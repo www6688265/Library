@@ -71,4 +71,21 @@ public class AdminServiceImpl implements AdminService {
         return admin;
     }
 
+    @Override
+    public Admin getAdminByAdmid(String id) {
+        AdminExample adminExample = new AdminExample();
+        adminExample.createCriteria().andAdmidEqualTo(Integer.parseInt(id));
+        List<Admin> list = null;
+        try {
+            list = adminMapper.selectByExample(adminExample);
+        } catch (Exception e) {
+            return null;
+        }
+        if (list.size() > 0) {
+            Admin admin = list.get(0);
+            return admin;
+        } else
+            return null;
+    }
+
 }

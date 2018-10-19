@@ -38,7 +38,7 @@
         <a href="${pageContext.request.contextPath}/index" class="logo"><b>图书管理<span>系统</span></b></a>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.jsp">退出登录</a></li>
+                <li><a class="logout" href="${pageContext.request.contextPath}/admin/logOut">退出登录</a></li>
             </ul>
         </div>
     </header>
@@ -86,6 +86,19 @@
                         <span>还书</span>
                     </a>
                 </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_table">
+                        <i class="fa fa-group"></i>
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_changePwd">
+                        <i class="fa fa-key"></i>
+                        <span>修改密码</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </aside>

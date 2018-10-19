@@ -80,6 +80,18 @@
                         <span>还书</span>
                     </a>
                 </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_table">
+                        <i class="fa fa-group"></i>
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_changePwd">
+                        <i class="fa fa-key"></i>
+                        <span>修改密码</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>

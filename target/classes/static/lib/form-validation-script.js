@@ -9,35 +9,15 @@ var Script = function () {
         return this.optional(element) || (tel.test(value));
     }, "请正确填写您的手机号码");
 
+    jQuery.validator.addMethod("charAndNum", function (value, element) {
+        var tel = /^[0-9a-zA_Z]+$/;
+        return this.optional(element) || (tel.test(value));
+    }, "只能输入英文或者数字");
     jQuery.validator.addMethod("username", function(value, element) {
         var tel = /^[\u4E00-\u9FA5A-Za-z]+$/;
         return this.optional(element) || (tel.test(value));
     }, "只能输入中文或英文");
 
-    $.validator.setDefaults({
-        submitHandler: function() {
-            $.ajax({url:"/user/addUser",
-                type:"POST",
-                dataType:"json",
-                data:$("#userForm").serialize(),
-                success:function (data) {
-                    if(data.result=="success"){
-                        alert("添加成功成功");
-                        oTable.ajax.reload();
-                        $("#myModal").modal("hide");
-                        $("#myModalLabel").text("新增");
-                        clear();
-                    }
-                    else{
-                        alert(data.msg);
-                    }
-                },
-                error:function () {
-                    alert("网络出现问题！");
-                }
-            })
-        }
-    });
 
     $().ready(function() {
         // validate the comment form when it is submitted
@@ -112,6 +92,76 @@ var Script = function () {
                     required:"手机号码不能为空",
                     phone:"手机号码格式不正确"
                 }
+            },
+            submitHandler: function () {
+                $.ajax({
+                    url: "/user/addUser",
+                    type: "POST",
+                    dataType: "json",
+                    data: $("#userForm").serialize(),
+                    success: function (data) {
+                        if (data.result == "success") {
+                            alert("添加成功成功");
+                            oTable.ajax.reload();
+                            $("#myModal").modal("hide");
+                            $("#myModalLabel").text("新增");
+                            clear();
+                        }
+                        else {
+                            alert(data.msg);
+                        }
+                    },
+                    error: function () {
+                        alert("网络出现问题！");
+                    }
+                })
+            }
+        });
+        $("#adminForm").validate({
+            rules: {
+                idcard: {
+                    charAndNum: true,
+                    required: true,
+                    minlength: 2
+                },
+                admpassword: {
+                    required: true,
+                    minlength: 8
+                }
+            },
+            messages: {
+                idcard: {
+                    charAndNum: "只能输入中文或者英文",
+                    required: "姓名不能为空",
+                    minlength: "至少两个字"
+                },
+                admpassword: {
+                    required: "密码不能为空",
+                    minlength: "密码至少8位"
+                }
+            },
+            submitHandler: function () {
+                $.ajax({
+                    url: "/admin/addAdmin",
+                    type: "POST",
+                    dataType: "json",
+                    data: $("#adminForm").serialize(),
+                    success: function (data) {
+                        if (data.result == "success") {
+                            alert("添加成功成功");
+                            oTable.ajax.reload();
+                            $("#myModal").modal("hide");
+                            $("#myModalLabel").text("新增");
+                            clear();
+                        }
+                        else {
+                            alert(data.msg);
+                        }
+                    },
+                    error: function () {
+                        alert("网络出现问题！");
+                    }
+                })
             }
         });
 

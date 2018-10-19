@@ -129,4 +129,29 @@ public class AdminController {
         }
     }
 
+    @RequestMapping(value = "changePwd")
+    @ResponseBody
+    public Map<String, Object> changePwd(String pwd, String newPwd, HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        Integer admid = (Integer) request.getSession().getAttribute("admid");
+        pwd = getEncrypt(pwd);
+        if (admid != null) {
+            Admin admin = adminService.getAdminByAdmid(Integer.toString(admid));
+            if (pwd.equals(admin.getAdmpassword())) {
+                admin.setAdmpassword(newPwd);
+                adminService.updateAdmin(admin);
+                result.put("result", "success");
+
+                request.getSession().removeAttribute("admid");
+                return result;
+            } else {
+                result.put("result", "当前密码不正确");
+                return result;
+            }
+        } else {
+            result.put("error", "您尚未登录!");
+            return result;
+        }
+    }
+
 }

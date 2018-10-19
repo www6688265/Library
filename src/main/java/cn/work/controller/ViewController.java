@@ -55,4 +55,9 @@ public class ViewController {
     public String AdminTable() {
         return "Admin_table";
     }
+
+    @RequestMapping("Admin_changePwd")
+    public String AdminChangePwd() {
+        return "Admin_changePwd";
+    }
 }
