@@ -13,12 +13,12 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
+import static cn.work.spring.config.LibraryConfig.limitBorrowNum;
 import static cn.work.util.SHAUtil.getEncrypt;
 
 @Service("UserService")
 public class UserServiceImpl implements UserService {
-    public static final int limitDay = 30;
-    public static final int limitBorrowNum = 3;
+
 
     @Resource
     UserinfoMapper userinfoMapper;

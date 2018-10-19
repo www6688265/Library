@@ -3,8 +3,10 @@ package cn.work.util;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
+import static cn.work.spring.config.LibraryConfig.KEY_SHA;
+
 public class SHAUtil {
-    public static final String KEY_SHA = "SHA";
+
 
     public static  String  getEncrypt(String inputStr)
     {

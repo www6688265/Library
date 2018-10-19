@@ -16,6 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import static cn.work.spring.config.LibraryConfig.borrowMonthPeriod;
+
 @Service(value = "BARService")
 public class BARServiceImpl implements BARService {
     @Resource
@@ -33,7 +35,7 @@ public class BARServiceImpl implements BARService {
         borrow.setBorrowtime(BorrowTime);
         Calendar ca = Calendar.getInstance();
         ca.setTime(BorrowTime);
-        ca.add(Calendar.MONTH, 1);
+        ca.add(Calendar.MONTH, borrowMonthPeriod);
         Date LimitTime = ca.getTime();
         borrow.setLimittime(LimitTime);
         borrowMapper.insertSelective(borrow);

@@ -106,7 +106,7 @@
                 <div class="col-lg-9 main-chart">
                     <!--CUSTOM CHART START -->
                     <div class="border-head">
-                        <h3>${admid}欢迎登录图书管理系统</h3>
+                        <h3>欢迎登录图书管理系统</h3>
                     </div>
                     <!-- /row -->
                 </div>
