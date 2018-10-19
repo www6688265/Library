@@ -7,673 +7,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf998b0c-1ac2-45be-b660-e46964d50aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BorrowController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BorrowRecController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/ReturnController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/TicketRecController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/ViewController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BookMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BooklocMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BorrowMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/TicketMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/UserinfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/exception/NotPayException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/exception/NotReturnException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/interceptors/loginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/AdminExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/AdminExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/AdminExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/AdminExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BookExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BookExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BookExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BookExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BookExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Bookloc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BooklocExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BooklocExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BooklocExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BooklocExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Borrow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BorrowExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BorrowExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BorrowExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BorrowExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/BorrowExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Ticket.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/TicketExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/TicketExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/TicketExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/TicketExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/TicketExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/Userinfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserinfoExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserinfoExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserinfoExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/pojo/UserinfoExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BARService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BorrowRecService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/AdminServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BARServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/TicketRecServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/TicketRecService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MapperScannerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/SpringMVCConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/util/FIleUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/util/SHAUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/work/util/Validator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/BooklocMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/BorrowMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TicketMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserinfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/contactform/contactform.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrapValidator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/editor.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style-responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/table-responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/to-do.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/zabuto_calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/blog-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/checkbox-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/friends/fr-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/instagram.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/login-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/lorde.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ny.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/portfolio/port06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/profile-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/profile-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/prompt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/radio-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ui-danro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ui-divya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ui-sam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ui-sherman.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/ui-zac.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/warn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/weather.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/zoom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_table_jui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/Sorting icons.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_enabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_enabled_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/details_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/details_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_enabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_enabled_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-form-components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-timepicker/compiled/timepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrapValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/calendar-conf-events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/chart-master/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/chartjs-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/common-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/dataTables.editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/dropzone/css/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/dropzone/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/dropzone/images/spritemap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/dropzone/images/spritemap@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/fancybox/jquery.fancybox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/fancybox/jquery.fancybox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-noscript.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/img/progressbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-audio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-process.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.iframe-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/flotchart-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/form-component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/form-validation-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/google-maps/data/points.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/google-maps/maplace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/css/jquery.gritter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/css/jquery.gritter0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter-long.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/ie-spacer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter/js/jquery.gritter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery-ui-1.9.2.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.backstretch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.scrollTo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.tagsinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.ui.touch-punch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/morris-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/morris/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/raphael/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/sparkline-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/xchart/d3.v3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/xchart/xcharts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/xchart/xcharts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/zabuto_calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/temp/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/upload/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowRecController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/TicketRecController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/ViewController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/BookMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/BooklocMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/BorrowMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/TicketMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/UserinfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/exception/NotPayException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/exception/NotReturnException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/interceptors/loginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/AdminExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/AdminExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/AdminExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/AdminExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BookExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BookExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BookExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BookExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BookExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Bookloc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BooklocExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BooklocExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BooklocExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BooklocExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Borrow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BorrowExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BorrowExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BorrowExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BorrowExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/BorrowExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Ticket.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/TicketExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/TicketExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/TicketExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/TicketExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/TicketExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/Userinfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserinfoExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserinfoExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserinfoExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/pojo/UserinfoExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowRecService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/AdminServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/TicketRecServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/TicketRecService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MapperScannerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/SpringMVCConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/FIleUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/SHAUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/Validator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/BookMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/BooklocMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/BorrowMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/TicketMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/UserinfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/contactform/contactform.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/bootstrapValidator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/editor.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style-responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/table-responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/to-do.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/zabuto_calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/blog-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/checkbox-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/instagram.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/login-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/lorde.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ny.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/prompt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/radio-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-danro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-divya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sherman.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-zac.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/warn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/weather.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/zoom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table_jui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/Sorting icons.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-form-components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/compiled/timepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrapValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/calendar-conf-events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chart-master/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chartjs-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/common-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dataTables.editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/css/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-noscript.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/progressbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-audio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-process.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.iframe-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flotchart-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-validation-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/data/points.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/maplace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-long.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/ie-spacer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/js/jquery.gritter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-ui-1.9.2.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.backstretch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.scrollTo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.tagsinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.ui.touch-punch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/raphael/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/sparkline-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/d3.v3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/zabuto_calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/temp/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/amqp-client-3.4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/aspectjweaver-1.8.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/c3p0-0.9.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/classmate-1.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/commons-codec-1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/commons-io-1.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/commons-lang3-3.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/fastjson-1.2.49.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/hibernate-validator-5.3.4.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jackson-core-2.8.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jackson-databind-2.8.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jcl-over-slf4j-1.7.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/jul-to-slf4j-1.7.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/junit-jupiter-api-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/junit-platform-commons-1.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/log4j-over-slf4j-1.7.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/logback-classic-1.1.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/logback-core-1.1.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-3.2.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-spring-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mysql-connector-java-5.1.41.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/opentest4j-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/slf4j-api-1.7.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/snakeyaml-1.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-amqp-1.7.1.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-aspects-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-autoconfigure-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-starter-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-starter-jdbc-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-starter-logging-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-boot-starter-web-1.5.2.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-rabbit-1.4.0.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-retry-1.2.0.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/tomcat-jdbc-8.5.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/tomcat-juli-8.5.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Book_table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow_table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Ticket_table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/addBook.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/contactform/contactform.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/contactform/contactform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style-responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/table-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/table-responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/to-do.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/to-do.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/zabuto_calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/zabuto_calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-form-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-form-components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/calendar-conf-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/calendar-conf-events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/chartjs-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/chartjs-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/common-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/common-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/easy-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/easy-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.pie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flotchart-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/flotchart-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/form-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/form-component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/form-validation-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/form-validation-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/gritter-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/morris-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/morris-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/php-mail-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/php-mail-form/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/sparkline-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/sparkline-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/contactform/contactform.php" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/contactform/contactform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style-responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/table-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/table-responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/to-do.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/to-do.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/zabuto_calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/zabuto_calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-form-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/advanced-form-components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/calendar-conf-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/calendar-conf-events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/chartjs-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/chartjs-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/common-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/common-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/easy-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/easy-pie-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flotchart-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/flotchart-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/form-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/form-component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/form-validation-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/form-validation-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/gritter-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/morris-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/morris-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/sparkline-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/sparkline-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/lib/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/contactform/contactform.php" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/contactform/contactform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style-responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/table-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/table-responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/to-do.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/to-do.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/zabuto_calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/zabuto_calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-form-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-form-components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/calendar-conf-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/calendar-conf-events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chartjs-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chartjs-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/common-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/common-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/easy-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/easy-pie-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flotchart-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flotchart-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-validation-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-validation-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/sparkline-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/sparkline-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1257,6 +656,32 @@
               <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
               <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -1360,7 +785,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539919454468" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539920125922" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1371,9 +796,12 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="cn.work.service" />
-      <recent name="cn.work.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/target/classes/static/upload" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/target/classes" />
+      <recent name="$PROJECT_DIR$/target/classes/static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
@@ -1385,12 +813,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.work.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target/classes/static/upload" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/target/classes" />
-      <recent name="$PROJECT_DIR$/target/classes/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.work.service" />
+      <recent name="cn.work.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1605,7 +1030,7 @@
       <workItem from="1539183167226" duration="22971000" />
       <workItem from="1539337274446" duration="71426000" />
       <workItem from="1539877873074" duration="1594000" />
-      <workItem from="1539918884671" duration="561000" />
+      <workItem from="1539918884671" duration="1130000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1539878728739</created>
@@ -1614,7 +1039,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539878728739</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试">
+      <created>1539919577983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539919577983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1638,7 +1070,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239360000" />
+    <option name="totallyTimeSpent" value="239929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1652,7 +1084,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.23104435" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.23104435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1669,8 +1101,8 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5035765" side_tool="true" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" visible="true" weight="0.31686747" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5035765" side_tool="true" visible="true" weight="0.31686747" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32891566" />
