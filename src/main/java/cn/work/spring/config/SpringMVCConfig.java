@@ -9,11 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 public class SpringMVCConfig extends WebMvcConfigurerAdapter {
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new loginInterceptor()).addPathPatterns("/index").
-                addPathPatterns("/admin/*").excludePathPatterns("/admin/login");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new loginInterceptor()).addPathPatterns("/index").
+//                addPathPatterns("/admin/*").excludePathPatterns("/admin/login");
+//    }
 
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatter(new DateFormatter("yyyy-MM-dd HH:mm:ss"));

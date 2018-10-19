@@ -50,4 +50,9 @@ public class ViewController {
     public String Return() {
         return "Return";
     }
+
+    @RequestMapping("Admin_table")
+    public String AdminTable() {
+        return "Admin_table";
+    }
 }

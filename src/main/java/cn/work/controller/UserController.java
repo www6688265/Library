@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.*;
 
 import static cn.work.util.Validator.userValidator;
@@ -67,9 +68,9 @@ public class UserController {
 
     @RequestMapping(value = "delUsers")
     @ResponseBody
-    public Map<String ,Object> delUsers(@RequestBody Userinfo[] userinfos){
+    public Map<String, Object> delUsers(@RequestBody Userinfo[] userinfos) {
         Map<String, Object> result = new HashMap<>();
-        for(Userinfo userinfo : userinfos){
+        for (Userinfo userinfo : userinfos) {
             try {
                 userService.delUser(userinfo.getUserid().toString());
             } catch (Exception e) {
@@ -84,7 +85,6 @@ public class UserController {
     }
 
 
-
     @RequestMapping(value = "getAccessDetail")
     @ResponseBody
     public Map<String, Object> getAccessDetail(String id) {
@@ -97,7 +97,6 @@ public class UserController {
 
     @RequestMapping(value = "updateUser")
     @ResponseBody
-
     public Map<String, Object> updateUser(Userinfo userinfo) {
         Map<String, Object> result = new HashMap<>();
         String msg = userValidator(userinfo);
@@ -116,6 +115,5 @@ public class UserController {
             result.put("data", userlist);
             return result;
         }
-
     }
 }

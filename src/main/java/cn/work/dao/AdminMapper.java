@@ -3,6 +3,7 @@ package cn.work.dao;
 import cn.work.pojo.Admin;
 import cn.work.pojo.AdminExample;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -28,4 +29,9 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    //自己写的yuju
+    @Select("select  admid,idcard,admright from Admin")
+    List<Admin> getAllAdmins();
+
 }

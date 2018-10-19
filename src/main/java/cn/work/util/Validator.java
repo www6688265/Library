@@ -1,5 +1,6 @@
 package cn.work.util;
 
+import cn.work.pojo.Admin;
 import cn.work.pojo.Userinfo;
 
 import java.util.regex.Pattern;
@@ -8,6 +9,7 @@ public class Validator {
     public static final String username_required_error = "姓名不能为空";
     public static final String username_username_error = "只能输入中文或者英文";
     public static final String username_minlength_error = "至少两个字";
+    public static final String username_CharAndSum_error = "只能为中文或者英文";
     public static final String idcard_required_error = "身份证号码不能为空";
     public static final String idcard_idcard_error = "身份证格式不正确";
     public static final String sex_required_error = "性别不能为空";
@@ -15,6 +17,8 @@ public class Validator {
     public static final String usertele_phon_error = "手机号码格式不正确";
     public static final String access_required_error = "权限不能为空";
     public static final String access_access_error = "权限只能为0或1";
+    public static final String pwd_required_error = "密码不能为空";
+    public static final String pwd_minlength_error = "至少为8位";
 
 
     public static String userValidator(Userinfo userinfo) {
@@ -58,6 +62,36 @@ public class Validator {
                         usertele)) {
                     return usertele_phon_error;
                 }
+            }
+        }
+        if (access != null) {
+            if (!Pattern.matches("^1|0$",
+                    access.toString())) {
+                return access_access_error;
+            }
+        }
+        return null;
+    }
+
+    public static String adminValidator(Admin admin) {
+        String username = admin.getIdcard();
+        String pwd = admin.getAdmpassword();
+        Integer access = admin.getAdmright();
+        if (username != null) {
+            if (username.equals(""))
+                return username_required_error;
+            else {
+                if (!Pattern.matches("^[0-9a-zA_Z]+$", username)) {
+                    return username_CharAndSum_error;
+                }
+            }
+        }
+        if (pwd != null) {
+            if (pwd.equals(""))
+                return pwd_required_error;
+            else {
+                if (pwd.length() < 8)
+                    return pwd_minlength_error;
             }
         }
         if (access != null) {
