@@ -87,7 +87,7 @@ public class ReturnController {
     public Map<String, Object> returnBook(String userid, String[] bookid) throws ParseException {
         Map<String, Object> result = new HashMap<>();
         List<Borrow> borrowlist = borrowRecService.getNotReturnRec(userid);
-        List<Borrow> returnList = new ArrayList<Borrow>();
+        List<Borrow> returnList = new ArrayList();
         List orderNotFoundList = new ArrayList();
         List<Borrow> searchList = borrowlist;
         for (int i = 0; i < bookid.length; i++) {

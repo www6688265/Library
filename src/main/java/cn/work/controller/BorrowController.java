@@ -8,7 +8,6 @@ import cn.work.service.BARService;
 import cn.work.service.BookService;
 import cn.work.service.TicketRecService;
 import cn.work.service.UserService;
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -106,8 +105,8 @@ public class BorrowController {
             }
         }
         if (notFoundlist.size() > 0) {
-            result.put("result","0");
-            result.put("notFoundList",notFoundlist);
+            result.put("result", "0");
+            result.put("notFoundList", notFoundlist);
             return result;
         }
         result.put("result", "1");
@@ -117,12 +116,11 @@ public class BorrowController {
 
     @RequestMapping(value = "borrowBook")
     @ResponseBody
-    public Map<String, Object> borrowBook(String userid,String []bookid) {
+    public Map<String, Object> borrowBook(String userid, String[] bookid) {
         Map<String, Object> result = new HashMap<>();
-        int length=bookid.length;
-        for(int i=0;i<length;i++)
-        {
-            Borrow borrow=new Borrow();
+        int length = bookid.length;
+        for (int i = 0; i < length; i++) {
+            Borrow borrow = new Borrow();
             borrow.setUserid(Integer.parseInt(userid));
             borrow.setBookid(Integer.parseInt(bookid[i]));
             barService.borrowBook(borrow);

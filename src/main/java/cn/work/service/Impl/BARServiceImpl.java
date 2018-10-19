@@ -58,8 +58,8 @@ public class BARServiceImpl implements BARService {
         bookMapper.updateByPrimaryKey(book);
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date limitTime = borrow.getLimittime();
-        now=df.parse(df.format(now));
-        limitTime=df.parse(df.format(limitTime));
+        now = df.parse(df.format(now));
+        limitTime = df.parse(df.format(limitTime));
         if (limitTime.before(now)) {
             Long day = (now.getTime() - limitTime.getTime()) / (24 * 60 * 60 * 1000);
             int OverDueTime = day.intValue();
