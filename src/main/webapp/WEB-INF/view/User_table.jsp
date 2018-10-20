@@ -10,15 +10,15 @@
     <title>图书管理系统</title>
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
 </head>
@@ -225,19 +225,19 @@
 
 <script type="text/javascript" language="javascript"
         src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" language="javascript"
         src="https://cdn.datatables.net/buttons/1.5.4/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" language="javascript"
         src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/dataTables.editor.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script type="text/javascript" src="lib/advanced-datatable/js/DT_bootstrap.js"></script>
-<script src="lib/common-scripts.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/dataTables.editor.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+<script src="background/lib/common-scripts.js"></script>
 <!--script for this page-->
-<script src="lib/form-validation-script.js"></script>
+<script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
     var oTable;
     var editor;

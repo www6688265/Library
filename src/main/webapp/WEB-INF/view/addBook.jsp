@@ -7,17 +7,16 @@
     <meta charset="utf-8">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
+    <link rel="stylesheet" type="text/css" href="background/lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
     <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
@@ -217,31 +216,31 @@
     </footer>
 
 </section>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
 <!--common script for all pages-->
-<script src="lib/common-scripts.js"></script>
+<script src="background/lib/common-scripts.js"></script>
 <!--script for this page-->
-<script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="background/lib/jquery-ui-1.9.2.custom.min.js"></script>
 <!--custom switch-->
-<script src="lib/bootstrap-switch.js"></script>
+<script src="background/lib/bootstrap-switch.js"></script>
 <!--custom tagsinput-->
-<script src="lib/jquery.tagsinput.js"></script>
+<script src="background/lib/jquery.tagsinput.js"></script>
 <!--custom checkbox & radio-->
-<script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="lib/bootstrap-daterangepicker/date.js"></script>
-<script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-<script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
-<script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script type="text/javascript" src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-<script type="text/javascript" src="lib/bootstrap-daterangepicker/moment.min.js"></script>
-<script type="text/javascript" src="lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-<script src="lib/jquery.form.js"></script>
-<script src="lib/advanced-form-components.js"></script>
-<script src="lib/form-validation-script.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/date.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+<script src="background/lib/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="background/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="background/lib/jquery.form.js"></script>
+<script src="background/lib/advanced-form-components.js"></script>
+<script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
     jQuery.browser = {};
     (function () {

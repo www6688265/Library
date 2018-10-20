@@ -16,6 +16,11 @@ public class ViewController {
         return "index";
     }
 
+    @RequestMapping("frontindex")
+    public String frontindex() {
+        return "frontindex";
+    }
+
     @RequestMapping("User_table")
     public String userTable() {
         return "User_table";
@@ -55,7 +60,6 @@ public class ViewController {
     public String AdminTable() {
         return "Admin_table";
     }
-
     @RequestMapping("Admin_changePwd")
     public String AdminChangePwd() {
         return "Admin_changePwd";

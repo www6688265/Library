@@ -9,15 +9,15 @@
     <title>图书管理系统</title>
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/people.png" class="img-circle" width="65">
+                                    <img src="background/img/people.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <form id="idcardForm" class="form-inline" role="form">
@@ -132,7 +132,7 @@
                             </div>
                             <div id="userNameInfo" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/prompt.png" class="img-circle" width="65">
+                                    <img src="background/img/prompt.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>该用户名为：<b id="username1"></b></p>
@@ -140,7 +140,7 @@
                             </div>
                             <div id="userNotFound" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>没有找到该用户，请重新输入身份证</p>
@@ -148,7 +148,7 @@
                             </div>
                             <div id="notNeedToReturn" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p><b id="username2"></b>没有需要归还的图书</p>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/book.png" class="img-circle" width="65">
+                                    <img src="background/img/book.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <form id="bookForm" class="form-inline" role="form">
@@ -189,7 +189,7 @@
                             </div>
                             <div id="bookNotFound" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="40">
+                                    <img src="background/img/warn.png" class="img-circle" width="40">
                                 </div>
                                 <div class="col-md-9">
                                     <p>编号为<b id="bookNotFonudisbns"></b>图书未找到，请重新输入</p>
@@ -197,7 +197,7 @@
                             </div>
                             <div id="confirm" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/prompt.png" class="img-circle" width="65">
+                                    <img src="background/img/prompt.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>该图书名为：<b id="bookNames"></b></p>
@@ -206,7 +206,7 @@
                             </div>
                             <div id="orderNotFound" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>还书失败，该用户没有isbn为<b id="orderNotFoundList"></b>的借书记录</p>
@@ -239,13 +239,13 @@
 </section>
 <!-- js placed at the end of the document so the pages load faster -->
 
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script src="lib/common-scripts.js"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="background/lib/common-scripts.js"></script>
 <!--script for this page-->
-<script src="lib/form-validation-script.js"></script>
+<script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#idSubmit").click(function () {
