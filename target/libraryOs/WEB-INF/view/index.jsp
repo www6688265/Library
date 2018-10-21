@@ -5,18 +5,18 @@
     <title>图书管理系统</title>
     <meta charset="utf-8">
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="background/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="background/lib/gritter/css/jquery.gritter.css"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet">
-    <script src="lib/chart-master/Chart.js"></script>
+    <link href="background/css/style.css" rel="stylesheet">
+    <link href="background/css/style-responsive.css" rel="stylesheet">
+    <script src="background/lib/chart-master/Chart.js"></script>
 </head>
 <body>
 <section id="container">
@@ -41,14 +41,14 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a href="${pageContext.request.contextPath}/User_table">
-                        <i class="fa fa-dashboard"></i>
+                    <a  href="${pageContext.request.contextPath}/User_table">
+                        <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-desktop"></i>
+                    <a  href="javascript:;">
+                        <i class="fa fa-barcode"></i>
                         <span>图书管理</span>
                     </a>
                     <ul class="sub">
@@ -58,14 +58,38 @@
                 </li>
                 <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Borrow_table">
-                        <i class="fa fa-cogs"></i>
+                        <i class="fa fa-tasks"></i>
                         <span>借书记录查询</span>
                     </a>
                 </li>
                 <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Ticket_table">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-ticket"></i>
                         <span>罚单查询</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a  href="${pageContext.request.contextPath}/Borrow">
+                        <i class="fa fa-book"></i>
+                        <span>借书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Return">
+                        <i class="fa fa-book"></i>
+                        <span>还书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_table">
+                        <i class="fa fa-group"></i>
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_changePwd">
+                        <i class="fa fa-key"></i>
+                        <span>修改密码</span>
                     </a>
                 </li>
             </ul>
@@ -82,7 +106,7 @@
                 <div class="col-lg-9 main-chart">
                     <!--CUSTOM CHART START -->
                     <div class="border-head">
-                        <h3>${admid}欢迎登录图书管理系统</h3>
+                        <h3>欢迎登录图书管理系统</h3>
                     </div>
                     <!-- /row -->
                 </div>
@@ -121,20 +145,20 @@
 
 </section>
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="lib/jquery/jquery.min.js"></script>
+<script src="background/lib/jquery/jquery.min.js"></script>
 
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script src="lib/jquery.sparkline.js"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="background/lib/jquery.sparkline.js"></script>
 <!--common script for all pages-->
-<script src="lib/common-scripts.js"></script>
-<script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
-<script type="text/javascript" src="lib/gritter-conf.js"></script>
+<script src="background/lib/common-scripts.js"></script>
+<script type="text/javascript" src="background/lib/gritter/js/jquery.gritter.js"></script>
+<script type="text/javascript" src="background/lib/gritter-conf.js"></script>
 <!--script for this page-->
-<script src="lib/sparkline-chart.js"></script>
-<script src="lib/zabuto_calendar.js"></script>
+<script src="background/lib/sparkline-chart.js"></script>
+<script src="background/lib/zabuto_calendar.js"></script>
 <script type="application/javascript">
     $(document).ready(function () {
         $("#date-popover").popover({

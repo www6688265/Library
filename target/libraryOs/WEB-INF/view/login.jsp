@@ -5,16 +5,16 @@
   <title>图书管理系统登录</title>
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap core CSS -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
-  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
+    <link href="background/css/style-responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,13 +35,13 @@
     </div>
   </div>
   <!-- js placed at the end of the document so the pages load faster -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+ <script src="background/lib/jquery/jquery.min.js"></script>
+ <script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
   <!--BACKSTRETCH-->
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-  <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
+ <script type="text/javascript" src="background/lib/jquery.backstretch.min.js"></script>
   <script>
-    $.backstretch("img/login-bg.jpg", {
+      $.backstretch("background/img/login-bg.jpg", {
       speed: 500
     });
     $(document).ready(function() {

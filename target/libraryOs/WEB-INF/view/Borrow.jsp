@@ -6,18 +6,18 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <title>用户管理</title>
+    <title>图书管理系统</title>
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -38,7 +38,7 @@
         <a href="${pageContext.request.contextPath}/index" class="logo"><b>图书管理<span>系统</span></b></a>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.jsp">退出登录</a></li>
+                <li><a class="logout" href="${pageContext.request.contextPath}/admin/logOut">退出登录</a></li>
             </ul>
         </div>
     </header>
@@ -47,7 +47,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a class="active" href="${pageContext.request.contextPath}/User_table">
+                    <a href="${pageContext.request.contextPath}/User_table">
                         <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
@@ -75,11 +75,30 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a href="${pageContext.request.contextPath}/Borrow">
+                    <a class="active" href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
                         <span>借书</span>
                     </a>
                 </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Return">
+                        <i class="fa fa-book"></i>
+                        <span>还书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_table">
+                        <i class="fa fa-group"></i>
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_changePwd">
+                        <i class="fa fa-key"></i>
+                        <span>修改密码</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </aside>
@@ -100,10 +119,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/people.png" class="img-circle" width="65">
+                                    <img src="background/img/people.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
-                                    <form id="idcardForm"class="form-inline" role="form">
+                                    <form id="idcardForm" class="form-inline" role="form">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="idcard" name="idcard"
                                                    placeholder="身份证">
@@ -114,7 +133,7 @@
                             </div>
                             <div id="overLimitInfo" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p><b id="username2"></b>超过借书数量借书，暂不能借书</p>
@@ -122,7 +141,7 @@
                             </div>
                             <div id="TicketNotDeal" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p><b id="username3"></b>有罚单未处理，金额为：<b id="fee"></b>元</p>
@@ -131,7 +150,7 @@
                             </div>
                             <div id="userNameInfo" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/prompt.png" class="img-circle" width="65">
+                                    <img src="background/img/prompt.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>该用户名为：<b id="username1"></b></p>
@@ -139,7 +158,7 @@
                             </div>
                             <div id="userNotFound" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p>该用户为新用户，请注册后借书</p>
@@ -147,7 +166,7 @@
                             </div>
                             <div id="hasOverDueBook" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <p><b id="username5"></b>有超过借书期限图书，暂不能借书</p>
@@ -159,48 +178,55 @@
             </div>
             </div>
             <div id="bookDiv" class="row mt" style="display: none">
-                <div class="col-md-12">
-                    <div class="col-md-12 mb">
+                <div class="col-lg-12">
+                    <div class="col-lg-12 mb">
                         <div class="message-p pn">
                             <div class="message-header">
                                 <h5>请输入图书ISBN编号</h5>
                             </div>
                             <div class="row">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/book.png" class="img-circle" width="65">
+                                    <img src="background/img/book.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
                                     <form id="bookForm" class="form-inline" role="form">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="isbn" name="isbn"
-                                                   placeholder="ISBN">
+                                            <input type="text" class="form-control" id="isbn_1" name="isbn"
+                                                   placeholder="请输入ISBN编号">
                                         </div>
-                                        <button id="bookSubmit" type="button" class="btn btn-default">下一步</button>
+                                        <a href="#" class="removeclass">×</a>
                                     </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <button id="AddMoreFileBox" type="button" class="btn btn-info">添加图书</button>
+                                    <button id="bookSubmit" type="button" class="btn btn-default">下一步</button>
                                 </div>
                             </div>
                             <div id="bookNotFound" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/warn.png" class="img-circle" width="65">
+                                    <img src="background/img/warn.png" class="img-circle" width="40">
                                 </div>
                                 <div class="col-md-9">
-                                    <p>未找到该图书，请重新输入</p>
+                                    <p>编号为<b id="bookNotFonudisbns"></b>图书未找到，请重新输入</p>
                                 </div>
                             </div>
                             <div id="confirm" class="row" style="display: none">
                                 <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="img/prompt.png" class="img-circle" width="65">
+                                    <img src="background/img/prompt.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
-                                    <p>该图书名为：《<b id="bookName1"></b>》</p>
-                                    <button type="button" class="btn btn-default">确认借书</button>
+                                    <p>图书名为：<b id="bookNames"></b></p>
+                                    <button id="confirmButton" type="button" class="btn btn-default">确认借书</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="display: block">
+            <div style="display: none">
                 <form id="borrowForm">
                     <input id="userid" name="userid">
                     <input id="bookid" name="bookid">
@@ -222,24 +248,55 @@
 </section>
 <!-- js placed at the end of the document so the pages load faster -->
 
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script src="lib/common-scripts.js"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="background/lib/common-scripts.js"></script>
 <!--script for this page-->
-<script src="lib/form-validation-script.js"></script>
+<script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
+        var MaxInputs;
+        var InputsWrapper = $("#bookForm");
+        var borrowForm = $("#borrowForm");
+        var x = InputsWrapper.length;
+        var FieldCount = 1;
+
+        $("#AddMoreFileBox").click(function (e) {
+            if (x < MaxInputs) {
+                FieldCount++;
+                $(InputsWrapper).append("<div class=\"form-group\">\n" +
+                    "                                            <input type=\"text\" class=\"form-control\" id=\"isbn_" + FieldCount + "\" name=\"isbn\"\n" +
+                    "                                                   placeholder=\"请输入ISBN编号\">\n" +
+                    "                                        </div>\n" +
+                    "                                        <a href=\"#\" class=\"removeclass\">×</a>");
+                x++;
+                $(borrowForm).append("<input id=\"bookid_" + FieldCount + "\" name=\"bookid\">");
+            }
+            else {
+                alert("该用户最多可以借" + MaxInputs + "本书！");
+            }
+            return false;
+        });
+
+        $("body").on("click", ".removeclass", function (e) {
+            if (x > 1) {
+                $(this).prev().remove();
+                $(this).remove();
+                $("#borrowForm >input:last").remove();
+                x--;
+            }
+            return false;
+        })
         $("#idSubmit").click(function () {
             $.ajax({
-                url:"/borrow/userCheck",
-                type:"POST",
-                dataType:"json",
-                data:$("#idcardForm").serialize(),
-                success:function (data) {
-                    switch(data.result)
-                    {
+                url: "/borrow/userCheck",
+                type: "POST",
+                dataType: "json",
+                data: $("#idcardForm").serialize(),
+                success: function (data) {
+                    switch (data.result) {
                         case "1":
                             $("#username1").html(data.username);
                             $("#userid").val(data.userid);
@@ -249,6 +306,7 @@
                             $("#userNotFound").hide();
                             $("#hasOverDueBook").hide();
                             $("#bookDiv").show();
+                            MaxInputs = data.maxBorrowNum;
                             break;
                         case "2":
                             $("#username2").html(data.username);
@@ -290,19 +348,19 @@
                             break;
                     }
                 },
-                error:function () {
+                error: function () {
                     alert("网络出现问题！");
                 }
             })
         });
         $("#dealSubmit").click(function () {
             $.ajax({
-                url:"/borrow/dealTicket",
-                type:"POST",
-                dataType:"json",
-                data:$("#borrowForm").serialize(),
-                success:function (data) {
-                    if(data.result=="success"){
+                url: "/borrow/dealTicket",
+                type: "POST",
+                dataType: "json",
+                data: $("#borrowForm").serialize(),
+                success: function (data) {
+                    if (data.result == "success") {
                         $("#userNameInfo").show();
                         $("#overLimitInfo").hide();
                         $("#TicketNotDeal").hide();
@@ -310,51 +368,70 @@
                         $("#bookDiv").show();
                     }
                 },
-                error:function () {
+                error: function () {
                     alert("网络出现问题！");
                 }
             })
         });
         $("#bookSubmit").click(function () {
             $.ajax({
-                url:"/borrow/bookCheck",
-                type:"POST",
-                dataType:"json",
-                data:$("#bookForm").serialize(),
-                success:function (data) {
-                    if(data.result=="1"){
-                        $("#bookName1").html(data.bookname);
-                        $("#bookid").val(data.bookid);
+                url: "/borrow/bookCheck",
+                type: "POST",
+                dataType: "json",
+                data: $("#bookForm").serialize(),
+                success: function (data) {
+                    if (data.result == "1") {
+                        var booklist = data.booklist;
+                        var length = booklist.length;
+                        var html = "";
+                        for (var i = 0; i < length; i++) {
+                            if (i == length - 1)
+                                html += "《" + booklist[i].bookname + "》";
+                            else
+                                html += "《" + booklist[i].bookname + "》、";
+                        }
+                        $("#bookNames").html(html);
+                        $("#borrowForm input").each(function () {
+                            if ($(this).index() > 0 && $(this).index() < length + 1) {
+                                $(this).val(booklist[$(this).index() - 1].bookid);
+                            }
+                        });
                         $("#bookNotFound").hide();
                         $("#confirm").show();
                     }
-                    else{
+                    else {
                         $("#bookNotFound").show();
+                        var notFonudList = data.notFoundList;
+                        var length = notFonudList.length;
+                        var html = "";
+                        for (var i = 0; i < length; i++) {
+                            if (i == length - 1)
+                                html += notFonudList[i];
+                            else
+                                html += notFonudList[i] + "、";
+                        }
+                        $("#bookNotFonudisbns").html(html);
                     }
                 },
-                error:function () {
+                error: function () {
                     alert("网络出现问题！");
                 }
             })
         });
 
-        $("#confirm").click(function () {
+        $("#confirmButton").click(function () {
             $.ajax({
-                url:"/borrow/borrowBook",
-                type:"POST",
-                dataType:"json",
-                data:$("#borrowForm").serialize(),
-                success:function (data) {
-                    if(data.result=="success"){
-                        alert("借书成功");
-                        $("#confirm").hide();
-                        $("#bookDiv").hide();
-                        $("#userNameInfo").hide();
-                        $("#idcard").val("");
-                        $("#isbn").val("");
+                url: "/borrow/borrowBook",
+                type: "POST",
+                dataType: "json",
+                data: $("#borrowForm").serialize(),
+                success: function (data) {
+                    if (data.result == "success") {
+                        alert("借书成功,当前已经借了" + data.borrowNum + "本书");
+                        window.location.reload();
                     }
                 },
-                error:function () {
+                error: function () {
                     alert("网络出现问题！");
                 }
             })

@@ -16,9 +16,9 @@ public class ViewController {
         return "index";
     }
 
-    @RequestMapping("frontindex")
-    public String frontindex() {
-        return "frontindex";
+    @RequestMapping("frontIndex")
+    public String frontIndex() {
+        return "frontIndex";
     }
 
     @RequestMapping("User_table")
@@ -55,7 +55,6 @@ public class ViewController {
     public String Return() {
         return "Return";
     }
-
     @RequestMapping("Admin_table")
     public String AdminTable() {
         return "Admin_table";
@@ -63,5 +62,15 @@ public class ViewController {
     @RequestMapping("Admin_changePwd")
     public String AdminChangePwd() {
         return "Admin_changePwd";
+    }
+
+    @RequestMapping("BookList")
+    public String BookList() {
+        return "BookList";
+    }
+
+    @RequestMapping("BookInfo")
+    public String BookInfo() {
+        return "BookInfo";
     }
 }

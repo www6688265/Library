@@ -125,6 +125,7 @@
                                                                              id="select-all"></th>
                                 <th><i class="fa fa-bullhorn"></i>书名</th>
                                 <th><i class="fa fa-bookmark"></i>作者</th>
+                                <th><i class="fa fa-bookmark"></i>类型</th>
                                 <th><i class="fa fa-bookmark"></i>ISBN</th>
                                 <th><i class="fa fa-bookmark"></i>库存</th>
                                 <th><i class="fa fa-bookmark"></i>剩余数量</th>
@@ -136,6 +137,7 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -190,6 +192,7 @@
     var oTable;
     var editor;
     var sOut;
+    var optionsA = [];
     $(document).ready(function () {
         editor = new $.fn.dataTable.Editor({
             display: 'envelope',
@@ -213,7 +216,8 @@
                 name: "bookname"
             }, {
                 label: "类型：",
-                name: "type"
+                name: "type",
+                type: "select"
             }, {
                 label: "出版社：",
                 name: "press"
@@ -261,6 +265,21 @@
             }
         });
 
+        $.getJSON("book/getAllTypes", {
+                term: "-1"
+            },
+            function (data) {
+                var option = {};
+                $.each(data, function (i, e) {
+                    option.label = e.type;
+                    option.value = e.id;
+                    optionsA.push(option);
+                    option = {};
+                });
+            }
+        ).done(function () {
+            editor.field('type').update(optionsA);
+        });
 
         oTable = $("#adv-dataTable").DataTable({
             "dom": "<'row'<'col-sm-12'lBrtip>>",
@@ -294,8 +313,9 @@
                         else return data;
                     }
                 },
+                {"data": "type"},
                 {"data": "isbn"},
-                {"data": "total", "width": "10%"},
+                {"data": "total", "width": "7%"},
                 {"data": "left", "width": "10%"},
                 {
                     "data": "pic", render: function (data) {
@@ -355,7 +375,7 @@
         oTable.columns.adjust().draw();
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() > 0 && $(this).index() < 4) {
+            if ($(this).index() > 0 && $(this).index() < 5) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
                 $(this).html('<input type="text" placeholder="搜索' + title + '" />');
             }
@@ -398,7 +418,6 @@
             dataType: "json",
             success: function (data) {
                 sOut += '<tr><td>出版社:</td><td>' + aData.press + '</td></tr>';
-                sOut += '<tr><td>类型:</td><td>'+aData.type +'</td></tr>';
                 sOut += '<tr><td>位置:</td><td>'+aData.floor+'楼，第'+aData.bookcase+'书架，第'+aData.level+'层'+'</td></tr>';
                 return sOut;
             }

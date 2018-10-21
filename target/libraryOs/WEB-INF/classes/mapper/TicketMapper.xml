@@ -254,7 +254,7 @@ WHERE
 	ticket.orderId = borrow.orderId AND ticket.`STATUS`=0
 	AND borrow.userid =#{id}
     </select>
-    <select id="getUserFee" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    <select id="getUserFee" parameterType="java.lang.Integer" resultType="java.lang.Double">
         SELECT
 	ticket.fee
 FROM

@@ -7,18 +7,18 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <title>借书记录管理</title>
+    <title>图书管理系统</title>
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="css/editor.bootstrap.min.css" rel="stylesheet">
+    <link href="background/img/favicon.png" rel="icon">
+    <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="background/css/editor.bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css" rel="stylesheet">
 </head>
@@ -41,7 +41,7 @@
         <a href="${pageContext.request.contextPath}/index" class="logo"><b>图书管理<span>系统</span></b></a>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.jsp">退出登录</a></li>
+                <li><a class="logout" href="${pageContext.request.contextPath}/admin/logOut">退出登录</a></li>
             </ul>
         </div>
     </header>
@@ -50,14 +50,14 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a href="${pageContext.request.contextPath}/User_table">
-                        <i class="fa fa-dashboard"></i>
+                    <a  href="${pageContext.request.contextPath}/User_table">
+                        <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
                 </li>
                 <li class="sub-menu">
                     <a  href="javascript:;">
-                        <i class="fa fa-desktop"></i>
+                        <i class="fa fa-barcode"></i>
                         <span>图书管理</span>
                     </a>
                     <ul class="sub">
@@ -67,14 +67,38 @@
                 </li>
                 <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Borrow_table">
-                        <i class="fa fa-cogs"></i>
-                        <span>借书记录管理</span>
+                        <i class="fa fa-tasks"></i>
+                        <span>借书记录查询</span>
                     </a>
                 </li>
                 <li class="sub-menu">
                     <a class="active" href="${pageContext.request.contextPath}/Ticket_table">
+                        <i class="fa fa-ticket"></i>
+                        <span>罚单查询</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a  href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
-                        <span>罚单管理</span>
+                        <span>借书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Return">
+                        <i class="fa fa-book"></i>
+                        <span>还书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_table">
+                        <i class="fa fa-group"></i>
+                        <span>管理员管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/Admin_changePwd">
+                        <i class="fa fa-key"></i>
+                        <span>修改密码</span>
                     </a>
                 </li>
             </ul>
@@ -144,21 +168,21 @@
 <!-- js placed at the end of the document so the pages load faster -->
 
 <script type="text/javascript" language="javascript"
-        src="lib/advanced-datatable/js/jquery.dataTables.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        src="background/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+<script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" language="javascript"
-        src="lib/advanced-datatable/js/dataTables.select.js"></script>
+        src="background/lib/advanced-datatable/js/dataTables.select.js"></script>
 <script type="text/javascript" language="javascript"
-        src="lib/advanced-datatable/js/dataTables.buttons.js"></script>
+        src="background/lib/advanced-datatable/js/dataTables.buttons.js"></script>
 <script type="text/javascript" language="javascript"
         src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
-<script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="lib/jquery.scrollTo.min.js"></script>
-<script src="lib/dataTables.editor.min.js"></script>
-<script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script type="text/javascript" src="lib/advanced-datatable/js/DT_bootstrap.js"></script>
-<script src="lib/common-scripts.js"></script>
-<script src="lib/form-validation-script.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="background/lib/jquery.scrollTo.min.js"></script>
+<script src="background/lib/dataTables.editor.min.js"></script>
+<script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+<script src="background/lib/common-scripts.js"></script>
+<script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
     var oTable;
     var sOut;

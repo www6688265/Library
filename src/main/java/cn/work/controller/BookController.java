@@ -3,17 +3,24 @@ package cn.work.controller;
 import cn.work.pojo.Book;
 import cn.work.pojo.BookExt;
 import cn.work.pojo.Bookloc;
+import cn.work.pojo.Booktype;
 import cn.work.service.BookService;
 import cn.work.util.FIleUtil;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.aspectj.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ResourceUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +34,12 @@ public class BookController {
 
     @Autowired
     BookService bookService;
+
+    @RequestMapping(value = "getAllTypes")
+    @ResponseBody
+    public List<Booktype> getAllTypes() {
+        return bookService.getAllTypes();
+    }
 
     @RequestMapping(value = "addBook")
     @ResponseBody
@@ -81,15 +94,9 @@ public class BookController {
                     book.setPic(path);
                 }
             }
-            BookExt old = bookService.getBook(book.getBookid());
-            if (old.getPic() != null && !old.getPic().equals("")) {
-                if (upload == null) {
-                    delFile(old.getPic());
-                }
-            }
             bookService.updateBook(book, loc);
             BookExt returnBook = bookService.getBook(book.getBookid());
-            List list = new ArrayList();
+            List<BookExt> list = new ArrayList<BookExt>();
             list.add(returnBook);
             result.put("data", list);
             return result;
@@ -99,8 +106,7 @@ public class BookController {
     @RequestMapping(value = "getBook")
     @ResponseBody
     public BookExt getBook(String id) {
-        BookExt book = bookService.getBook(Integer.parseInt(id));
-        return book;
+        return bookService.getBook(Integer.parseInt(id));
     }
 
     @RequestMapping(value = "delBook")
@@ -116,11 +122,10 @@ public class BookController {
             return result;
         }
         if (pic != null && !pic.equals("") && !pic.equals("null")) {
-            File file=new File("");
-            try{
+            File file = new File("");
+            try {
                 file = ResourceUtils.getFile("classpath:static/" + pic);
-            }
-            catch (FileNotFoundException e){
+            } catch (FileNotFoundException e) {
 
             }
             if (file.exists())
@@ -128,6 +133,26 @@ public class BookController {
         }
         result.put("result", "success");
         return result;
+    }
+
+    @RequestMapping(value = "getList")
+    @ResponseBody
+    public PageInfo<BookExt> getList(String bookname, String author, String type, int page, int pageSize) {
+        if (StringUtil.isEmpty(bookname) && StringUtil.isEmpty(author) && StringUtil.isEmpty(type)) {
+            PageHelper.startPage(page, pageSize);
+            List<BookExt> list = bookService.getAllBooks();
+            return new PageInfo<>(list);
+        }
+        if (!StringUtil.isEmpty(bookname) || !StringUtil.isEmpty(author)) {
+            PageHelper.startPage(page, pageSize);
+            List<BookExt> list = bookService.getBooksByNameOrAuthor(bookname, author);
+            return new PageInfo(list);
+        }
+        if (!StringUtil.isEmpty(type)) {
+            PageHelper.startPage(page, pageSize);
+            List<BookExt> list = bookService.getBooksByType(type);
+            return new PageInfo<>(list);
+        } else return null;
     }
 
 
@@ -167,20 +192,21 @@ public class BookController {
         return result;
     }
 
-    public void moveFileFromTemp(String fileName) throws IOException {
-        File file = ResourceUtils.getFile("classpath:static/temp" + fileName);
-        if (file.exists()) {
-            File FileDir = ResourceUtils.getFile("classpath:static/upload/1.txt");
-            File uploadFileDir = FileDir.getParentFile();
-            File targetFileDir = new File(uploadFileDir.getPath(), file.getName());
-            FileUtil.copyFile(file, targetFileDir);
-            FileUtils.forceDelete(file);
+    public void moveFileFromTemp(String fileName) {
+        File file = null;
+        try {
+            file = ResourceUtils.getFile("classpath:static/temp" + fileName);
+            if (file.exists()) {
+                File FileDir = ResourceUtils.getFile("classpath:static/upload/1.txt");
+                File uploadFileDir = FileDir.getParentFile();
+                File targetFileDir = new File(uploadFileDir.getPath(), file.getName());
+                FileUtil.copyFile(file, targetFileDir);
+                FileUtils.forceDelete(file);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
 
-    public void delFile(String fileName) throws IOException {
-        File file = ResourceUtils.getFile("classpath:static" + fileName);
-        FileUtils.forceDelete(file);
     }
 
     public File getTempFile() throws FileNotFoundException {

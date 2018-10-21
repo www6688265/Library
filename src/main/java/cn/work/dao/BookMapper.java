@@ -31,8 +31,15 @@ public interface BookMapper {
 
     int updateByPrimaryKey(Book record);
 
-    @Select("select * from book,bookloc where book.bookid=bookloc.bookid")
+    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`\n" +
+            "FROM book,bookloc,booktype\n" +
+            "WHERE book.bookid = bookloc.bookid and book.type=booktype.id")
     List<BookExt> findAllBooks();
 
     BookExt getBook(int id);
+
+    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`\n" +
+            "FROM book,bookloc,booktype\n" +
+            "WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.type=#{id}")
+    List<BookExt> getBooksByType(String id);
 }

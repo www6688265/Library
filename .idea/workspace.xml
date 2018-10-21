@@ -7,493 +7,287 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf998b0c-1ac2-45be-b660-e46964d50aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/checkout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/creditly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/easy-responsive-tabs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/flexslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/footer1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/footer2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/footer3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/footer4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/jquery-ui1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/jquery.desoslide.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/b1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/b2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/c1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/c2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/c3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/c4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/close_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/desoslide_controls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/f1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/f2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/f3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/f4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/img-sp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/l8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lib8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/loginBg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/lt8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/move-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/s1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/s2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/s3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/s5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/test2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/SmoothScroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/bootstrap-paginator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/creditly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/easy-responsive-tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/imagezoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/jquery-2.2.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/jquery.desoslide.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/jquery.flexslider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/minicart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/move-top.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/numscroller-1.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/js/scrolling-nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/BooktypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/Booktype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/BooktypeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BooktypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/errorImg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/34e556b3-817f-40cd-9f47-c64b7fb74101stock-photo-movie-watching-183764977.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/4ba27cb6-1b85-4106-95b1-2dd552fd59ce“611538315446_.pic_hd”的副.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/83e40333-70d7-4719-b0bb-b4a4414ab4dd500px218677791.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/ac0459f6-e65e-4c55-bddb-04a04795b07estock-photo-movie-watching-183764977.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/d4d39ba1-cf8a-4d54-895e-306233e883f9“701538715673_.pic_hd”的副本.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/dd95ed7c-6106-4677-9ce9-eade77f5da8cstock-photo-movie-watching-183764977.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/contactform/contactform.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/contactform/contactform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrapValidator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/bootstrapValidator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/editor.bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/editor.bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/jquery.dataTables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/jquery.dataTables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/style-responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/table-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/table-responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/to-do.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/to-do.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/zabuto_calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/zabuto_calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/404.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/404.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/500.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/500.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/apple-touch-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/blog-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/blog-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/book.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/book.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/checkbox-gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/checkbox-gray.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-07.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-08.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-09.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/friends/fr-11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/friends/fr-11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/instagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/instagram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/login-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/login-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/lorde.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/lorde.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/mask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ny.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/people.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/port06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/portfolio/port06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/product.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/product.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/profile-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/profile-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/profile-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/profile-02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/prompt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/prompt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/radio-gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/radio-gray.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ui-danro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ui-danro.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ui-divya.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ui-divya.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ui-sam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ui-sam.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ui-sherman.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ui-sherman.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ui-zac.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/ui-zac.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/warn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/warn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/weather.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/weather.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/zoom.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/img/zoom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/DT_bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/demo_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/demo_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/demo_table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/demo_table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/demo_table_jui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/demo_table_jui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/jquery.dataTables.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/jquery.dataTables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/Sorting icons.psd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/Sorting icons.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/back_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/back_disabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/back_enabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/back_enabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/back_enabled_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/back_enabled_hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/details_close.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/details_close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/details_open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/details_open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/forward_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/forward_disabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/forward_enabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/forward_enabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/forward_enabled_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/forward_enabled_hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/sort_asc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/sort_asc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/sort_asc_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/sort_asc_disabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/sort_both.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/sort_both.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/sort_desc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/sort_desc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/images/sort_desc_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/images/sort_desc_disabled.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/DT_bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/dataTables.buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/dataTables.buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/dataTables.editor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/dataTables.editor.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/dataTables.select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/dataTables.select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/dataTables.select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/dataTables.select.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-datatable/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-datatable/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/advanced-form-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-form-components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-datepicker/css/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-daterangepicker/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-daterangepicker/date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-daterangepicker/daterangepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-daterangepicker/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-daterangepicker/moment.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-datetimepicker/css/datetimepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-fileupload/bootstrap-fileupload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-fileupload/bootstrap-fileupload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-timepicker/compiled/timepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-timepicker/compiled/timepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/bootstrapValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/bootstrapValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/calendar-conf-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/calendar-conf-events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/chart-master/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/chart-master/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/chartjs-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/chartjs-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/ckeditor/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/ckeditor/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/common-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/common-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/dataTables.editor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/dataTables.editor.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/dropzone/css/dropzone.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/dropzone/css/dropzone.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/dropzone/dropzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/dropzone/dropzone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/dropzone/images/spritemap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/dropzone/images/spritemap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/dropzone/images/spritemap@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/dropzone/images/spritemap@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/easy-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/easy-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/fancybox/jquery.fancybox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/fancybox/jquery.fancybox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/fancybox/jquery.fancybox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/fancybox/jquery.fancybox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/css/jquery.fileupload-noscript.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/css/jquery.fileupload-noscript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/css/jquery.fileupload-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/css/jquery.fileupload-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/css/jquery.fileupload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/css/jquery.fileupload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/img/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/img/loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/img/progressbar.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/img/progressbar.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/cors/jquery.xdr-transport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-audio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-audio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-process.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-process.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload-video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload-video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.fileupload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.fileupload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/jquery.iframe-transport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/jquery.iframe-transport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/file-uploader/js/vendor/jquery.ui.widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.crosshair.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flot/jquery.flot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flot/jquery.flot.pie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flot/jquery.flot.resize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flot/jquery.flot.stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flot/jquery.flot.stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/flotchart-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/flotchart-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/form-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/form-component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/form-validation-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/form-validation-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/fullcalendar/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/google-maps/data/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/google-maps/data/points.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/google-maps/maplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/google-maps/maplace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/css/jquery.gritter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/css/jquery.gritter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/css/jquery.gritter0.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/css/jquery.gritter0.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/images/gritter-light.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/images/gritter-light.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/images/gritter-long.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/images/gritter-long.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/images/gritter.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/images/gritter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/images/ie-spacer.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/images/ie-spacer.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/gritter/js/jquery.gritter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/gritter/js/jquery.gritter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery-ui-1.9.2.custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery-ui-1.9.2.custom.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.backstretch.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.backstretch.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.dcjqaccordion.2.7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.nicescroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.nicescroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.scrollTo.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.scrollTo.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.sparkline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.sparkline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.tagsinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.tagsinput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery.ui.touch-punch.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery.ui.touch-punch.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/morris-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/morris-conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/morris/morris.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/morris/morris.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/php-mail-form/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/php-mail-form/loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/php-mail-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/php-mail-form/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/raphael/raphael.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/raphael/raphael.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/sparkline-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/sparkline-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/xchart/d3.v3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/xchart/d3.v3.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/xchart/xcharts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/xchart/xcharts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/xchart/xcharts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/xchart/xcharts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/zabuto_calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/lib/zabuto_calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_changePwd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_changePwd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Return.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Return.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/contactform/contactform.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrapValidator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/editor.bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/jquery.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/table-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/to-do.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/zabuto_calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/500.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/blog-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/book.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/checkbox-gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/friends/fr-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/instagram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/login-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/lorde.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/people.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/portfolio/port06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/product.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/prompt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/radio-gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ui-danro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ui-divya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ui-sam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ui-sherman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ui-zac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/warn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/weather.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_table.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/demo_table_jui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/jquery.dataTables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/Sorting icons.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/back_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/details_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/details_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/forward_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_asc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_asc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_both.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_desc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/images/sort_desc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.editor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/dataTables.select.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-datatable/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/advanced-form-components.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datepicker/css/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/date.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-daterangepicker/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-switch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-timepicker/compiled/timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/bootstrapValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/calendar-conf-events.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/chart-master/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/chartjs-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/ckeditor/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/common-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/dataTables.editor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/dropzone/css/dropzone.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/dropzone/dropzone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/dropzone/images/spritemap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/dropzone/images/spritemap@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/easy-pie-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/fancybox/jquery.fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/css/jquery.fileupload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/img/progressbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-audio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-process.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload-video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.fileupload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/jquery.iframe-transport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.crosshair.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.pie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flot/jquery.flot.stack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/flotchart-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/form-component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/form-validation-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/fullcalendar/fullcalendar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/google-maps/data/points.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/google-maps/maplace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/css/jquery.gritter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/css/jquery.gritter0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter-long.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/gritter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/images/ie-spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/gritter/js/jquery.gritter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery-ui-1.9.2.custom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.backstretch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.nicescroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.scrollTo.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.sparkline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.tagsinput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery.ui.touch-punch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/morris-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/morris/morris.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/php-mail-form/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/raphael/raphael.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/sparkline-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/tasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/xchart/d3.v3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/xchart/xcharts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/xchart/xcharts.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/zabuto_calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/dao/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BookMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/spring/config/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/ViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/TicketMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/TicketMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/interceptors/loginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/interceptors/loginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowRecService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/TicketRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/TicketRecServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/TicketRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/TicketRecService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/SpringMVCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/SpringMVCConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/SHAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/SHAUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/TicketMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/TicketMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/contactform/contactform.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/bootstrapValidator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/editor.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/table-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/to-do.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/zabuto_calendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/blog-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/checkbox-gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/instagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/lorde.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ny.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/people.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/product.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/prompt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/radio-gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-danro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-divya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sherman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-zac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/warn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/weather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/zoom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table_jui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/Sorting icons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.editor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-form-components.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/css/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/compiled/timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrapValidator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/calendar-conf-events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chart-master/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chartjs-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/ckeditor/ckeditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/common-scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dataTables.editor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/css/dropzone.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/dropzone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/easy-pie-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/progressbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-audio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-process.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.iframe-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.crosshair.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.resize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.stack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flotchart-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-validation-script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/data/points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/maplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/ie-spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/js/jquery.gritter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-ui-1.9.2.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.backstretch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.nicescroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.scrollTo.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.sparkline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.tagsinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.ui.touch-punch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris/morris.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/raphael/raphael.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/sparkline-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/tasks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/d3.v3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/zabuto_calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/c3p0-0.9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Book_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Book_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Ticket_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Ticket_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/addBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -529,7 +323,7 @@
     <session id="-982238341">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="35" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
@@ -539,69 +333,74 @@
           <entry key="project.open.time.6" value="6" />
           <entry key="project.open.time.7" value="9" />
           <entry key="project.open.time.8" value="6" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="css" value="34" />
           <entry key="dummy" value="10" />
           <entry key="html" value="20" />
-          <entry key="java" value="23760" />
+          <entry key="java" value="25611" />
           <entry key="js" value="479" />
-          <entry key="jsp" value="9620" />
-          <entry key="properties" value="220" />
+          <entry key="jsp" value="11696" />
+          <entry key="properties" value="224" />
           <entry key="sql" value="1" />
           <entry key="txt" value="55" />
-          <entry key="xml" value="1188" />
+          <entry key="xml" value="1384" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="22" />
-          <entry key="JAVA" value="23760" />
-          <entry key="JSP" value="9618" />
+          <entry key="CSS" value="34" />
+          <entry key="HTML" value="47" />
+          <entry key="JAVA" value="25611" />
+          <entry key="JSP" value="11669" />
           <entry key="JavaScript" value="479" />
           <entry key="PLAIN_TEXT" value="65" />
-          <entry key="Properties" value="220" />
+          <entry key="Properties" value="224" />
           <entry key="SQL" value="9" />
-          <entry key="XML" value="1180" />
+          <entry key="XML" value="1376" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="10" />
-          <entry key="css" value="17" />
+          <entry key="css" value="18" />
           <entry key="html" value="8" />
           <entry key="iml" value="1" />
-          <entry key="java" value="808" />
+          <entry key="java" value="857" />
           <entry key="jpeg" value="8" />
-          <entry key="js" value="30" />
-          <entry key="jsp" value="190" />
+          <entry key="jpg" value="23" />
+          <entry key="js" value="32" />
+          <entry key="jsp" value="202" />
+          <entry key="md" value="1" />
           <entry key="php" value="1" />
-          <entry key="png" value="1" />
+          <entry key="png" value="10" />
           <entry key="pom" value="2" />
-          <entry key="properties" value="30" />
+          <entry key="properties" value="32" />
           <entry key="sql" value="1" />
           <entry key="txt" value="4" />
-          <entry key="xml" value="122" />
+          <entry key="xml" value="140" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="10" />
-          <entry key="CSS" value="17" />
+          <entry key="CSS" value="18" />
           <entry key="HTML" value="8" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="9" />
-          <entry key="JAVA" value="808" />
-          <entry key="JSP" value="190" />
-          <entry key="JavaScript" value="30" />
+          <entry key="Image" value="41" />
+          <entry key="JAVA" value="857" />
+          <entry key="JSP" value="202" />
+          <entry key="JavaScript" value="32" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Properties" value="30" />
+          <entry key="Properties" value="32" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="124" />
+          <entry key="XML" value="142" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -616,12 +415,21 @@
     <favorites_list name="libraryOs" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+            <state relative-caret-position="225">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="862">
+              <caret line="301" column="113" lean-forward="true" selection-start-line="301" selection-start-column="113" selection-end-line="301" selection-end-column="113" />
             </state>
           </provider>
         </entry>
@@ -662,6 +470,11 @@
       <find>backgound</find>
       <find>href=&quot;lib</find>
       <find>src=&quot;img</find>
+      <find>mybatis</find>
+      <find>3</find>
+      <find>img</find>
+      <find>&quot;&quot;</find>
+      <find>pic</find>
     </findStrings>
     <replaceStrings>
       <replace>access</replace>
@@ -689,24 +502,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/interceptors/loginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BorrowService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/interceptors/borrowInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BARService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/AdminMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/util/Validator.java" />
@@ -718,7 +513,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Return.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_changePwd.jsp" />
@@ -731,15 +525,34 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BARServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/static/front/from.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/front/from.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/shop.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/Booktype.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BooktypeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/BooktypeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" />
       </list>
     </option>
   </component>
@@ -764,10 +577,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="806" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1012,6 +823,150 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="libraryOs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LibraryOs" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LibraryOs" type="616d4139:PackageViewModuleNode" />
+              <item name="mybatis" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -1082,140 +1037,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="libraryOs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LibraryOs" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LibraryOs" type="616d4139:PackageViewModuleNode" />
-              <item name="mybatis" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1229,7 +1050,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540031585912" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540120492400" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1240,26 +1061,26 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="cn.work.service" />
-      <recent name="cn.work.controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/front" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/work/pojo" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/work/dao" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.work.dao" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/background" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/target/classes/static/upload" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/work/pojo" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/upload" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/front/images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.work.dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.work.service" />
+      <recent name="cn.work.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1478,7 +1299,8 @@
       <workItem from="1539941214589" duration="947000" />
       <workItem from="1539942415435" duration="307000" />
       <workItem from="1539943545821" duration="4199000" />
-      <workItem from="1540028554326" duration="1779000" />
+      <workItem from="1540028554326" duration="24842000" />
+      <workItem from="1540113965945" duration="3573000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1539878728739</created>
@@ -1529,7 +1351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539950500417</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="测试">
+      <created>1540032630227</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540032630227</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1553,7 +1382,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258538000" />
+    <option name="totallyTimeSpent" value="285174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1568,7 +1397,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.24320458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1579,20 +1408,20 @@
       <window_info anchor="bottom" id="Application Servers" order="0" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49928468" weight="0.37951806" />
-      <window_info active="true" anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49713877" visible="true" weight="0.28433734" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49785408" weight="0.35903615" />
+      <window_info anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49427754" visible="true" weight="0.3421687" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" weight="0.21428572" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5028612" side_tool="true" weight="0.40963855" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50572246" side_tool="true" weight="0.3060241" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49928468" weight="0.32771084" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4985694" weight="0.32771084" />
       <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32891566" />
-      <window_info anchor="bottom" id="Problems" order="16" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Problems" order="16" sideWeight="0.49785408" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1604,6 +1433,43 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297568" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.2639485" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.20857699" side_tool="true" weight="0.2811159" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" weight="0.3297568" />
+      <window_info anchor="bottom" id="Application Servers" order="0" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49785408" weight="0.35903615" />
+      <window_info active="true" anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49427754" visible="true" weight="0.3421687" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" weight="0.21428572" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50572246" side_tool="true" weight="0.3060241" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4985694" weight="0.32771084" />
+      <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32891566" />
+      <window_info anchor="bottom" id="Problems" order="16" sideWeight="0.49785408" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297568" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1647,23 +1513,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java</url>
-          <line>134</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="borrows" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -1689,360 +1538,301 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/f4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lib4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/test2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/s1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/move-top.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/img-sp.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/s3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/desoslide_controls.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/net/PlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
+        <state relative-caret-position="152">
+          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Ticket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/BARService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="256" column="90" selection-start-line="256" selection-start-column="90" selection-end-line="256" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/background/lib/advanced-form-components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/interceptors/loginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/UserinfoExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="507" selection-start-line="507" selection-end-line="507" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/background/lib/form-validation-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="145" column="33" lean-forward="true" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="66" column="38" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Return.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="40" column="91" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/util/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/util/SHAUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1211">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="282">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/css/shop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="182">
+          <caret line="973" column="14" selection-start-line="973" selection-start-column="14" selection-end-line="973" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="132" column="41" lean-forward="true" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+        <state relative-caret-position="242">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BARServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="269">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="109" column="23" lean-forward="true" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/background/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/BooktypeExample.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/background/css/editor.bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/UserinfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#33463#33680#2" expanded="true" />
-            <element signature="e#33784#34001#2" expanded="true" />
-            <element signature="e#34078#34315#2" expanded="true" />
-            <element signature="e#34394#34631#2" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="62" />
+        <state relative-caret-position="184">
+          <caret line="260" column="72" selection-start-line="260" selection-start-column="72" selection-end-line="260" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_changePwd.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="-3284" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Booktype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/BooktypeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+        <state relative-caret-position="376">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BooktypeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="316">
+          <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="133" column="49" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="49" />
+        <state relative-caret-position="211">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/css/shop.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        <state relative-caret-position="199">
+          <caret line="419" column="77" selection-start-line="419" selection-start-column="77" selection-end-line="419" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="294" column="9" lean-forward="true" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+          <folding>
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1579#1580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="101" column="26" lean-forward="true" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3339#3348#0" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3627#3628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="301" column="113" lean-forward="true" selection-start-line="301" selection-start-column="113" selection-end-line="301" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1631">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/BookExt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BooklocMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4170">
+          <caret line="278" column="22" selection-start-line="278" selection-start-column="22" selection-end-line="278" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+        <state relative-caret-position="225">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

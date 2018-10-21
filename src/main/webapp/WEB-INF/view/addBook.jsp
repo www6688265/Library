@@ -119,7 +119,9 @@
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">类型</label>
                                 <div class="col-sm-10">
-                                    <input type="text" id="type" name="type" class="form-control">
+                                    <select id="type" name="type" class="form-control">
+
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -252,6 +254,13 @@
         }
     })();
     $(document).ready(function() {
+        $.ajax({
+            url: "/book/getAllTypes",
+            success: function (data) {
+                for (var type of data)
+                    $("#type").append(`<option value=` + type.id + `>` + type.type + `</option>`)
+            }
+        });
         $("#save").click(function () {
 
             $("#addBookForm").ajaxSubmit({

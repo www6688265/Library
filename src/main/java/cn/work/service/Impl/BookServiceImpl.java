@@ -2,15 +2,15 @@ package cn.work.service.Impl;
 
 import cn.work.dao.BookMapper;
 import cn.work.dao.BooklocMapper;
+import cn.work.dao.BooktypeMapper;
 import cn.work.dao.BorrowMapper;
 import cn.work.pojo.*;
 import cn.work.service.BookService;
-import org.junit.jupiter.api.Test;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.util.StringUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 @Service(value = "BookService")
@@ -24,6 +24,9 @@ public class BookServiceImpl implements BookService {
 
     @Resource
     BorrowMapper borrowMapper;
+
+    @Resource
+    BooktypeMapper booktypeMapper;
 
     @Override
     public void addBook(Book book, Bookloc bookloc) {
@@ -46,8 +49,12 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<BookExt> getAllBooks() {
-        List<BookExt> list=bookMapper.findAllBooks();
-        return list;
+        return bookMapper.findAllBooks();
+    }
+
+    @Override
+    public List<BookExt> getBooksByType(String type) {
+        return bookMapper.getBooksByType(type);
     }
 
     @Override
@@ -60,6 +67,7 @@ public class BookServiceImpl implements BookService {
         BookExt bookExt=bookMapper.getBook(id);
         return bookExt;
     }
+
 
     @Override
     public void delBook(int id) throws Exception {
@@ -83,6 +91,25 @@ public class BookServiceImpl implements BookService {
             return list.get(0);
         else
             return null;
+    }
+
+    @Override
+    public List<BookExt> getBooksByNameOrAuthor(String name, String author) {
+        BookExample example = new BookExample();
+        if (!StringUtil.isEmpty(name)) {
+            example.createCriteria().andBooknameLike("%" + name + "%");
+        }
+        if (!StringUtil.isEmpty(author)) {
+            example.createCriteria().andAuthorLike("%" + author + "%");
+        }
+        List<BookExt> list = (List<BookExt>) (Object) bookMapper.selectByExample(example);
+
+        return list;
+    }
+
+    @Override
+    public List<Booktype> getAllTypes() {
+        return booktypeMapper.getAllTypes();
     }
 
 
