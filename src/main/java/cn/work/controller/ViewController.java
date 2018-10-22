@@ -73,4 +73,14 @@ public class ViewController {
     public String BookInfo() {
         return "BookInfo";
     }
+
+    @RequestMapping("UserLogin")
+    public String userLogin() {
+        return "UserLogin";
+    }
+
+    @RequestMapping("profile")
+    public String profile() {
+        return "profile";
+    }
 }

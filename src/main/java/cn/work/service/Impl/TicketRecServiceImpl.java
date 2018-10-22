@@ -23,8 +23,7 @@ public class TicketRecServiceImpl implements TicketRecService {
 
     @Override
     public List<TicketExt> getAllTicketRec() {
-        List<TicketExt> list=ticketMapper.getAllTicketRec();
-        return  list;
+        return ticketMapper.getAllTicketRec();
     }
 
     @Override
@@ -45,6 +44,11 @@ public class TicketRecServiceImpl implements TicketRecService {
     @Override
     public void addTicketRec(Ticket ticket) {
         ticketMapper.insertSelective(ticket);
+    }
+
+    @Override
+    public List<TicketExt> getTicketByUserId(String id) {
+        return ticketMapper.getTicketByUserId(Integer.parseInt(id));
     }
 
 

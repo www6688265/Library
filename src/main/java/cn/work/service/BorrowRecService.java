@@ -11,4 +11,8 @@ public interface BorrowRecService {
     void delBorrowRec(String id);
 
     List<Borrow> getNotReturnRec(String userid);
+
+    List<BorrowExt> getBorrowRecByUserID(String userid);
+
+    boolean renewBorrow(String orderid);
 }

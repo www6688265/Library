@@ -12,11 +12,11 @@
     <!-- Favicons -->
     <link href="background/img/favicon.png" rel="icon">
     <link href="background/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="background/css/editor.bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css"/>
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">

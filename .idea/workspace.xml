@@ -7,287 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf998b0c-1ac2-45be-b660-e46964d50aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/BooktypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/Booktype.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/BooktypeExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BooktypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/front/images/errorImg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/34e556b3-817f-40cd-9f47-c64b7fb74101stock-photo-movie-watching-183764977.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/4ba27cb6-1b85-4106-95b1-2dd552fd59ce“611538315446_.pic_hd”的副.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/83e40333-70d7-4719-b0bb-b4a4414ab4dd500px218677791.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/ac0459f6-e65e-4c55-bddb-04a04795b07estock-photo-movie-watching-183764977.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/d4d39ba1-cf8a-4d54-895e-306233e883f9“701538715673_.pic_hd”的副本.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/upload/dd95ed7c-6106-4677-9ce9-eade77f5da8cstock-photo-movie-watching-183764977.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/interceptors/userLoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/work/pojo/UserExt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/TicketRecController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/TicketRecController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/background/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/background/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/front/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/front/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/BorrowRecController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/BorrowRecController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/TicketRecController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/TicketRecController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/work/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/dao/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BookMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/spring/config/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/dao/BorrowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/BorrowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/dao/TicketMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/TicketMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/BorrowRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/BorrowRecService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/TicketRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/TicketRecServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/TicketRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/TicketRecService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/work/spring/config/SpringMVCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/work/spring/config/SpringMVCConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BorrowMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BorrowMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TicketMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TicketMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/BorrowController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/AdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/TicketMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/dao/TicketMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/interceptors/loginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/interceptors/loginInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowRecService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/BorrowService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowRecServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/BorrowServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/TicketRecServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/TicketRecServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/TicketRecService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/TicketRecService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/LibraryApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/MyBatisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/SpringMVCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/spring/config/SpringMVCConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/SHAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/SHAUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/cn/work/util/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/TicketMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mapper/TicketMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/contactform/contactform.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/bootstrapValidator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/editor.bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/jquery.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/table-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/to-do.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/css/zabuto_calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/500.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/blog-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/book.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/checkbox-gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/friends/fr-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/instagram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/login-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/lorde.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/people.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/portfolio/port06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/product.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/profile-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/prompt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/radio-gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-danro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-divya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-sherman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/ui-zac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/warn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/weather.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/img/zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/DT_bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/demo_table_jui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/Sorting icons.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/back_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/details_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/forward_enabled_hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_asc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_both.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/images/sort_desc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/DT_bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.editor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/dataTables.select.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-datatable/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/advanced-form-components.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/css/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/date.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-daterangepicker/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/css/datetimepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-fileupload/bootstrap-fileupload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-switch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/compiled/timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/bootstrapValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/calendar-conf-events.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chart-master/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/chartjs-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/ckeditor/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/common-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dataTables.editor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/css/dropzone.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/dropzone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/dropzone/images/spritemap@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/easy-pie-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fancybox/jquery.fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/css/jquery.fileupload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/img/progressbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/cors/jquery.xdr-transport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-audio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-process.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload-video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.fileupload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/jquery.iframe-transport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/file-uploader/js/vendor/jquery.ui.widget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.crosshair.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.pie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flot/jquery.flot.stack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/flotchart-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/form-validation-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/bootstrap-fullcalendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/fullcalendar/fullcalendar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/data/points.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/google-maps/maplace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/css/jquery.gritter0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter-long.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/gritter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/images/ie-spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/gritter/js/jquery.gritter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery-ui-1.9.2.custom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.backstretch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.nicescroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.scrollTo.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.sparkline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.tagsinput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery.ui.touch-punch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris-conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/morris/morris.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/php-mail-form/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/raphael/raphael.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/sparkline-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/tasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/d3.v3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/xchart/xcharts.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/lib/zabuto_calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff0067ab-6e1b-4a8a-a9d0-e112496b35b6“611538315446_.pic_hd”的副.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/classes/static/upload/ff2be022-8f58-4347-8ea7-cd5a0f2b50d9“701538715673_.pic_hd”的副本.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/c3p0-0.9.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Book_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Book_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Borrow_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Ticket_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/Ticket_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/User_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/addBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/libraryOs/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -339,42 +108,42 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="34" />
+          <entry key="css" value="118" />
           <entry key="dummy" value="10" />
           <entry key="html" value="20" />
-          <entry key="java" value="25611" />
+          <entry key="java" value="27361" />
           <entry key="js" value="479" />
-          <entry key="jsp" value="11696" />
+          <entry key="jsp" value="13472" />
           <entry key="properties" value="224" />
           <entry key="sql" value="1" />
           <entry key="txt" value="55" />
-          <entry key="xml" value="1384" />
+          <entry key="xml" value="1502" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="34" />
+          <entry key="CSS" value="118" />
           <entry key="HTML" value="47" />
-          <entry key="JAVA" value="25611" />
-          <entry key="JSP" value="11669" />
+          <entry key="JAVA" value="27361" />
+          <entry key="JSP" value="13445" />
           <entry key="JavaScript" value="479" />
           <entry key="PLAIN_TEXT" value="65" />
           <entry key="Properties" value="224" />
           <entry key="SQL" value="9" />
-          <entry key="XML" value="1376" />
+          <entry key="XML" value="1494" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="10" />
-          <entry key="css" value="18" />
+          <entry key="css" value="25" />
           <entry key="html" value="8" />
           <entry key="iml" value="1" />
-          <entry key="java" value="857" />
+          <entry key="java" value="906" />
           <entry key="jpeg" value="8" />
           <entry key="jpg" value="23" />
           <entry key="js" value="32" />
-          <entry key="jsp" value="202" />
+          <entry key="jsp" value="228" />
           <entry key="md" value="1" />
           <entry key="php" value="1" />
           <entry key="png" value="10" />
@@ -382,25 +151,25 @@
           <entry key="properties" value="32" />
           <entry key="sql" value="1" />
           <entry key="txt" value="4" />
-          <entry key="xml" value="140" />
+          <entry key="xml" value="145" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="10" />
-          <entry key="CSS" value="18" />
+          <entry key="CSS" value="25" />
           <entry key="HTML" value="8" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="41" />
-          <entry key="JAVA" value="857" />
-          <entry key="JSP" value="202" />
+          <entry key="JAVA" value="906" />
+          <entry key="JSP" value="228" />
           <entry key="JavaScript" value="32" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="32" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="142" />
+          <entry key="XML" value="147" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -415,21 +184,57 @@
     <favorites_list name="libraryOs" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="4272">
+              <caret line="310" column="7" lean-forward="true" selection-start-line="310" selection-start-column="7" selection-end-line="310" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="65" column="24" lean-forward="true" selection-start-line="65" selection-start-column="24" selection-end-line="69" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="862">
-              <caret line="301" column="113" lean-forward="true" selection-start-line="301" selection-start-column="113" selection-end-line="301" selection-end-column="113" />
+            <state relative-caret-position="206">
+              <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserLogin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -475,6 +280,9 @@
       <find>img</find>
       <find>&quot;&quot;</find>
       <find>pic</find>
+      <find>edit</find>
+      <find>contact</find>
+      <find>UserLogin</find>
     </findStrings>
     <replaceStrings>
       <replace>access</replace>
@@ -489,6 +297,8 @@
       <replace>background</replace>
       <replace>href=&quot;background/lib</replace>
       <replace>src=&quot;background/img</replace>
+      <replace>edit</replace>
+      <replace>profile</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/cn/work/pojo</dir>
@@ -502,38 +312,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/util/Validator.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/lib/form-validation-script.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/changAdminPwd.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/User_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Return.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_changePwd.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/util/SHAUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BARServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/static/front/from.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/front/from.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontindex.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/shop.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/front/css/shop.css" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java" />
@@ -547,12 +331,38 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BooktypeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/BooktypeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BookService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/UserExt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/front/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/background/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/TicketRecController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/profile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/pojo/Profile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/interceptors/userInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserLogin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp" />
       </list>
     </option>
   </component>
@@ -886,33 +696,6 @@
               <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="work" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -929,7 +712,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
@@ -938,6 +721,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryOs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libraryOs" type="b2602c69:ProjectViewProjectNode" />
@@ -1048,9 +842,10 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/UserServiceImpl.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540120492400" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540195688726" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1070,10 +865,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/front/css" />
       <recent name="$PROJECT_DIR$/src/main/java/cn/work/pojo" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/upload" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/front/images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.work.dao" />
@@ -1300,7 +1095,7 @@
       <workItem from="1539942415435" duration="307000" />
       <workItem from="1539943545821" duration="4199000" />
       <workItem from="1540028554326" duration="24842000" />
-      <workItem from="1540113965945" duration="3573000" />
+      <workItem from="1540113965945" duration="23573000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1539878728739</created>
@@ -1358,7 +1153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540032630227</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="测试">
+      <created>1540120820994</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1540120820994</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1382,7 +1184,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285174000" />
+    <option name="totallyTimeSpent" value="305174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1409,13 +1211,13 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49785408" weight="0.35903615" />
-      <window_info anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49427754" visible="true" weight="0.3421687" />
+      <window_info anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49356222" visible="true" weight="0.38795182" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" weight="0.21428572" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50572246" side_tool="true" weight="0.3060241" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5064378" side_tool="true" weight="0.43253013" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32891566" />
@@ -1434,7 +1236,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297568" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.2639485" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.791423" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1446,13 +1248,13 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49785408" weight="0.35903615" />
-      <window_info active="true" anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49427754" visible="true" weight="0.3421687" />
+      <window_info anchor="bottom" x="17" y="338" width="1398" height="267" id="Debug" order="4" sideWeight="0.49356222" weight="0.38795182" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" weight="0.21428572" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50572246" side_tool="true" weight="0.3060241" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5064378" side_tool="true" weight="0.43253013" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32891566" />
@@ -1538,158 +1340,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/f4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l5.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/l8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lib4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/lt1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/test2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/t1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/s1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/move-top.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/img-sp.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/s3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/images/desoslide_controls.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/net/PlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/css/shop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="973" column="14" selection-start-line="973" selection-start-column="14" selection-end-line="973" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/MyBatisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/BooktypeExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/UserinfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/addBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="260" column="72" selection-start-line="260" selection-start-column="72" selection-end-line="260" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3284" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Booktype.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1715,16 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="419" column="77" selection-start-line="419" selection-start-column="77" selection-end-line="419" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1775,41 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="301" column="113" lean-forward="true" selection-start-line="301" selection-start-column="113" selection-end-line="301" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1631">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/BookExt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1822,17 +1427,315 @@
         <state relative-caret-position="-2516" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4170">
-          <caret line="278" column="22" selection-start-line="278" selection-start-column="22" selection-end-line="278" selection-end-column="22" />
+        <state relative-caret-position="417">
+          <caret line="65" column="11" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="65" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/UserExt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#118#119#0" expanded="true" />
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="466">
+          <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+          <folding>
+            <element signature="e#1539#1540#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/front/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="3894" column="16" lean-forward="true" selection-start-line="3894" selection-start-column="16" selection-end-line="3894" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Book_table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="305" column="20" selection-start-line="305" selection-start-column="20" selection-end-line="305" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Ticket_table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="186" column="4" lean-forward="true" selection-start-line="186" selection-start-column="4" selection-end-line="291" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/background/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="3413" selection-start-line="3413" selection-end-line="3413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/BorrowMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BorrowMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="243" column="34" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/ReturnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BARServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/LibraryConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowRecController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/BorrowRecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/TicketRecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="159" column="15" lean-forward="true" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/dao/TicketMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="299" column="35" lean-forward="true" selection-start-line="299" selection-start-column="35" selection-end-line="299" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/TicketRecController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="50" column="68" lean-forward="true" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+          <folding>
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/BorrowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/pojo/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="175" column="52" selection-start-line="175" selection-start-column="52" selection-end-line="175" selection-end-column="52" />
+          <folding>
+            <element signature="e#4762#4763#0" expanded="true" />
+            <element signature="e#4821#4822#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admin_table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/spring/config/SpringMVCConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/interceptors/userLoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/interceptors/loginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/work/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Borrow_table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4272">
+          <caret line="310" column="7" lean-forward="true" selection-start-line="310" selection-start-column="7" selection-end-line="310" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/frontIndex.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="65" column="24" lean-forward="true" selection-start-line="65" selection-start-column="24" selection-end-line="69" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
         </state>
       </provider>
     </entry>

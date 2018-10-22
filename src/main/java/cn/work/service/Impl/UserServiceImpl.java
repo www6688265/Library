@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
+import static cn.work.spring.config.LibraryConfig.initPassword;
 import static cn.work.spring.config.LibraryConfig.limitBorrowNum;
 import static cn.work.util.SHAUtil.getEncrypt;
 
@@ -48,7 +49,7 @@ public class UserServiceImpl implements UserService {
         userinfoMapper.insertSelective(userinfo);
         User user = new User();
         user.setUserid(userinfo.getUserid());
-        user.setPassword(getEncrypt("88888888"));
+        user.setPassword(getEncrypt(initPassword));
         userMapper.insert(user);
         return true;
     }
@@ -117,6 +118,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
+
     @Override
     public Userinfo updateUser(Userinfo userinfo) {
         UserinfoExample example=new UserinfoExample();
@@ -153,6 +155,26 @@ public class UserServiceImpl implements UserService {
             sum+=fee;
         }
         return sum;
+    }
+
+    @Override
+    public UserExt getUserAndPwdByID(String idcard) {
+        return userMapper.getUserAndPwdByID(idcard);
+    }
+
+    @Override
+    public Profile getProfile(String id) {
+        Profile profile = new Profile();
+        Userinfo user = userinfoMapper.selectByPrimaryKey(Integer.parseInt(id));
+        profile.setAccess(user.getAccess());
+        profile.setIdcard(user.getIdcard());
+        profile.setUsername(user.getUsername());
+        profile.setSex(user.getSex());
+        profile.setOverDueNum(getOverDueNum(id));
+        profile.setNotReturnNum(getNotReturnNum(id));
+        profile.setUserFee(getUserFee(id));
+        profile.setAccessDetail(getAccessDetail(id));
+        return profile;
     }
 
 

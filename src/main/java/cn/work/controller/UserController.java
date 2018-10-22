@@ -1,5 +1,7 @@
 package cn.work.controller;
 
+import cn.work.pojo.Profile;
+import cn.work.pojo.UserExt;
 import cn.work.pojo.Userinfo;
 import cn.work.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
+import static cn.work.util.SHAUtil.getEncrypt;
 import static cn.work.util.Validator.userValidator;
 
 @Controller
@@ -18,6 +22,43 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    @RequestMapping("login")
+    @ResponseBody
+    public Map<String, Object> login(UserExt user, HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        String pwd = "";
+        if (user != null) {
+            UserExt va_user = userService.getUserAndPwdByID(user.getIdcard());
+            if (va_user != null) {
+                pwd = getEncrypt(user.getPassword());
+            } else {
+                result.put("result", "找不到用户名！");
+                return result;
+            }
+            if (va_user.getPassword().equals(pwd)) {
+                request.getSession().setAttribute("userid", va_user.getUserid());
+                result.put("result", "success");
+                return result;
+            } else {
+                result.put("result", "密码错误！");
+                return result;
+            }
+        } else {
+            result.put("result", "未输入信息！");
+            return result;
+        }
+    }
+
+    @RequestMapping("logOut")
+    public String logOut(HttpServletRequest request) {
+        Integer userid = (Integer) request.getSession().getAttribute("userid");
+        if (userid != null && !userid.equals("")) {
+            request.getSession().removeAttribute("userid");
+            return "redirect:/UserLogin";
+        } else
+            return "redirect:/UserLogin";
+    }
 
     @RequestMapping(value = "getAllUsers")
     @ResponseBody
@@ -115,5 +156,12 @@ public class UserController {
             result.put("data", userlist);
             return result;
         }
+    }
+
+    @RequestMapping(value = "getProfile")
+    @ResponseBody
+    public Profile getProfile(String userid) {
+        Profile profile = userService.getProfile(userid);
+        return profile;
     }
 }

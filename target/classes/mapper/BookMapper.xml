@@ -288,8 +288,8 @@
     where bookID = #{bookid,jdbcType=INTEGER}
   </update>
   <select id="getBook" resultType="cn.work.pojo.BookExt" parameterType="java.lang.Integer" >
-    select *
-    from Book,Bookloc
-    where book.bookID = #{id} and book.bookid=bookloc.bookid
+    SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`
+            FROM book,bookloc,booktype
+            WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.bookid=#{id}
   </select>
 </mapper>

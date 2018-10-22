@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.work.dao.TicketMapper" >
-  <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket" >
-    <id column="TicketId" property="ticketid" jdbcType="INTEGER" />
+    <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket" >
+        <id column="TicketId" property="ticketid" jdbcType="INTEGER" />
     <result column="orderId" property="orderid" jdbcType="INTEGER" />
     <result column="overdueTime" property="overduetime" jdbcType="INTEGER" />
     <result column="fee" property="fee" jdbcType="DOUBLE" />
@@ -276,4 +276,28 @@ WHERE
 	AND a.orderid = ticket.orderid
 	AND a.userid = #{id};
     </update>
+    <select id="getTicketByUserId" parameterType="java.lang.Integer" resultMap="TicketAndBorrowMap">
+    SELECT
+	ticket.TicketId,
+	userinfo.username,
+	book.bookname,
+	borrow.BorrowTime,
+	borrow.ReturnTime,
+	borrow.LimitTime,
+	ticket.overdueTime,
+	ticket.fee,
+	ticket.STATUS
+FROM
+	user,
+	userinfo,
+	borrow,
+	ticket,
+	book
+WHERE
+	userinfo.userID = borrow.userID
+	AND book.bookID = borrow.BookID
+	AND ticket.orderId = borrow.orderId
+	AND userinfo.userID=user.userID
+	AND user.userid=#{id}
+    </select>
 </mapper>

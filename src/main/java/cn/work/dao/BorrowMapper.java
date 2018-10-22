@@ -31,4 +31,6 @@ public interface BorrowMapper {
     int updateByPrimaryKey(Borrow record);
 
     List<BorrowExt> getAllBorrowRec();
+
+    List<BorrowExt> getBorrowRecByUserID(int id);
 }

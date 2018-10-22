@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,5 +36,25 @@ public class BorrowRecController {
         return result;
     }
 
+    @RequestMapping(value = "getBorrowRecByUserID")
+    @ResponseBody
+    public Map getBorrowRecByUserID(String id) {
+        Map<String, Object> result = new HashMap<>();
+        List<BorrowExt> borrowList = borrowService.getBorrowRecByUserID(id);
+        result.put("data", borrowList);
+        return result;
+    }
 
+    @RequestMapping(value = "renew")
+    @ResponseBody
+    public Map renew(String orderid) {
+        Map<String, Object> result = new HashMap<>();
+        boolean done = borrowService.renewBorrow(orderid);
+        if (done) {
+            result.put("result", "success");
+        } else {
+            result.put("msg", "以达到最大续借时长");
+        }
+        return result;
+    }
 }

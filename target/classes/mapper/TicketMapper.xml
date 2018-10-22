@@ -276,4 +276,28 @@ WHERE
 	AND a.orderid = ticket.orderid
 	AND a.userid = #{id};
     </update>
+    <select id="getTicketByUserId" parameterType="java.lang.Integer" resultMap="TicketAndBorrowMap">
+    SELECT
+	ticket.TicketId,
+	userinfo.username,
+	book.bookname,
+	borrow.BorrowTime,
+	borrow.ReturnTime,
+	borrow.LimitTime,
+	ticket.overdueTime,
+	ticket.fee,
+	ticket.STATUS
+FROM
+	user,
+	userinfo,
+	borrow,
+	ticket,
+	book
+WHERE
+	userinfo.userID = borrow.userID
+	AND book.bookID = borrow.BookID
+	AND ticket.orderId = borrow.orderId
+	AND userinfo.userID=user.userID
+	AND user.userid=#{id}
+    </select>
 </mapper>

@@ -13,4 +13,7 @@ public interface TicketRecService {
     void dealTicketByUserid(String id);
 
     void addTicketRec(Ticket ticket);
+
+    List<TicketExt> getTicketByUserId(String id);
+
 }

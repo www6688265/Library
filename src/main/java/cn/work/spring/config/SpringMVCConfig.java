@@ -1,6 +1,7 @@
 package cn.work.spring.config;
 
 import cn.work.interceptors.loginInterceptor;
+import cn.work.interceptors.userLoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.format.datetime.DateFormatter;
@@ -23,6 +24,8 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/User_table")
                 .addPathPatterns("/admin/*")
                 .excludePathPatterns("/admin/login");
+
+        registry.addInterceptor(new userLoginInterceptor()).addPathPatterns("/profile");
     }
 
     public void addFormatters(FormatterRegistry registry) {

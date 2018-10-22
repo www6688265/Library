@@ -241,4 +241,22 @@
 	borrow.userid = userinfo.userID and
 	borrow.BookID=book.bookID
   </select>
+  <select id="getBorrowRecByUserID" resultType="cn.work.pojo.BorrowExt" parameterType="java.lang.Integer">
+    SELECT
+    userinfo.username,
+	book.bookName,
+	orderid,
+	BorrowTime,
+	ReturnTime,
+	LimitTime
+	FROM
+	userinfo,
+	book,
+	borrow
+	WHERE
+	borrow.userid = userinfo.userID and
+	borrow.BookID=book.bookID and
+	userinfo.userid=#{id}
+  </select>
+
 </mapper>

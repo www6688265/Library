@@ -1,5 +1,7 @@
 package cn.work.service;
 
+import cn.work.pojo.Profile;
+import cn.work.pojo.UserExt;
 import cn.work.pojo.Userinfo;
 
 import java.util.List;
@@ -24,5 +26,9 @@ public interface UserService {
     Userinfo getUserByIDcard(String idcard);
 
     double getUserFee(String id);
+
+    UserExt getUserAndPwdByID(String idcard);
+
+    Profile getProfile(String id);
 
 }

@@ -3409,6 +3409,75 @@ ul.chat-available-user li a:hover {
   margin: 15px 0;
 }
 
+#edit {
+    padding: 40px 0;
+}
+
+.edit-form label {
+    color: #999;
+}
+
+.edit-form input, .edit-form textarea {
+    padding: 10px 12px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
+}
+
+.edit-form .form-send {
+    text-align: center;
+}
+
+.edit-form .form-send button {
+    background: #18d26e;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.edit-form .form-send button:hover {
+    background: #13a456;
+}
+
+.edit-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.edit-form .loading {
+    display: none;
+    color: #555;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.edit-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.edit-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px 0;
+}
 /* Copyrights */
 
 #copyrights {

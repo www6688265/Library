@@ -38,4 +38,13 @@ public class TicketRecController {
         return result;
 
     }
+
+    @RequestMapping(value = "getTicket")
+    @ResponseBody
+    public Map<String, Object> getTicket(String userid) {
+        Map<String, Object> result = new HashMap<>();
+        List<TicketExt> list = ticketRecService.getTicketByUserId(userid);
+        result.put("data", list);
+        return result;
+    }
 }

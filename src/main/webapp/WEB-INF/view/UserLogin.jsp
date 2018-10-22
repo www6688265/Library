@@ -102,20 +102,6 @@
             <!-- /.container -->
         </div>
     </nav>
-    <!-- //navbar ends here -->
-    <!-- banner -->
-    <div class="banner-bg-inner">
-        <!-- banner-text -->
-        <div class="banner-text-inner">
-            <div class="container">
-                <h2 class="title-inner">
-                    图书信息
-                </h2>
-
-            </div>
-        </div>
-        <!-- //banner-text -->
-    </div>
     <!-- //banner -->
     <!-- breadcrumbs -->
     <div class="crumbs text-center">
@@ -128,96 +114,92 @@
                         </a>
                     </li>
                     <li class="btn btn2">
-                        <a href="${pageContext.request.contextPath}/BookList">所有图书</a>
-                    </li>
-                    <li class="btn btn3" id="typeNav">
-
+                        <a href="${pageContext.request.contextPath}/profile">登录与注册</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <!--//breadcrumbs ends here-->
-    <!-- Single -->
-    <div class="innerf-pages section">
+    <!-- signin and signup form -->
+    <div class="login-form section text-center">
         <div class="container">
-            <div class="col-md-4 single-right-left ">
-                <div class="grid images_3_of_2">
-                    <div class="flexslider1">
-                        <div class="thumb-image" id="pic">
+            <h4 class="rad-txt">
+                <span class="abtxt1">登录</span>
+            </h4>
+            <div id="loginbox" style="margin-top:30px;" class="mainbox  loginbox">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">登录</div>
+                    </div>
+                    <div style="padding-top:30px" class="panel-body">
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                        <form id="loginform" class="form-horizontal" method="post">
+                            <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                <input id="login-username" type="text" class="form-control" name="idcard"
+                                       placeholder="身份证" required="">
+                            </div>
 
-                        </div>
-                        <div class="clearfix"></div>
+                            <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-lock"></i>
+                                    </span>
+                                <input id="login-password" type="password" class="form-control" name="password"
+                                       placeholder="密码" required="">
+                            </div>
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+                                <div class="col-sm-12 controls">
+                                    <button type="button" id="btn-login" class="btn btn-success">登录</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                        没有账号？
+                                        <span>
+                                            请携带身份证至图书馆注册账号
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 single-right-left simpleCart_shelfItem">
-                <h3 id="bookname">书名：
-                </h3>
-                <p>作者
-                    <a id="author"></a>
-                </p>
-
-                <div class="desc_single">
-                    <h5>图书简介</h5>
-                    <p id="brief"></p>
-                </div>
-                <div class="occasional">
-                    <h5>详细信息</h5>
-                    <ul class="single_specific">
-                        <li id="press">
-                            <span>出版社 : </span>
-                        </li>
-                        <li id="type">
-                            <span>类型 : </span>
-                        </li>
-                        <li id="total">
-                            <span>库存 : </span>
-                        </li>
-                        <li id="left">
-                            <span>剩余 : </span>
-                        </li>
-                        <li id="isbn">
-                            <span>isbn编号 : </span>
-                        </li>
-                        <li id="loc">
-                            <span>位置 : </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </div>
-    <!--// Single -->
-    <!-- footer -->
-    <!-- //footer -->
-    <div class="cpy-right">
-        <p>© 2018 Chronicle. All rights reserved | Design by
-            <a href="http://w3layouts.com"> W3layouts.</a>
-        </p>
-    </div>
 </div>
+</div>
+<!--//signin and signup form ends here-->
+<!-- //footer -->
 <!-- //home -->
-<!-- Common js -->
+<!-- js -->
 <script src="front/js/jquery-2.2.3.min.js"></script>
-<!--// Common js -->
-<!-- zoom -->
-<script src="front/js/imagezoom.js"></script>
-<!-- zoom-->
-<!-- single -->
-<!-- FlexSlider -->
-<script src="front/js/jquery.flexslider.js"></script>
+<!-- //js -->
+<!--search jQuery-->
+<script src="front/js/main.js"></script>
+<!--search jQuery-->
+<!-- cart-js -->
+<script src="front/js/minicart.js"></script>
 <script>
-    // Can also be used with $(document).ready()
-    $(window).load(function () {
-        $('.flexslider1').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails"
-        });
+    chr.render();
+
+    chr.cart.on('new_checkout', function (evt) {
+        var items, len, i;
+
+        if (this.subtotal() > 0) {
+            items = this.items();
+
+            for (i = 0, len = items.length; i < len; i++) {
+            }
+        }
     });
 </script>
-<!-- //FlexSlider-->
+<!-- //cart-js -->
 
 <!-- dropdown nav -->
 <script>
@@ -235,61 +217,56 @@
     });
 </script>
 <!-- //dropdown nav -->
-<!--search jQuery-->
-<script src="front/js/main.js"></script>
-<!--search jQuery-->
 
 <!-- Scrolling Nav JavaScript -->
 <script src="front/js/scrolling-nav.js"></script>
 <!-- //fixed-scroll-nav-js -->
-<!--//scripts-->
-<script src="front/js/bootstrap.js"></script>
-<!-- start-smoth-scrolling -->
+<!-- start-smooth-scrolling -->
 <script src="front/js/move-top.js"></script>
 <script src="front/js/easing.js"></script>
 <script>
     jQuery(document).ready(function ($) {
         $(".scroll").click(function (event) {
             event.preventDefault();
+
             $('html,body').animate({
                 scrollTop: $(this.hash).offset().top
             }, 1000);
         });
     });
 </script>
-<!-- start-smoth-scrolling -->
-<!-- here stars scrolling icon -->
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
 <script>
     $(document).ready(function () {
         $().UItoTop({
             easingType: 'easeOutQuart'
         });
 
+        $("#btn-login").click(function () {
+            $.ajax({
+                url: "/user/login",
+                type: "POST",
+                dataType: "json",
+                data: $("#loginform").serialize(),
+                success: function (data) {
+                    if (data.result == "success") {
+                        alert("登录成功");
+                        window.location.href = "${pageContext.request.contextPath}/frontIndex";
+                    }
+                    else {
+                        alert(data.result);
+                    }
+                },
+                error: function () {
+                    alert("网络出现问题！");
+                }
+            })
+        });
     });
 </script>
-<!-- //here ends scrolling icon -->
-<!-- smoothscroll -->
 <script src="front/js/SmoothScroll.min.js"></script>
-<!-- //smoothscroll -->
-<script>
-    $(document).ready(function () {
-        $.ajax({
-            url: "/book/getBook?id=" +${param.bookid},
-            success: function (data) {
-                $("#typeNav").append(data.type);
-                $("#bookname").append("《" + data.bookname + "》");
-                $("#author").append(data.author);
-                $("#press").append(data.press);
-                $("#type").append(data.type);
-                $("#left").append(data.left);
-                $("#brief").append(data.brief);
-                $("#total").append(data.total);
-                $("#isbn").append(data.isbn);
-                $("#loc").append(data.floor + "楼，第" + data.bookcase + "个书架，第" + data.level + "层");
-                $("#pic").append(`<img src="` + data.pic + `" data-imagezoom="true" class="img-responsive" onerror="this.src='/front/images/errorImg.jpg'">`);
-            }
-        })
-    });
-</script>
+<script src="front/js/bootstrap.js"></script>
 </body>
+
 </html>

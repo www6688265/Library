@@ -70,8 +70,13 @@
                         <li>
                             <a href="${pageContext.request.contextPath}/BookList">所有图书</a>
                         </li>
+                        <c:if test="${!empty userid}">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/user/logOut">退出登录</a>
+                            </li>
+                        </c:if>
                         <li>
-                            <a href="${pageContext.request.contextPath}/UserLogin" title="SignIn & SignUp">
+                            <a href="${pageContext.request.contextPath}/profile" title="SignIn & SignUp">
                                 <span class="fa fa-user nav-icon" aria-hidden="true"></span>
                             </a>
                         </li>

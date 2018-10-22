@@ -39,4 +39,6 @@ public interface TicketMapper {
     Double[] getUserFee(int id);
 
     void dealTicketByUserid(int id);
+
+    List<TicketExt> getTicketByUserId(int id);
 }
