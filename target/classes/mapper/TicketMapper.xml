@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.work.dao.TicketMapper" >
-  <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket" >
-    <id column="TicketId" property="ticketid" jdbcType="INTEGER" />
+    <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket" >
+        <id column="TicketId" property="ticketid" jdbcType="INTEGER" />
     <result column="orderId" property="orderid" jdbcType="INTEGER" />
     <result column="overdueTime" property="overduetime" jdbcType="INTEGER" />
     <result column="fee" property="fee" jdbcType="DOUBLE" />

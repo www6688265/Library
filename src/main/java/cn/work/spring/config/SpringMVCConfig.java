@@ -3,9 +3,11 @@ package cn.work.spring.config;
 import cn.work.interceptors.loginInterceptor;
 import cn.work.interceptors.userLoginInterceptor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.format.datetime.DateFormatter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
@@ -26,6 +28,12 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/admin/login");
 
         registry.addInterceptor(new userLoginInterceptor()).addPathPatterns("/profile");
+    }
+
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("frontIndex");
+        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+        super.addViewControllers(registry);
     }
 
     public void addFormatters(FormatterRegistry registry) {

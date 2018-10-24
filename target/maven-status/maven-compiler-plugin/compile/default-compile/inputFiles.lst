@@ -7,8 +7,11 @@
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/UserServiceImpl.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/dao/TicketMapper.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BorrowExt.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/UserExt.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/interceptors/userLoginInterceptor.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/ReturnController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/BookController.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Profile.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Userinfo.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BooklocExample.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Borrow.java
@@ -19,6 +22,7 @@
 /Users/Aaron/LibraryOs/src/main/java/cn/work/interceptors/loginInterceptor.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/TicketRecServiceImpl.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/BorrowController.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Booktype.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BookExt.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/UserService.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/spring/config/SpringMVCConfig.java
@@ -44,13 +48,14 @@
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/AdminServiceImpl.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/BARService.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/dao/UserinfoMapper.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BooktypeExample.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Ticket.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/exception/NotReturnException.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/UserController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BookExample.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Book.java
-/Users/Aaron/LibraryOs/src/main/java/cn/work/spring/config/MapperScannerConfig.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/TicketExt.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/dao/BooklocMapper.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/BARServiceImpl.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/TicketExample.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/dao/BooktypeMapper.java

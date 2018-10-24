@@ -2,6 +2,7 @@ package cn.work.spring.config;
 
 import com.github.pagehelper.PageHelper;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,17 +17,15 @@ import java.util.Properties;
 @Configuration
 @PropertySource(value = "classpath:jdbc.properties")
 @ComponentScan(basePackages = "cn.work")
+@MapperScan("cn.work.dao")
 public class LibraryApplication extends SpringServletContainerInitializer {
 
     @Value("${jdbc.url}")
     private String jdbcUrl;
-
     @Value("${jdbc.driverClassName}")
     private String driverClassName;
-
     @Value("${jdbc.username}")
     private String username;
-
     @Value("${jdbc.password}")
     private String password;
 
@@ -37,6 +36,7 @@ public class LibraryApplication extends SpringServletContainerInitializer {
         dataSource.setJdbcUrl(jdbcUrl);
         dataSource.setUser(username);
         dataSource.setPassword(password);
+
 
         return dataSource;
     }
