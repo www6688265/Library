@@ -9,4 +9,10 @@ public class LibraryConfig {
 
     public static final String initPassword = "88888888";
 
+    public static final String projectPath = System.getProperty("user.dir");
+
+    public static final String projectCachePath = "/ImgTemp";
+    public static final String projectUploadPath = "/ImgUpload";
+
+
 }
