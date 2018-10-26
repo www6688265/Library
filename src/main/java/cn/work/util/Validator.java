@@ -1,8 +1,13 @@
 package cn.work.util;
 
 import cn.work.pojo.Admin;
+import cn.work.pojo.Book;
 import cn.work.pojo.Userinfo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 public class Validator {
@@ -19,6 +24,8 @@ public class Validator {
     public static final String access_access_error = "权限只能为0或1";
     public static final String pwd_required_error = "密码不能为空";
     public static final String pwd_minlength_error = "至少为8位";
+    public static final String required_error = "不能为空";
+    public static final String maxlength_error = "最多为";
 
 
     public static String userValidator(Userinfo userinfo) {
@@ -101,5 +108,90 @@ public class Validator {
             }
         }
         return null;
+    }
+
+    public static Map<String, Object> bookValidator(Book book) {
+        Map<String, Object> error = new HashMap<>();
+        List<Map> errors = new ArrayList<>();
+        Map<String, Object> booknameError = new HashMap<>();
+        Map<String, Object> pressError = new HashMap<>();
+        Map<String, Object> totalError = new HashMap<>();
+        Map<String, Object> isbnError = new HashMap<>();
+        Map<String, Object> leftError = new HashMap<>();
+        String bookname = book.getBookname();
+        String press = book.getPress();
+        Integer total = book.getTotal();
+        String isbn = book.getIsbn();
+        Integer left = book.getLeft();
+        if (bookname != null) {
+            if (bookname.equals("")) {
+                booknameError.put("name", "bookname");
+                booknameError.put("status", required_error);
+                errors.add(booknameError);
+            } else {
+                if (bookname.length() > 50) {
+                    booknameError.put("name", "bookname");
+                    booknameError.put("status", maxlength_error + "50位");
+                    errors.add(booknameError);
+                }
+            }
+        }
+        if (press != null) {
+            if (press.equals("")) {
+                pressError.put("name", "press");
+                pressError.put("status", required_error);
+                errors.add(booknameError);
+            } else {
+                if (press.length() > 50) {
+                    pressError.put("name", "press");
+                    pressError.put("status", maxlength_error + "50位");
+                    errors.add(booknameError);
+                }
+            }
+        }
+        if (isbn != null) {
+            if (isbn.equals("")) {
+                isbnError.put("name", "isbn");
+                isbnError.put("status", required_error);
+                errors.add(isbnError);
+            } else {
+                if (isbn.length() > 20) {
+                    isbnError.put("name", "isbn");
+                    isbnError.put("status", maxlength_error + "20位");
+                    errors.add(isbnError);
+                }
+            }
+        }
+        if (total != null) {
+            if (total.equals("")) {
+                totalError.put("name", "total");
+                totalError.put("status", required_error);
+                errors.add(totalError);
+            } else {
+                if (total.toString().length() > 4) {
+                    totalError.put("name", "total");
+                    totalError.put("status", maxlength_error + "4位");
+                    errors.add(totalError);
+                }
+            }
+        }
+        if (left != null) {
+            if (left.equals("")) {
+                leftError.put("name", "left");
+                leftError.put("status", required_error);
+                errors.add(leftError);
+            } else {
+                if (left.toString().length() > 4) {
+                    leftError.put("name", "left");
+                    leftError.put("status", maxlength_error + "4位");
+                    errors.add(leftError);
+                }
+            }
+        }
+        if (errors.size() > 0) {
+            error.put("fieldErrors", errors);
+            return error;
+        } else
+            return null;
     }
 }

@@ -25,17 +25,20 @@ var Script = function () {
         $("#addBookForm").validate({
             rules:{
                 bookname:{
-                    required: true
+                    required: true,
+                    maxlength: 50,
                 },
                 type:{
                     required: true
                 },
                 press:{
-                    required: true
+                    required: true,
+                    maxlength: 50,
                 },
                 total:{
                     required: true,
-                    digits:true
+                    digits: true,
+                    maxlength: 4,
                 },
                 floor:{
                     required: true,
@@ -51,9 +54,51 @@ var Script = function () {
                 },
                 isbn:{
                     required: true,
-                    digits:true
+                    digits: true,
+                    maxlength: 20,
                 },
             },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    url: "/book/addBook",
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.result == "success") {
+                            alert("添加图书成功");
+                            window.open('/Book_table', '_self')
+                        }
+                        else {
+                            alert(data.msg);
+                        }
+                    },
+                    error: function () {
+                        alert("网络出现问题！");
+                    }
+                });
+            }
+        });
+        $("#findBookForm").validate({
+            rules: {
+                bookname: {
+                    maxlength: 50,
+                },
+                press: {
+                    maxlength: 50,
+                },
+                total: {
+                    digits: true,
+                    maxlength: 4,
+                },
+                left: {
+                    digits: true,
+                    maxlength: 4,
+                },
+                isbn: {
+                    digits: true,
+                    maxlength: 20,
+                },
+            }
         });
 
         $("#userForm").validate({
@@ -73,7 +118,8 @@ var Script = function () {
                 usertele:{
                     required: true,
                     phone:true
-                }
+                },
+
             },
             messages:{
                 username: {

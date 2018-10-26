@@ -149,7 +149,6 @@ public class UserController {
         if (userinfo == null) {
             result.put("error", "该身份证已有人使用！");
             return result;
-
         } else {
             List<Userinfo> userlist = new ArrayList<>();
             userlist.add(userinfo);

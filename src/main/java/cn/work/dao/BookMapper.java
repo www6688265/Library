@@ -31,15 +31,22 @@ public interface BookMapper {
 
     int updateByPrimaryKey(Book record);
 
-    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`\n" +
+    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,display,`level`\n" +
+            "FROM book,bookloc,booktype\n" +
+            "WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.display=1")
+    List<BookExt> findAllDisplayBooks();
+
+    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,display,`level`\n" +
             "FROM book,bookloc,booktype\n" +
             "WHERE book.bookid = bookloc.bookid and book.type=booktype.id")
     List<BookExt> findAllBooks();
 
     BookExt getBook(int id);
 
-    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`\n" +
+    @Select("SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,display,`level`\n" +
             "FROM book,bookloc,booktype\n" +
-            "WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.type=#{id}")
+            "WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.type=#{id} and book.display=1")
     List<BookExt> getBooksByType(String id);
+
+    List<BookExt> getBooks(BookExample example);
 }

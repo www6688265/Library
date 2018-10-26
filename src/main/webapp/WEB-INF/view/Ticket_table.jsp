@@ -183,6 +183,10 @@
 <script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
 <script src="background/lib/common-scripts.js"></script>
 <script src="background/lib/form-validation-script.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script type="text/javascript">
     var oTable;
     var sOut;
@@ -244,6 +248,7 @@
             }],
             searching: true,
             "bFilter": true,
+            "order": [[1, 'asc']],
             "oLanguage": { // 国际化配置
                 "sProcessing": "正在获取数据，请稍后...",
                 "sLengthMenu": "显示 _MENU_ 条",
@@ -260,7 +265,6 @@
                     "sNext": "下一页",
                     "sLast": "最后一页"
                 },
-                "order": [[1, 'asc']]
             },
             "autoWidth": true
         });
@@ -268,14 +272,18 @@
 
         $('#adv-dataTable tfoot th').each(function () {
             if ($(this).index() < 4||$(this).index() ==5) {
-                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
-                $(this).html('<input type="text" placeholder="搜索' + title + '" />');
+                if ($(this).index() === 2) {
+                    var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                    $(this).html('<input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
+                }
+                else {
+                    var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                    $(this).html('<input type="text" placeholder="搜索' + title + '" />');
+                }
             }
 
         });
         $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
-
-        $("#adv-dataTable label input").addClass("col-xs-12");
 
         oTable.columns().every(function () {
             var that = this;
@@ -286,6 +294,11 @@
                         .draw();
                 }
             });
+        });
+        $('.default-date-picker').datepicker({
+            format: 'yyyy-mm-dd',
+            clearBtn: true,
+            language: "zh-CN",
         });
 
 

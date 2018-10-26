@@ -1,9 +1,6 @@
 package cn.work.service;
 
-import cn.work.pojo.Book;
-import cn.work.pojo.BookExt;
-import cn.work.pojo.Bookloc;
-import cn.work.pojo.Booktype;
+import cn.work.pojo.*;
 
 import java.util.List;
 
@@ -29,4 +26,5 @@ public interface BookService {
 
     List<Booktype> getAllTypes();
 
+    List<BookExt> getBooks(Book book);
 }

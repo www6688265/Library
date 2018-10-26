@@ -21,6 +21,8 @@ public class Book {
 
     private String isbn;
 
+    private Integer display;
+
     public Integer getBookid() {
         return bookid;
     }
@@ -99,5 +101,13 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn == null ? null : isbn.trim();
+    }
+
+    public Integer getDisplay() {
+        return display;
+    }
+
+    public void setDisplay(Integer display) {
+        this.display = display;
     }
 }

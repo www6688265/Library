@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -47,7 +47,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a  href="${pageContext.request.contextPath}/User_table">
+                    <a href="${pageContext.request.contextPath}/User_table">
                         <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a  href="${pageContext.request.contextPath}/Borrow">
+                    <a href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
                         <span>借书</span>
                     </a>
@@ -109,66 +109,111 @@
                 <div class="col-lg-12">
                     <div class="form-panel">
                         <form id="addBookForm" class="form-horizontal style-form" method="post"
-                              action="${pageContext.request.contextPath}/book/addBook" enctype ="multipart/form-data">
+                              action="${pageContext.request.contextPath}/book/addBook" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">书名</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <input type="text" id="bookname" name="bookname" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">类型</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <select id="type" name="type" class="form-control">
 
                                     </select>
                                 </div>
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">出版社</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <input type="text" id="press" name="press" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">作者</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <input type="text" id="author" name="author" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">ISBN</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <input type="text" id="isbn" name="isbn" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">库存</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
                                     <input type="text" id="total" name="total" class="form-control">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">楼层</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="floor" name="floor" class="form-control">
+                                <div class="col-sm-4">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">书架</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="bookcase" name="bookcase" class="form-control">
+                                <label class="col-sm-2 col-sm-2 control-label">位置</label>
+                                <div class="col-sm-2">
+                                    <select id="floor" name="floor" class="form-control">
+                                        <c:forEach var="i" begin="1" end="10" step="1">
+                                            <option value="${i}">${i}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1">
+                                    <b class="help-block">楼</b>
+                                </div>
+                                <div class="col-sm-2">
+                                    <select id="bookcase" name="bookcase" class="form-control">
+                                        <c:forEach var="i" begin="1" end="10" step="1">
+                                            <option value="${i}">${i}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1">
+                                    <b class="help-block">书架</b>
+                                </div>
+                                <div class="col-sm-2">
+                                    <select id="level" name="level" class="form-control">
+                                        <c:forEach var="i" begin="1" end="10" step="1">
+                                            <option value="${i}">${i}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1">
+                                    <b class="help-block">层</b>
+                                </div>
+                                <div class="col-sm-1">
+                                    <b class="help-block">*必填</b>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">层数</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="level" name="level" class="form-control">
+                            <div class="form-group ">
+                                <label for="brief" class="control-label col-lg-2">是否上架</label>
+                                <div class="col-sm-2">
+                                    <select id="display" name="display" class="form-control">
+                                        <option value="1">是</option>
+                                        <option value="0">否</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group ">
                                 <label for="brief" class="control-label col-lg-2">简介</label>
-                                <div class="col-lg-10">
+                                <div class="col-lg-5">
                                     <textarea class="form-control " id="brief" name="brief"></textarea>
                                 </div>
                             </div>
@@ -188,16 +233,16 @@
                                             <span class="fileupload-exists"><i class="fa fa-undo"></i> 更改</span>
                                             <input name="file" type="file" class="default"/>
                                             </span><a class="btn btn-theme04 fileupload-exists"
-                                                                   data-dismiss="fileupload"><i class="fa fa-trash-o"></i> 删除</a>
+                                                      data-dismiss="fileupload"><i class="fa fa-trash-o"></i> 删除</a>
                                         </div>
                                     </div>
-                                        <span class="label label-info">注意！</span>
-                                        <span>只允许大小为3M一下的文件</span>
-                                    </div>
+                                    <span class="label label-info">注意！</span>
+                                    <span>只允许大小为1M以下的文件</span>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
-                                    <button id="save" class="btn btn-theme" type="button">保存</button>
+                                    <button id="save" class="btn btn-theme" type="submit">保存</button>
                                     <button class="btn btn-theme04" type="button">取消</button>
                                 </div>
                             </div>
@@ -253,32 +298,13 @@
             jQuery.browser.version = RegExp.$1;
         }
     })();
-    $(document).ready(function() {
+    $(document).ready(function () {
         $.ajax({
             url: "/book/getAllTypes",
             success: function (data) {
                 for (var type of data)
                     $("#type").append(`<option value=` + type.id + `>` + type.type + `</option>`)
             }
-        });
-        $("#save").click(function () {
-
-            $("#addBookForm").ajaxSubmit({
-                url:"/book/addBook",
-                success:function (data) {
-                    if(data.result=="success"){
-                        alert("添加图书成功");
-                        window.open('${pageContext.request.contextPath}/Book_table','_self')
-                    }
-                    else{
-                        alert(data.msg);
-                    }
-                },
-                error:function () {
-                    alert("网络出现问题！");
-                }
-            });
-
         });
     });
 </script>

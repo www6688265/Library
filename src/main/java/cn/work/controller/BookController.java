@@ -1,17 +1,18 @@
 package cn.work.controller;
 
-import cn.work.pojo.Book;
-import cn.work.pojo.BookExt;
-import cn.work.pojo.Bookloc;
-import cn.work.pojo.Booktype;
+import cn.work.pojo.*;
 import cn.work.service.BookService;
 import cn.work.util.FIleUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.ibatis.annotations.Param;
 import org.aspectj.util.FileUtil;
 import org.eclipse.jdt.internal.compiler.batch.ClasspathSourceJar;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,9 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,6 +36,7 @@ import java.util.Map;
 import static cn.work.spring.config.LibraryConfig.projectCachePath;
 import static cn.work.spring.config.LibraryConfig.projectPath;
 import static cn.work.spring.config.LibraryConfig.projectUploadPath;
+import static cn.work.util.Validator.bookValidator;
 
 
 @Controller
@@ -58,7 +62,7 @@ public class BookController {
             result.put("msg", "该图书已存在");
             return result;
         }
-        if (file != null) {
+        if (file != null && file.getSize() > 0) {
             result = uploadFile(file, result);
             if (result.get("result") != null)
                 return result;
@@ -68,7 +72,7 @@ public class BookController {
         }
         book.setLeft(book.getTotal());
         bookService.addBook(book, loc);
-        if (file != null) {
+        if (file != null && file.getSize() > 0) {
             moveFileFromTemp(picPath.substring(picPath.lastIndexOf("/")));
         }
         result.put("result", "success");
@@ -77,9 +81,21 @@ public class BookController {
 
     @RequestMapping(value = "getAllBooks")
     @ResponseBody
-    public Map getAllBooks() {
+    public Map getAllBooks(@RequestBody JSONObject jsonParam) {
         Map<String, Object> result = new HashMap<>();
-        List<BookExt> bookList = bookService.getAllBooks();
+        List<BookExt> bookList;
+        dataTablePage page = new dataTablePage(jsonParam, "Book");
+        if (page.getBook() != null) {
+            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrder());
+            bookList = bookService.getBooks(page.getBook());
+        } else {
+            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrder());
+            bookList = bookService.getAllBooks();
+        }
+        PageInfo pageInfo = new PageInfo<>(bookList);
+        result.put("draw", page.getDraw() + 1);
+        result.put("recordsTotal", pageInfo.getTotal());
+        result.put("recordsFiltered", pageInfo.getTotal());
         result.put("data", bookList);
         return result;
     }
@@ -92,6 +108,16 @@ public class BookController {
             uploadFile(upload, result);
             return result;
         } else {
+            Map<String, Object> errorMap = bookValidator(book);
+            if (errorMap != null)
+                return errorMap;
+            String isbn = book.getIsbn();
+            Book aBook = bookService.getBookByISBN(isbn);
+            if (aBook != null && !aBook.getIsbn().equals(book.getIsbn())) {
+                errorMap = new HashMap<>();
+                errorMap.put("error", "已存在相同isbn的图书！");
+                return errorMap;
+            }
             String pic = book.getPic();
             if (pic != null && !pic.equals("")) {
                 boolean hasTemp = pic.contains("Temp");
@@ -136,6 +162,26 @@ public class BookController {
         return result;
     }
 
+    @RequestMapping(value = "showBook")
+    @ResponseBody
+    public Map<String, Object> showBook(String id, boolean display) throws IOException {
+        Map<String, Object> result = new HashMap<>();
+        try {
+            Book book = new Book();
+            book.setBookid(Integer.parseInt(id));
+            int show = display ? 1 : 0;
+            book.setDisplay(show);
+            bookService.updateBook(book, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            result.put("result", "error");
+            result.put("msg", e.getMessage());
+            return result;
+        }
+        result.put("result", "success");
+        return result;
+    }
+
     @RequestMapping(value = "getList")
     @ResponseBody
     public PageInfo<BookExt> getList(String bookname, String author, String type, int page, int pageSize) {
@@ -147,7 +193,7 @@ public class BookController {
         if (!StringUtil.isEmpty(bookname) || !StringUtil.isEmpty(author)) {
             PageHelper.startPage(page, pageSize);
             List<BookExt> list = bookService.getBooksByNameOrAuthor(bookname, author);
-            return new PageInfo(list);
+            return new PageInfo<>(list);
         }
         if (!StringUtil.isEmpty(type)) {
             PageHelper.startPage(page, pageSize);

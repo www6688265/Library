@@ -181,6 +181,10 @@
 <script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
 <script src="background/lib/common-scripts.js"></script>
 <script src="background/lib/form-validation-script.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script type="text/javascript">
     var oTable;
     var sOut;
@@ -253,11 +257,14 @@
         oTable.columns.adjust().draw();
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() < 5) {
+            if ($(this).index() < 2) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
                 $(this).html('<input type="text" placeholder="搜索' + title + '" />');
             }
-
+            if ($(this).index() >= 2 && $(this).index() != 5) {
+                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                $(this).html('<input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
+            }
         });
         $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
 
@@ -273,7 +280,11 @@
                 }
             });
         });
-
+        $('.default-date-picker').datepicker({
+            format: 'yyyy-mm-dd',
+            clearBtn: true,
+            language: "zh-CN",
+        });
 
     });
 

@@ -50,7 +50,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a  href="${pageContext.request.contextPath}/User_table">
+                    <a href="${pageContext.request.contextPath}/User_table">
                         <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a  href="${pageContext.request.contextPath}/Borrow">
+                    <a href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
                         <span>借书</span>
                     </a>
@@ -117,18 +117,73 @@
                     <div class="adv-table">
                         <h4><i class="fa fa-angle-right"></i>图书管理</h4>
                         <hr>
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i>条件查询</h4>
+                            <form class="form-horizontal style-form" role="form" id="findBookForm">
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <input type="text" name="bookname" id="bookname" class="form-control"
+                                               placeholder="书名">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="author" id="author" class="form-control"
+                                               placeholder="作者">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select id="type" name="type" class="form-control">
+                                            <option value="" selected>-------选择图书类型-------</option>
+
+                                        </select>
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="press" id="press" class="form-control"
+                                               placeholder="出版社">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <input type="text" name="isbn" id="isbn" class="form-control"
+                                               placeholder="ISBN">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="total" id="total" class="form-control"
+                                               placeholder="库存">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="left" id="left" class="form-control"
+                                               placeholder="剩余数量">
+                                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select id="display" name="display" class="form-control">
+                                            <option value="" selected>---------上架状态----------</option>
+                                            <option value="1">已上架</option>
+                                            <option value="0">未上架</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button id="search" type="button" class="btn btn-theme">搜索</button>
+                            </form>
+                        </div>
+                        <!-- /form-panel -->
                         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered"
                                id="adv-dataTable">
                             <thead>
                             <tr>
-                                <th class="select-checkbox sorting_1"><input type="checkbox" name="select_all"
-                                                                             id="select-all"></th>
+                                <th class="select-checkbox sorting_1"></th>
                                 <th><i class="fa fa-bullhorn"></i>书名</th>
                                 <th><i class="fa fa-bookmark"></i>作者</th>
                                 <th><i class="fa fa-bookmark"></i>类型</th>
                                 <th><i class="fa fa-bookmark"></i>ISBN</th>
                                 <th><i class="fa fa-bookmark"></i>库存</th>
                                 <th><i class="fa fa-bookmark"></i>剩余数量</th>
+                                <th><i class="fa fa-bookmark"></i>上架情况</th>
                                 <th><i class="fa fa-bookmark"></i>图书封面</th>
                                 <th><i class="fa fa-edit"></i>管理</th>
                             </tr>
@@ -136,17 +191,6 @@
                             <tbody>
                             </tbody>
                             <tfoot>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
                             </tfoot>
                         </table>
                     </div>
@@ -193,7 +237,15 @@
     var editor;
     var sOut;
     var optionsA = [];
+    var optionsB = [];
     $(document).ready(function () {
+        $.ajax({
+            url: "/book/getAllTypes",
+            success: function (data) {
+                for (var type of data)
+                    $("#type").append(`<option value=` + type.id + `>` + type.type + `</option>`)
+            }
+        });
         editor = new $.fn.dataTable.Editor({
             display: 'envelope',
             ajax: {
@@ -205,7 +257,7 @@
                         var result = data.data[i];
                         result.bookid = i;
                         result.action = data.action;
-                        console.log(result);
+
                     }
                     return result;
                 },
@@ -238,13 +290,16 @@
                 name: "left"
             }, {
                 label: "楼层：",
-                name: "floor"
+                name: "floor",
+                type: "select"
             }, {
                 label: "书架：",
-                name: "bookcase"
+                name: "bookcase",
+                type: "select"
             }, {
                 label: "层数：",
-                name: "level"
+                name: "level",
+                type: "select"
             }, {
                 label: "图书封面（不能超过1M）:",
                 name: "pic",
@@ -270,16 +325,42 @@
             },
             function (data) {
                 var option = {};
+                console.log(optionsB)
                 $.each(data, function (i, e) {
                     option.label = e.type;
                     option.value = e.id;
-                    optionsA.push(option);
+                    optionsB.push(option);
                     option = {};
                 });
             }
         ).done(function () {
-            editor.field('type').update(optionsA);
+            editor.field('type').update(optionsB);
         });
+
+        var floorOptions = [];
+        var bookcaseOptions = [];
+        var levelOptions = [];
+        var option = {};
+        for (var i = 1; i < 11; i++) {
+            option.label = i;
+            option.value = i;
+            floorOptions.push(option);
+            bookcaseOptions.push(option);
+            levelOptions.push(option);
+            option = {};
+        }
+        editor.field('floor').update(floorOptions);
+        editor.field('bookcase').update(bookcaseOptions);
+        editor.field('level').update(levelOptions);
+
+
+        $.fn.dataTable.ext.errMode = function (s, h, m) {
+            if (h == 1) {
+                alert("连接服务器失败！");
+            } else if (h == 7) {
+                alert("返回数据错误！");
+            }
+        };
 
         oTable = $("#adv-dataTable").DataTable({
             "dom": "<'row'<'col-sm-12'lBrtip>>",
@@ -294,8 +375,24 @@
                     extend: 'edit', editor: editor, text: "编辑", className: 'btn btn-round btn-primary'
                 }
             ],
+            "processing": true,
+            "serverSide": true,
             "ajax": {
                 "url": "/book/getAllBooks",
+                "data": function (d) {
+                    var option = {};
+                    $.each(d, function (i, e) {
+                        option.label = e.type;
+                        option.value = e.id;
+                        optionsA.push(option);
+                        option = {};
+                    });
+
+                    var json = JSON.stringify(d);
+                    return json;
+                },
+                type: "POST",
+                contentType: "application/json;charset=UTF-8",
             },
             "columns": [
                 {
@@ -303,39 +400,77 @@
                     defaultContent: '',
                     className: 'select-checkbox',
                     orderable: false,
-                    "width": "5px"
+                    searchable: false,
+                    width: "3%"
                 },
-                {"data": "bookname"},
+                {
+                    "data": "bookname",
+                    width: "10%"
+                },
                 {
                     "data": "author", render: function (data) {
-                        if (data == null || data.toString() == "")
+                        if (data == null || data.toString() === "")
                             return "暂未输入";
                         else return data;
-                    }
+                    },
+                    width: "10%"
                 },
-                {"data": "type"},
-                {"data": "isbn"},
-                {"data": "total", "width": "7%"},
-                {"data": "left", "width": "10%"},
+                {
+                    "data": "type",
+                    width: "10%"
+                },
+                {
+                    "data": "isbn",
+                    width: "10%"
+                },
+                {
+                    "data": "total",
+                    width: "10%"
+                },
+                {
+                    "data": "left",
+                    width: "10%"
+                },
+                {
+                    "data": "display",
+                    render: function (data) {
+                        if (data === 0)
+                            return "未上架";
+                        else return "已上架";
+                    },
+                    width: "10%"
+                },
                 {
                     "data": "pic", render: function (data) {
-                        if (data != null && data.toString() != "")
-                            return "<img src=" + data + " width=100%/>";
+                        if (data != null && data.toString() !== "")
+                            return "<img src=" + data + " width=\"50%\"/>";
                         else
                             return null;
                     },
                     defaultContent: "没有封面图片",
-                    title: "封面",
-                    "width": "10%"
                 }
                 ,
                 {
-                    "data": "bookid", render: function (data, type, row, meta) {
-
-                        var html = "<i><button class=\"btn btn-success btn-xs\" onclick=\"showDetail(this)\"><i class=\"fa fa-exclamation-circle\"></i></button></i>";
-                        html += "<button class=\"btn btn-danger btn-xs\" onclick=\"bookDelete(this)\"><i class=\"fa fa-trash-o \"></i></button>"
+                    "data": "bookid",
+                    "width": "10%", render: function (data, type, row, meta) {
+                        var html = "<i><button class=\"btn btn-info btn-xs\" onclick=\"showDetail(this)\">更多信息</button></i>";
+                        if (oTable.row(meta.row).data().display === 1)
+                            html += "<i><button class=\"btn btn-danger btn-xs\" onclick=\"hideBook(" + data + ")\">图书下架</button></i>";
+                        else
+                            html += "<i><button class=\"btn btn-success btn-xs\" onclick=\"showBook(" + data + ")\">图书上架</button></i>";
                         return html;
                     }
+                }, {
+                    "data": "press", visible: false
+                }
+                , {
+                    "data": "floor", visible: false
+                }
+                , {
+                    "data": "bookcase", visible: false
+                }
+                , {
+                    "data": "level", visible: false
                 }
             ],
             select: {
@@ -346,12 +481,13 @@
             "paging": true,//开启表格分页
             "bLengthChange": true,
             "bRetrieve": true,
+            searching: true,
+            "bFilter": true,
+            "order": [[1, 'asc']],
             "aoColumnDefs": [{
                 "bSortable": false,
                 "aTargets": [0]
             }],
-            searching: true,
-            "bFilter": true,
             "oLanguage": { // 国际化配置
                 "sProcessing": "正在获取数据，请稍后...",
                 "sLengthMenu": "显示 _MENU_ 条",
@@ -368,63 +504,42 @@
                     "sNext": "下一页",
                     "sLast": "最后一页"
                 },
-                "order": [[1, 'asc']]
             },
-            "autoWidth": true
+            "autoWidth": false
         });
         oTable.columns.adjust().draw();
 
-        $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() > 0 && $(this).index() < 5) {
-                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
-                $(this).html('<input type="text" placeholder="搜索' + title + '" />');
-            }
+        $(document).on("click", "#search", function () {
+            var bookname = $("#bookname").val();
+            bookname = bookname ? bookname : null;
+            var author = $("#author").val();
+            author = author ? author : null;
+            var type = $("#type").val();
+            type = type ? type : null;
+            var press = $("#press").val();
+            press = press ? press : null;
+            var isbn = $("#isbn").val();
+            isbn = isbn ? isbn : null;
+            var total = $("#total").val();
+            total = total ? total : null;
+            var left = $("#left").val();
+            left = left ? left : null;
+            var display = $("#display").val();
+            display = display ? display : null;
+            var result = {bookname, author, type, press, isbn, total, left, display};
+            oTable.search(JSON.stringify(result)).draw();
 
         });
-        $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
-
-        $("#adv-dataTable label input").addClass("col-xs-12");
-
-        oTable.columns().every(function () {
-            var that = this;
-            $('input', this.footer()).on('keyup change', function () {
-                if (that.search() !== this.value) {
-                    that
-                        .search(this.value)
-                        .draw();
-                }
-            });
-        });
-
-
-        $('#select-all').on('click', function () {
-            if (this.checked) {
-                oTable.rows().select();
-            }
-            else {
-                oTable.rows().deselect();
-            }
-        });
-
-
     });
 
     function fnFormatDetails(aData) {
         sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-        $.ajax({
-            url: "/book/getBook?id=" + aData.bookid,
-            type: "GET",
-            async: false,
-            dataType: "json",
-            success: function (data) {
-                sOut += '<tr><td>出版社:</td><td>' + aData.press + '</td></tr>';
-                sOut += '<tr><td>位置:</td><td>'+aData.floor+'楼，第'+aData.bookcase+'书架，第'+aData.level+'层'+'</td></tr>';
-                return sOut;
-            }
-        });
+        sOut += '<tr><td>出版社:</td><td>' + aData.press + '</td></tr>';
+        sOut += '<tr><td>位置:</td><td>' + aData.floor + '楼，第' + aData.bookcase + '书架，第' + aData.level + '层' + '</td></tr>';
+        return sOut;
     }
 
-    function showDetail(td) {
+    function showDetail(td, data) {
         var nTr = $(td).parents('tr');
         var row = oTable.row(nTr);
         if (row.child.isShown()) {
@@ -438,24 +553,24 @@
         }
     }
 
-
-    function bookDelete(td) {
-        var nTr = $(td).parents('tr');
-        var row = oTable.row(nTr);
-        var id=row.data().bookid;
-        var pic=row.data().pic;
-        if (confirm("确定要删除这条记录吗?")) {
+    function showBook(data) {
+        var bookid = data;
+        if (confirm("确定要上架此书吗?")) {
             $.ajax({
-                url: "/book/delBook?id=" + id+"&pic="+pic,
+                url: "/book/showBook",
                 async: true,
-                type: "GET",
+                type: "POST",
                 dataType: "json",
+                data: {
+                    id: bookid,
+                    display: true,
+                },
                 cache: false,    //不允许缓存
                 success: function (data) {
                     var obj = eval(data);
                     if (obj.result == "success") {
                         oTable.ajax.reload();
-                        alert("删除成功");
+                        alert("上架成功");
                     }
                     else {
                         alert(data.msg);
@@ -468,6 +583,35 @@
         }
     }
 
+    function hideBook(data) {
+        var bookid = data;
+        if (confirm("确定要下架此书吗?")) {
+            $.ajax({
+                url: "/book/showBook",
+                async: true,
+                type: "POST",
+                dataType: "json",
+                data: {
+                    id: bookid,
+                    display: false,
+                },
+                cache: false,    //不允许缓存
+                success: function (data) {
+                    var obj = eval(data);
+                    if (obj.result == "success") {
+                        oTable.ajax.reload();
+                        alert("下架成功");
+                    }
+                    else {
+                        alert(data.msg);
+                    }
+                },
+                error: function (data) {
+                    alert("请求异常");
+                }
+            });
+        }
+    }
 </script>
 
 </body>

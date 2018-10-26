@@ -13,6 +13,4 @@ public class LibraryConfig {
 
     public static final String projectCachePath = "/ImgTemp";
     public static final String projectUploadPath = "/ImgUpload";
-
-
 }
