@@ -104,11 +104,24 @@ public class BookController {
     @ResponseBody
     public Map updateBook(Book book, Bookloc loc, MultipartFile upload) throws IOException {
         Map<String, Object> result = new HashMap<>();
+        Map<String, Object> errorMap = new HashMap<>();
         if (upload != null) {
+            String name = upload.getOriginalFilename();
+            System.out.println(name);
+            String type = name.substring(name.lastIndexOf(".") + 1);
+            long size = upload.getSize();
+            if (!type.equals("jpg") && !type.equals("png") && !type.equals("gif")) {
+                errorMap.put("error", "文件类型应为jpg,png,gif");
+                return errorMap;
+            }
+            if (size > 1024000) {
+                errorMap.put("error", "文件大小不能超过1M");
+                return errorMap;
+            }
             uploadFile(upload, result);
             return result;
         } else {
-            Map<String, Object> errorMap = bookValidator(book);
+            errorMap = bookValidator(book);
             if (errorMap != null)
                 return errorMap;
             String isbn = book.getIsbn();

@@ -12,7 +12,7 @@
     <result column="pic" property="pic" jdbcType="VARCHAR" />
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="isbn" property="isbn" jdbcType="VARCHAR" />
-    <result column="display" property="display" jdbcType="INTEGER" />
+    <result column="display" property="display" jdbcType="INTEGER"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -148,7 +148,7 @@
       <if test="isbn != null" >
         isbn,
       </if>
-      <if test="display != null" >
+      <if test="display != null">
         display,
       </if>
     </trim>
@@ -183,7 +183,7 @@
       <if test="isbn != null" >
         #{isbn,jdbcType=VARCHAR},
       </if>
-      <if test="display != null" >
+      <if test="display != null">
         #{display,jdbcType=INTEGER},
       </if>
     </trim>
@@ -227,7 +227,7 @@
       <if test="record.isbn != null" >
         isbn = #{record.isbn,jdbcType=VARCHAR},
       </if>
-      <if test="record.display != null" >
+      <if test="record.display != null">
         display = #{record.display,jdbcType=INTEGER},
       </if>
     </set>
@@ -246,8 +246,8 @@
       `left` = #{record.left,jdbcType=INTEGER},
       pic = #{record.pic,jdbcType=VARCHAR},
       author = #{record.author,jdbcType=VARCHAR},
-      isbn = #{record.isbn,jdbcType=VARCHAR},
-      display = #{record.display,jdbcType=INTEGER}
+    isbn = #{record.isbn,jdbcType=VARCHAR},
+    display = #{record.display,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -282,7 +282,7 @@
       <if test="isbn != null" >
         isbn = #{isbn,jdbcType=VARCHAR},
       </if>
-      <if test="display != null" >
+      <if test="display != null">
         display = #{display,jdbcType=INTEGER},
       </if>
     </set>
@@ -307,14 +307,14 @@
             FROM book,bookloc,booktype
             WHERE book.bookid = bookloc.bookid and book.type=booktype.id and book.bookid=#{id}
   </select>
-  <select id="getBooks" resultType="cn.work.pojo.BookExt" parameterType="cn.work.pojo.BookExample" >
+  <select id="getBooks" resultType="cn.work.pojo.BookExt" parameterType="cn.work.pojo.BookExample">
     SELECT book.bookid,bookname,booktype.type,press,brief,total,`LEFT`,pic,author,isbn,floor,bookcase,`level`,display
     FROM book,bookloc,booktype
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
     </if>
     and book.bookid = bookloc.bookid and book.type=booktype.id
-    <if test="orderByClause != null" >
+    <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
   </select>

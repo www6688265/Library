@@ -301,7 +301,7 @@
                 name: "level",
                 type: "select"
             }, {
-                label: "图书封面（不能超过1M）:",
+                label: "图书封面（不能超过1M,类型位jpg,png,gif）:",
                 name: "pic",
                 type: "upload",
                 display: function (data) {
@@ -352,7 +352,6 @@
         editor.field('floor').update(floorOptions);
         editor.field('bookcase').update(bookcaseOptions);
         editor.field('level').update(levelOptions);
-
 
         $.fn.dataTable.ext.errMode = function (s, h, m) {
             if (h == 1) {

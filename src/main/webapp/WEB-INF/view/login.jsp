@@ -52,7 +52,6 @@
                 data:$("#data").serialize(),
                 success:function (data) {
                         if(data.result=="success"){
-                            alert("登录成功");
                             window.location.href = "${pageContext.request.contextPath}/index";
                         }
                         else{

@@ -217,12 +217,13 @@
                                     <textarea class="form-control " id="brief" name="brief"></textarea>
                                 </div>
                             </div>
-                            <div class="form-group last">
+                            <div class="form-group last" id="fileZero">
                                 <label class="control-label col-md-3">图书封面上传</label>
                                 <div class="col-md-9">
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                         <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"
+                                            <img id="fileImg"
+                                                 src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"
                                                  alt=""/>
                                         </div>
                                         <div class="fileupload-preview fileupload-exists thumbnail"
@@ -231,13 +232,14 @@
                                             <span class="btn btn-theme02 btn-file">
                                                 <span class="fileupload-new"><i class="fa fa-paperclip"></i> 选择图片</span>
                                             <span class="fileupload-exists"><i class="fa fa-undo"></i> 更改</span>
-                                            <input name="file" type="file" class="default"/>
+                                            <input name="file" id="file" type="file" class="default"
+                                                   onchange="checkFile(this)"/>
                                             </span><a class="btn btn-theme04 fileupload-exists"
                                                       data-dismiss="fileupload"><i class="fa fa-trash-o"></i> 删除</a>
                                         </div>
                                     </div>
                                     <span class="label label-info">注意！</span>
-                                    <span>只允许大小为1M以下的文件</span>
+                                    <span>只允许大小为1M以下,类型为jpg,png,gif的文件</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -276,17 +278,9 @@
 <!--custom tagsinput-->
 <script src="background/lib/jquery.tagsinput.js"></script>
 <!--custom checkbox & radio-->
-<script type="text/javascript" src="background/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/date.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 <script src="background/lib/jquery-ui-1.9.2.custom.min.js"></script>
 <script type="text/javascript" src="background/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-daterangepicker/moment.min.js"></script>
-<script type="text/javascript" src="background/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script src="background/lib/jquery.form.js"></script>
-<script src="background/lib/advanced-form-components.js"></script>
 <script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
     jQuery.browser = {};
@@ -307,6 +301,28 @@
             }
         });
     });
+
+    function checkFile(target) {
+        var file = $("#file");
+        var name = file.val();
+        var type = name.substring(name.lastIndexOf(".") + 1, name.length);
+        var size = $("#file")[0].files[0].size;
+        console.log(type);
+        if (type !== "jpg" && type !== "png" && type !== "gif") {
+            alert("只支持jpg,png,gif文件！");
+            file.outerHTML = file.outerHTML;
+            file.val("");
+            $(".fileupload-preview img").attr("src", "http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image");
+            return false;
+        }
+        if (size > 1024000) {
+            alert("文件大小不超过1M");
+            file.outerHTML = file.outerHTML;
+            file.val("");
+            $(".fileupload-preview img").attr("src", "http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image");
+            return false;
+        }
+    }
 </script>
 </body>
 

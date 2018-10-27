@@ -283,10 +283,10 @@
         var pageSize = 10;
         var bookname = "";
         var author = "";
-        var type = "";
+        var booktype = "";
         bookname += "${param.bookname}";
         author += "${param.author}";
-        type += "${param.type}"
+        booktype += "${param.type}"
         pageStart();
 
         function pageStart() {
@@ -299,7 +299,7 @@
                     "pageSize": pageSize,
                     "bookname": bookname,
                     "author": author,
-                    "type": type
+                    "type": booktype
                 },
                 success: function (data) {
                     for (var item of data.list)
@@ -347,7 +347,7 @@
                                     "pageSize": pageSize,
                                     "bookname": bookname,
                                     "author": author,
-                                    "type": type
+                                    "type": booktype
                                 },
                                 success: function (data) {
                                     $("#BookList").html("");

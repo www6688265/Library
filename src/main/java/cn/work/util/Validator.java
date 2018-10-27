@@ -18,6 +18,7 @@ public class Validator {
     public static final String idcard_required_error = "身份证号码不能为空";
     public static final String idcard_idcard_error = "身份证格式不正确";
     public static final String sex_required_error = "性别不能为空";
+    public static final String sex_sex_error = "只能为男或女";
     public static final String usertele_required_error = "手机号码不能为空";
     public static final String usertele_phon_error = "手机号码格式不正确";
     public static final String access_required_error = "权限不能为空";
@@ -59,6 +60,12 @@ public class Validator {
         if (sex != null) {
             if (sex.equals(""))
                 return sex_required_error;
+            else {
+                if (!Pattern.matches("^男|女$",
+                        sex)) {
+                    return sex_sex_error;
+                }
+            }
 
         }
         if (usertele != null) {

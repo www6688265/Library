@@ -269,7 +269,8 @@
                 name: "idcard"
             }, {
                 label: "",
-                name: "sex"
+                name: "sex",
+                type: "select"
             }, {
                 label: "",
                 name: "usertele"
@@ -280,6 +281,9 @@
             ],
             idSrc: 'userid',
         });
+
+        var sexOptions = [{label: "男", value: "男"}, {label: "女", value: "女"}];
+        editor.field('sex').update(sexOptions);
 
         //修改用户信息方法
         $('#adv-dataTable').on('click', 'tbody td:not(:first-child :nth-child(6))', function (e) {

@@ -251,8 +251,7 @@
                 data: $("#loginform").serialize(),
                 success: function (data) {
                     if (data.result == "success") {
-                        alert("登录成功");
-                        window.location.href = "${pageContext.request.contextPath}/frontIndex";
+                        window.location.href = "${pageContext.request.contextPath}/profile";
                     }
                     else {
                         alert(data.result);
