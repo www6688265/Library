@@ -12,7 +12,7 @@ import static cn.work.spring.config.LibraryConfig.projectPath;
 import static cn.work.spring.config.LibraryConfig.projectUploadPath;
 
 @Component
-public class initConfig implements CommandLineRunner {
+public class InitConfig implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         File TempDir = new File(projectPath + projectCachePath);

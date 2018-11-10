@@ -30,6 +30,6 @@ public interface UserinfoMapper {
 
     int updateByPrimaryKey(Userinfo record);
 
-    @Select("select * from userinfo")
+    //自己的语句
     List<Userinfo> getAllUsers();
 }

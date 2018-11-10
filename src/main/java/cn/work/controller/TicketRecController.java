@@ -20,24 +20,24 @@ public class TicketRecController {
     @Autowired
     TicketRecService ticketRecService;
 
-    @RequestMapping(value="getAllTicketRec")
+    @RequestMapping(value = "getAllTicketRec")
     @ResponseBody
-    public Map<String,Object> getAllTicketRec(){
+    public Map<String, Object> getAllTicketRec() {
         Map<String, Object> result = new HashMap<>();
-        List<TicketExt> list=  ticketRecService.getAllTicketRec();
+        List<TicketExt> list = ticketRecService.getAllTicketRec();
         result.put("data", list);
         return result;
     }
 
-    @RequestMapping(value="delTicketRec")
-    @ResponseBody
-    public Map<String,Object> delTicketRec(String id){
-        Map<String, Object> result = new HashMap<>();
-        ticketRecService.delTicketRec(Integer.parseInt(id));
-        result.put("result","success");
-        return result;
-
-    }
+//    @RequestMapping(value = "delTicketRec")
+//    @ResponseBody
+//    public Map<String, Object> delTicketRec(String id) {
+//        Map<String, Object> result = new HashMap<>();
+//        ticketRecService.delTicketRec(Integer.parseInt(id));
+//        result.put("result", "success");
+//        return result;
+//
+//    }
 
     @RequestMapping(value = "getTicket")
     @ResponseBody

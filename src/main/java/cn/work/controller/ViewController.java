@@ -52,25 +52,25 @@ public class ViewController {
     }
 
     @RequestMapping("Return")
-    public String Return() {
+    public String returnBook() {
         return "Return";
     }
     @RequestMapping("Admin_table")
-    public String AdminTable() {
+    public String adminTable() {
         return "Admin_table";
     }
     @RequestMapping("Admin_changePwd")
-    public String AdminChangePwd() {
+    public String adminChangePwd() {
         return "Admin_changePwd";
     }
 
     @RequestMapping("BookList")
-    public String BookList() {
+    public String bookList() {
         return "BookList";
     }
 
     @RequestMapping("BookInfo")
-    public String BookInfo() {
+    public String bookInfo() {
         return "BookInfo";
     }
 

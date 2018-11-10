@@ -2,10 +2,33 @@ package cn.work.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-@JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+import java.util.Date;
+
 public class BorrowExt extends Borrow {
     String username;
     String bookname;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    Date Borrowtime;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    Date Limittime;
+    private Date returntime;
+
+    private Integer bookid;
+
+    public BorrowExt() {
+    }
+
+    public BorrowExt(Integer userid) {
+        super(userid);
+    }
+
+    public Date getReturntime() {
+        return returntime;
+    }
+
+    public void setReturntime(Date returntime) {
+        this.returntime = returntime;
+    }
 
     public String getUsername() {
         return username;
@@ -21,5 +44,29 @@ public class BorrowExt extends Borrow {
 
     public void setBookname(String bookname) {
         this.bookname = bookname;
+    }
+
+    public Integer getBookid() {
+        return bookid;
+    }
+
+    public void setBookid(Integer bookid) {
+        this.bookid = bookid;
+    }
+
+    public Date getBorrowtime() {
+        return Borrowtime;
+    }
+
+    public void setBorrowtime(Date borrowtime) {
+        Borrowtime = borrowtime;
+    }
+
+    public Date getLimittime() {
+        return Limittime;
+    }
+
+    public void setLimittime(Date limittime) {
+        Limittime = limittime;
     }
 }

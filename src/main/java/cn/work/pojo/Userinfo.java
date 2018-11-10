@@ -13,6 +13,8 @@ public class Userinfo {
 
     private Integer access;
 
+    private Integer userStatus;
+
     public Integer getUserid() {
         return userid;
     }
@@ -59,5 +61,13 @@ public class Userinfo {
 
     public void setAccess(Integer access) {
         this.access = access;
+    }
+
+    public Integer getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(Integer userStatus) {
+        this.userStatus = userStatus;
     }
 }

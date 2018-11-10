@@ -1,5 +1,11 @@
 package cn.work.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+@JsonFormat(timezone = "GMT+8", pattern = "yyyyMMddHHmmss")
 public class Ticket {
     private Integer ticketid;
 
@@ -7,9 +13,13 @@ public class Ticket {
 
     private Integer overduetime;
 
-    private Double fee;
+    private Date dealtime;
 
-    private Integer status;
+    private BigDecimal fee;
+
+    private Integer ticketStatus;
+
+    private Integer bookid;
 
     public Integer getTicketid() {
         return ticketid;
@@ -35,19 +45,35 @@ public class Ticket {
         this.overduetime = overduetime;
     }
 
-    public Double getFee() {
+    public Date getDealtime() {
+        return dealtime;
+    }
+
+    public void setDealtime(Date dealtime) {
+        this.dealtime = dealtime;
+    }
+
+    public BigDecimal getFee() {
         return fee;
     }
 
-    public void setFee(Double fee) {
+    public void setFee(BigDecimal fee) {
         this.fee = fee;
     }
 
-    public Integer getStatus() {
-        return status;
+    public Integer getTicketStatus() {
+        return ticketStatus;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setTicketStatus(Integer ticketStatus) {
+        this.ticketStatus = ticketStatus;
+    }
+
+    public Integer getBookid() {
+        return bookid;
+    }
+
+    public void setBookid(Integer bookid) {
+        this.bookid = bookid;
     }
 }

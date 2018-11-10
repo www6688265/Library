@@ -1,6 +1,8 @@
 package cn.work.pojo;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TicketExample {
@@ -284,6 +286,66 @@ public class TicketExample {
             return (Criteria) this;
         }
 
+        public Criteria andDealtimeIsNull() {
+            addCriterion("dealTime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeIsNotNull() {
+            addCriterion("dealTime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeEqualTo(Date value) {
+            addCriterion("dealTime =", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeNotEqualTo(Date value) {
+            addCriterion("dealTime <>", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeGreaterThan(Date value) {
+            addCriterion("dealTime >", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("dealTime >=", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeLessThan(Date value) {
+            addCriterion("dealTime <", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeLessThanOrEqualTo(Date value) {
+            addCriterion("dealTime <=", value, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeIn(List<Date> values) {
+            addCriterion("dealTime in", values, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeNotIn(List<Date> values) {
+            addCriterion("dealTime not in", values, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeBetween(Date value1, Date value2) {
+            addCriterion("dealTime between", value1, value2, "dealtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDealtimeNotBetween(Date value1, Date value2) {
+            addCriterion("dealTime not between", value1, value2, "dealtime");
+            return (Criteria) this;
+        }
+
         public Criteria andFeeIsNull() {
             addCriterion("fee is null");
             return (Criteria) this;
@@ -294,113 +356,173 @@ public class TicketExample {
             return (Criteria) this;
         }
 
-        public Criteria andFeeEqualTo(Double value) {
+        public Criteria andFeeEqualTo(BigDecimal value) {
             addCriterion("fee =", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeNotEqualTo(Double value) {
+        public Criteria andFeeNotEqualTo(BigDecimal value) {
             addCriterion("fee <>", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeGreaterThan(Double value) {
+        public Criteria andFeeGreaterThan(BigDecimal value) {
             addCriterion("fee >", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeGreaterThanOrEqualTo(Double value) {
+        public Criteria andFeeGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("fee >=", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeLessThan(Double value) {
+        public Criteria andFeeLessThan(BigDecimal value) {
             addCriterion("fee <", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeLessThanOrEqualTo(Double value) {
+        public Criteria andFeeLessThanOrEqualTo(BigDecimal value) {
             addCriterion("fee <=", value, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeIn(List<Double> values) {
+        public Criteria andFeeIn(List<BigDecimal> values) {
             addCriterion("fee in", values, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeNotIn(List<Double> values) {
+        public Criteria andFeeNotIn(List<BigDecimal> values) {
             addCriterion("fee not in", values, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeBetween(Double value1, Double value2) {
+        public Criteria andFeeBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("fee between", value1, value2, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andFeeNotBetween(Double value1, Double value2) {
+        public Criteria andFeeNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("fee not between", value1, value2, "fee");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNull() {
-            addCriterion("status is null");
+        public Criteria andTicketStatusIsNull() {
+            addCriterion("ticket_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNotNull() {
-            addCriterion("status is not null");
+        public Criteria andTicketStatusIsNotNull() {
+            addCriterion("ticket_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusEqualTo(Integer value) {
-            addCriterion("status =", value, "status");
+        public Criteria andTicketStatusEqualTo(Integer value) {
+            addCriterion("ticket_status =", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotEqualTo(Integer value) {
-            addCriterion("status <>", value, "status");
+        public Criteria andTicketStatusNotEqualTo(Integer value) {
+            addCriterion("ticket_status <>", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThan(Integer value) {
-            addCriterion("status >", value, "status");
+        public Criteria andTicketStatusGreaterThan(Integer value) {
+            addCriterion("ticket_status >", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("status >=", value, "status");
+        public Criteria andTicketStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("ticket_status >=", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThan(Integer value) {
-            addCriterion("status <", value, "status");
+        public Criteria andTicketStatusLessThan(Integer value) {
+            addCriterion("ticket_status <", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("status <=", value, "status");
+        public Criteria andTicketStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("ticket_status <=", value, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIn(List<Integer> values) {
-            addCriterion("status in", values, "status");
+        public Criteria andTicketStatusIn(List<Integer> values) {
+            addCriterion("ticket_status in", values, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotIn(List<Integer> values) {
-            addCriterion("status not in", values, "status");
+        public Criteria andTicketStatusNotIn(List<Integer> values) {
+            addCriterion("ticket_status not in", values, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusBetween(Integer value1, Integer value2) {
-            addCriterion("status between", value1, value2, "status");
+        public Criteria andTicketStatusBetween(Integer value1, Integer value2) {
+            addCriterion("ticket_status between", value1, value2, "ticketStatus");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("status not between", value1, value2, "status");
+        public Criteria andTicketStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("ticket_status not between", value1, value2, "ticketStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidIsNull() {
+            addCriterion("bookid is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidIsNotNull() {
+            addCriterion("bookid is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidEqualTo(Integer value) {
+            addCriterion("bookid =", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidNotEqualTo(Integer value) {
+            addCriterion("bookid <>", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidGreaterThan(Integer value) {
+            addCriterion("bookid >", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidGreaterThanOrEqualTo(Integer value) {
+            addCriterion("bookid >=", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidLessThan(Integer value) {
+            addCriterion("bookid <", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidLessThanOrEqualTo(Integer value) {
+            addCriterion("bookid <=", value, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidIn(List<Integer> values) {
+            addCriterion("bookid in", values, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidNotIn(List<Integer> values) {
+            addCriterion("bookid not in", values, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidBetween(Integer value1, Integer value2) {
+            addCriterion("bookid between", value1, value2, "bookid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBookidNotBetween(Integer value1, Integer value2) {
+            addCriterion("bookid not between", value1, value2, "bookid");
             return (Criteria) this;
         }
     }

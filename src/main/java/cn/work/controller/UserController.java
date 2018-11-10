@@ -1,12 +1,12 @@
 package cn.work.controller;
 
 import cn.work.pojo.Profile;
+import cn.work.pojo.User;
 import cn.work.pojo.UserExt;
 import cn.work.pojo.Userinfo;
 import cn.work.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,7 +29,7 @@ public class UserController {
         Map<String, Object> result = new HashMap<>();
         String pwd = "";
         if (user != null) {
-            UserExt va_user = userService.getUserAndPwdByID(user.getIdcard());
+            UserExt va_user = userService.getUserAndPwdByIDCard(user.getIdcard());
             if (va_user != null) {
                 pwd = getEncrypt(user.getPassword());
             } else {
@@ -53,18 +53,46 @@ public class UserController {
     @RequestMapping("logOut")
     public String logOut(HttpServletRequest request) {
         Integer userid = (Integer) request.getSession().getAttribute("userid");
-        if (userid != null && !userid.equals("")) {
+        if (userid != null) {
             request.getSession().removeAttribute("userid");
             return "redirect:/UserLogin";
         } else
             return "redirect:/UserLogin";
     }
 
+    @RequestMapping(value = "changePwd")
+    @ResponseBody
+    public Map<String, Object> changePwd(String pwd, String newPwd, HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        Integer userid = (Integer) request.getSession().getAttribute("userid");
+        pwd = getEncrypt(pwd);
+        if (userid != null) {
+            User user = userService.getUserAndPwdByID(Integer.toString(userid));
+            if (newPwd.equals(pwd)) {
+                result.put("result", "新密码不能与旧密码相同！");
+                return result;
+            }
+            if (pwd.equals(user.getPassword())) {
+                user.setPassword(newPwd);
+                userService.updatePwd(user);
+                result.put("result", "success");
+                request.getSession().removeAttribute("userid");
+                return result;
+            } else {
+                result.put("result", "当前密码不正确");
+                return result;
+            }
+        } else {
+            result.put("error", "您尚未登录!");
+            return result;
+        }
+    }
+
     @RequestMapping(value = "getAllUsers")
     @ResponseBody
     public Map getAllUsers() {
         Map<String, Object> result = new HashMap<>();
-        List<Userinfo> userlist = new ArrayList<>();
+        List<Userinfo> userlist;
         userlist = userService.getAllUsers();
         result.put("data", userlist);
         return result;
@@ -91,38 +119,20 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "delUser")
+    @RequestMapping(value = "showUser")
     @ResponseBody
-    public Map<String, Object> delUser(String id) {
+    public Map<String, Object> showUser(String id, boolean display) {
         Map<String, Object> result = new HashMap<>();
         try {
-            userService.delUser(id);
+            userService.showUser(id, display);
             result.put("result", "success");
         } catch (Exception e) {
             e.printStackTrace();
             result.put("result", "error");
-            result.put("msg", e.getMessage());
+            result.put("msg", "注销失败！原因：" + e.getMessage());
         } finally {
             return result;
         }
-    }
-
-    @RequestMapping(value = "delUsers")
-    @ResponseBody
-    public Map<String, Object> delUsers(@RequestBody Userinfo[] userinfos) {
-        Map<String, Object> result = new HashMap<>();
-        for (Userinfo userinfo : userinfos) {
-            try {
-                userService.delUser(userinfo.getUserid().toString());
-            } catch (Exception e) {
-                e.printStackTrace();
-                result.put("result", "error");
-                result.put("msg", e.getMessage());
-                return result;
-            }
-        }
-        result.put("result", "success");
-        return result;
     }
 
 

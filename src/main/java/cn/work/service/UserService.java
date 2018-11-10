@@ -1,6 +1,7 @@
 package cn.work.service;
 
 import cn.work.pojo.Profile;
+import cn.work.pojo.User;
 import cn.work.pojo.UserExt;
 import cn.work.pojo.Userinfo;
 
@@ -11,7 +12,7 @@ public interface UserService {
 
     boolean addUser(Userinfo userinfo) throws Exception;
 
-    void delUser(String id) throws Exception;
+    void showUser(String id, boolean display) throws Exception;
 
     String getAccessDetail(String id);
 
@@ -27,8 +28,14 @@ public interface UserService {
 
     double getUserFee(String id);
 
-    UserExt getUserAndPwdByID(String idcard);
+    UserExt getUserAndPwdByIDCard(String idcard);
+
+    User getUserAndPwdByID(String userid);
 
     Profile getProfile(String id);
+
+    void setUserAccess(String id, boolean access);
+
+    void updatePwd(User user);
 
 }

@@ -26,10 +26,10 @@ public class TicketRecServiceImpl implements TicketRecService {
         return ticketMapper.getAllTicketRec();
     }
 
-    @Override
-    public void delTicketRec(int id) {
-        ticketMapper.deleteByPrimaryKey(id);
-    }
+//    @Override
+//    public void delTicketRec(int id) {
+//        ticketMapper.deleteByPrimaryKey(id);
+//    }
 
     @Override
     public void dealTicketByUserid(String id) {

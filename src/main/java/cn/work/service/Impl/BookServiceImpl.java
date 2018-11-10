@@ -1,12 +1,11 @@
 package cn.work.service.Impl;
 
 import cn.work.dao.BookMapper;
-import cn.work.dao.BooklocMapper;
 import cn.work.dao.BooktypeMapper;
 import cn.work.dao.BorrowMapper;
+import cn.work.dao.InventoryMapper;
 import cn.work.pojo.*;
 import cn.work.service.BookService;
-import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.util.StringUtil;
 import org.springframework.stereotype.Service;
 
@@ -20,28 +19,24 @@ public class BookServiceImpl implements BookService {
     BookMapper bookMapper;
 
     @Resource
-    BooklocMapper booklocMapper;
-
-    @Resource
     BorrowMapper borrowMapper;
 
     @Resource
     BooktypeMapper booktypeMapper;
 
+    @Resource
+    InventoryMapper inventoryMapper;
+
     @Override
-    public void addBook(Book book, Bookloc bookloc) {
+    public void addBook(BookExt book) {
         bookMapper.insertSelective(book);
-        bookloc.setBookid(book.getBookid());
-        booklocMapper.insert(bookloc);
+        Inventory inventory = new Inventory(book.getBookid(), book.getTotal());
+        inventoryMapper.insert(inventory);
     }
 
     public boolean checkBookExist(Book book) {
         BookExample example = new BookExample();
-        example.createCriteria()
-//                .andBooknameEqualTo(book.getBookname())
-//                .andPressEqualTo(book.getPress())
-//                .andAuthorEqualTo(book.getAuthor())
-                .andIsbnEqualTo(book.getIsbn());
+        example.createCriteria().andIsbnEqualTo(book.getIsbn());
         List<Book> list = bookMapper.selectByExample(example);
         if (list.size() > 0) {
             return false;
@@ -59,11 +54,12 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void updateBook(Book book, Bookloc loc) {
-        if (book != null)
+    public void updateBook(BookExt book) {
+        if (book != null) {
             bookMapper.updateByPrimaryKeySelective(book);
-        if (loc != null)
-            booklocMapper.updateByPrimaryKeySelective(loc);
+            Inventory inventory = new Inventory(book.getBookid(), book.getLeft_num());
+            inventoryMapper.updateByPrimaryKey(inventory);
+        }
     }
 
     public BookExt getBook(int id) {
@@ -71,19 +67,6 @@ public class BookServiceImpl implements BookService {
         return bookExt;
     }
 
-
-    @Override
-    public void delBook(int id) throws Exception {
-        BorrowExample borrowExample = new BorrowExample();
-        borrowExample.createCriteria().andBookidEqualTo(id).andReturntimeIsNull();
-        int notReturncount = borrowMapper.countByExample(borrowExample);
-        if (notReturncount > 0)
-            throw new Exception("删除失败！有借出图书未还");
-        else {
-            bookMapper.deleteByPrimaryKey(id);
-            booklocMapper.deleteByPrimaryKey(id);
-        }
-    }
 
     @Override
     public Book getBookByISBN(String isbn) {
@@ -117,7 +100,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<BookExt> getBooks(Book book) {
+    public List<BookExt> getBooks(BookExt book) {
         BookExample example = new BookExample();
         BookExample.Criteria c = example.createCriteria();
         c.andBooknameIsNotNull();
@@ -127,8 +110,8 @@ public class BookServiceImpl implements BookService {
         if (!StringUtil.isEmpty(book.getAuthor())) {
             c.andAuthorLike("%" + book.getAuthor() + "%");
         }
-        if (!StringUtil.isEmpty(book.getType())) {
-            c.andTypeEqualTo(book.getType());
+        if (!StringUtil.isEmpty(book.getBooktypeid())) {
+            c.andBooktypeidEqualTo(book.getBooktypeid());
         }
         if (!StringUtil.isEmpty(book.getPress())) {
             c.andPressLike("%" + book.getPress() + "%");
@@ -139,11 +122,11 @@ public class BookServiceImpl implements BookService {
         if (book.getTotal() != null) {
             c.andTotalEqualTo(book.getTotal());
         }
-        if (book.getLeft() != null) {
-            c.andTotalEqualTo(book.getLeft());
-        }
         if (book.getDisplay() != null) {
             c.andDisplayEqualTo(book.getDisplay());
+        }
+        if (book.getLeft_num() != null) {
+            c.andleftNumEqualTo(book.getLeft_num());
         }
         return bookMapper.getBooks(example);
     }

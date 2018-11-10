@@ -1,6 +1,5 @@
 package cn.work.service;
 
-import cn.work.pojo.Borrow;
 import cn.work.pojo.BorrowExt;
 
 import java.util.List;
@@ -10,9 +9,10 @@ public interface BorrowRecService {
 
     void delBorrowRec(String id);
 
-    List<Borrow> getNotReturnRec(String userid);
+    List<BorrowExt> getNotReturnRec(String userid);
 
     List<BorrowExt> getBorrowRecByUserID(String userid);
 
-    boolean renewBorrow(String orderid);
+    boolean renewBorrow(String orderid, String bookid);
+
 }

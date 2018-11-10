@@ -132,7 +132,7 @@
                                         <label class="col-sm-2 col-sm-2 control-label"></label>
                                     </div>
                                     <div class="col-sm-2">
-                                        <select id="type" name="type" class="form-control">
+                                        <select id="booktypeid" name="booktypeid" class="form-control">
                                             <option value="" selected>-------选择图书类型-------</option>
 
                                         </select>
@@ -156,7 +156,7 @@
                                         <label class="col-sm-2 col-sm-2 control-label"></label>
                                     </div>
                                     <div class="col-sm-2">
-                                        <input type="text" name="left" id="left" class="form-control"
+                                        <input type="text" name="left_num" id="left_num" class="form-control"
                                                placeholder="剩余数量">
                                         <label class="col-sm-2 col-sm-2 control-label"></label>
                                     </div>
@@ -243,7 +243,7 @@
             url: "/book/getAllTypes",
             success: function (data) {
                 for (var type of data)
-                    $("#type").append(`<option value=` + type.id + `>` + type.type + `</option>`)
+                    $("#booktypeid").append(`<option value=` + type.id + `>` + type.booktype + `</option>`)
             }
         });
         editor = new $.fn.dataTable.Editor({
@@ -268,7 +268,7 @@
                 name: "bookname"
             }, {
                 label: "类型：",
-                name: "type",
+                name: "booktypeid",
                 type: "select"
             }, {
                 label: "出版社：",
@@ -287,7 +287,7 @@
                 name: "total"
             }, {
                 label: "剩余数量：",
-                name: "left"
+                name: "left_num"
             }, {
                 label: "楼层：",
                 name: "floor",
@@ -327,14 +327,14 @@
                 var option = {};
                 console.log(optionsB)
                 $.each(data, function (i, e) {
-                    option.label = e.type;
+                    option.label = e.booktype;
                     option.value = e.id;
                     optionsB.push(option);
                     option = {};
                 });
             }
         ).done(function () {
-            editor.field('type').update(optionsB);
+            editor.field('booktypeid').update(optionsB);
         });
 
         var floorOptions = [];
@@ -415,7 +415,7 @@
                     width: "10%"
                 },
                 {
-                    "data": "type",
+                    "data": "booktype",
                     width: "10%"
                 },
                 {
@@ -427,7 +427,7 @@
                     width: "10%"
                 },
                 {
-                    "data": "left",
+                    "data": "left_num",
                     width: "10%"
                 },
                 {
@@ -513,19 +513,19 @@
             bookname = bookname ? bookname : null;
             var author = $("#author").val();
             author = author ? author : null;
-            var type = $("#type").val();
-            type = type ? type : null;
+            var booktypeid = $("#booktypeid").val();
+            booktypeid = booktypeid ? booktypeid : null;
             var press = $("#press").val();
             press = press ? press : null;
             var isbn = $("#isbn").val();
             isbn = isbn ? isbn : null;
             var total = $("#total").val();
             total = total ? total : null;
-            var left = $("#left").val();
-            left = left ? left : null;
+            var left_num = $("#left_num ").val();
+            left_num = left_num ? left_num : null;
             var display = $("#display").val();
             display = display ? display : null;
-            var result = {bookname, author, type, press, isbn, total, left, display};
+            var result = {bookname, author, booktypeid, press, isbn, total, left_num, display};
             oTable.search(JSON.stringify(result)).draw();
 
         });
@@ -534,7 +534,7 @@
     function fnFormatDetails(aData) {
         sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
         sOut += '<tr><td>出版社:</td><td>' + aData.press + '</td></tr>';
-        sOut += '<tr><td>位置:</td><td>' + aData.floor + '楼，第' + aData.bookcase + '书架，第' + aData.level + '层' + '</td></tr>';
+        sOut += '<tr><td>位置:</td><td>' + aData.floor + '楼，第' + aData.bookcase + '书架，第' + aData.layer + '层' + '</td></tr>';
         return sOut;
     }
 

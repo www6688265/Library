@@ -4,6 +4,7 @@ import cn.work.pojo.Borrow;
 import cn.work.pojo.BorrowExample;
 import cn.work.pojo.BorrowExt;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -30,7 +31,33 @@ public interface BorrowMapper {
 
     int updateByPrimaryKey(Borrow record);
 
+    //自己写的语句
     List<BorrowExt> getAllBorrowRec();
 
     List<BorrowExt> getBorrowRecByUserID(int id);
+
+    @Select("SELECT\n" +
+            "\tcount( * ) \n" +
+            "FROM\n" +
+            "\tborrow,\n" +
+            "\tBorrowedBooks \n" +
+            "WHERE\n" +
+            "\tborrow.userID = #{id} \n" +
+            "\tAND BorrowedBooks.ReturnTime is null \n" +
+            "\tAND borrow.orderId = BorrowedBooks.orderId")
+    int countUserNotReturn(int id);
+
+    @Select("SELECT\n" +
+            "\tcount( * ) \n" +
+            "FROM\n" +
+            "\tborrow,\n" +
+            "\tBorrowedBooks \n" +
+            "WHERE\n" +
+            "\tborrow.userID = #{id} \n" +
+            "\tAND BorrowedBooks.ReturnTime is null \n" +
+            "\tAnd LimitTime<now()\n" +
+            "\tAND borrow.orderId = BorrowedBooks.orderId")
+    int countUserOverDueNum(int id);
+
+    List<BorrowExt> getNotReturnRec(int id);
 }

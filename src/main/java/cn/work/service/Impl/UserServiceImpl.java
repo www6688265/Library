@@ -55,22 +55,27 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delUser(String id) throws Exception {
+    public void showUser(String id, boolean display) throws Exception {
         int userid = Integer.parseInt(id);
-        String errorMsg = "";
-        int notReturnNum = getNotReturnNum(id);
-        double notPayNum = getTicketNum(id);
-        if (notReturnNum > 0) {
-            errorMsg += "有未还图书！";
+        int status = display ? 1 : 0;
+        if (!display) {
+            String errorMsg = "";
+            int notReturnNum = getNotReturnNum(id);
+            double notPayNum = getTicketNum(id);
+            if (notReturnNum > 0) {
+                errorMsg += "有未还图书！";
+            }
+            if (notPayNum > 0) {
+                errorMsg += "有未处理罚款！";
+            }
+            if (notReturnNum > 0 || notPayNum > 0) {
+                throw new Exception(errorMsg);
+            }
         }
-        if (notPayNum > 0) {
-            errorMsg += "有未处理罚款！";
-        }
-        if(notReturnNum > 0||notPayNum > 0){
-            throw new Exception(errorMsg);
-        }
-        userinfoMapper.deleteByPrimaryKey(userid);
-
+        Userinfo userinfo = new Userinfo();
+        userinfo.setUserid(userid);
+        userinfo.setUserStatus(status);
+        userinfoMapper.updateByPrimaryKeySelective(userinfo);
     }
 
     @Override
@@ -96,19 +101,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int getNotReturnNum(String id) {
-        BorrowExample borrowExample = new BorrowExample();
-        borrowExample.createCriteria().andUseridEqualTo(Integer.parseInt(id))
-                .andReturntimeIsNull();
-        int borrowNum = borrowMapper.countByExample(borrowExample);
+        int borrowNum = borrowMapper.countUserNotReturn(Integer.parseInt(id));
         return borrowNum;
     }
 
     @Override
     public int getOverDueNum(String id){
-        BorrowExample borrowExample = new BorrowExample();
-        borrowExample.createCriteria().andUseridEqualTo(Integer.parseInt(id))
-                .andReturntimeIsNull().andLimittimeLessThan(new Date());
-        int borrowNum = borrowMapper.countByExample(borrowExample);
+        int borrowNum = borrowMapper.countUserOverDueNum(Integer.parseInt(id));
         return borrowNum;
     }
 
@@ -121,10 +120,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Userinfo updateUser(Userinfo userinfo) {
-        UserinfoExample example=new UserinfoExample();
-        example.createCriteria().andUseridEqualTo(userinfo.getUserid());
         try{
-            userinfoMapper.updateByExampleSelective(userinfo,example);
+            userinfoMapper.updateByPrimaryKeySelective(userinfo);
         }
         catch (DuplicateKeyException e)
         {
@@ -149,17 +146,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public double getUserFee(String id) {
-        Double [] fees=ticketMapper.getUserFee(Integer.parseInt(id));
+        List<Ticket> list = ticketMapper.getUserFee(Integer.parseInt(id));
         double sum=0;
-        for(double fee:fees){
-            sum+=fee;
+        for (Ticket ticket : list) {
+            sum = sum + ticket.getFee().doubleValue();
         }
         return sum;
     }
 
     @Override
-    public UserExt getUserAndPwdByID(String idcard) {
+    public UserExt getUserAndPwdByIDCard(String idcard) {
         return userMapper.getUserAndPwdByID(idcard);
+    }
+
+    @Override
+    public User getUserAndPwdByID(String userid) {
+        return userMapper.selectByPrimaryKey(Integer.parseInt(userid));
     }
 
     @Override
@@ -175,6 +177,25 @@ public class UserServiceImpl implements UserService {
         profile.setUserFee(getUserFee(id));
         profile.setAccessDetail(getAccessDetail(id));
         return profile;
+    }
+
+    @Override
+    public void setUserAccess(String id, boolean access) {
+        int userAccess = access ? 1 : 0;
+        Userinfo userinfo = new Userinfo();
+        userinfo.setUserid(Integer.parseInt(id));
+        userinfo.setAccess(userAccess);
+        userinfoMapper.updateByPrimaryKeySelective(userinfo);
+    }
+
+    @Override
+    public void updatePwd(User user) {
+        String pwd = user.getPassword();
+        if (pwd != null && !pwd.equals("")) {
+            pwd = getEncrypt(pwd);
+            user.setPassword(pwd);
+        }
+        userMapper.updateByPrimaryKey(user);
     }
 
 

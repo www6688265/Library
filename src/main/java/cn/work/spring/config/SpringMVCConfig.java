@@ -1,22 +1,15 @@
 package cn.work.spring.config;
 
-import cn.work.interceptors.loginInterceptor;
-import cn.work.interceptors.userLoginInterceptor;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import cn.work.interceptors.LoginInterceptor;
+import cn.work.interceptors.UserLoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.format.datetime.DateFormatter;
-import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import java.util.List;
-
 import static cn.work.spring.config.LibraryConfig.projectCachePath;
 import static cn.work.spring.config.LibraryConfig.projectPath;
 import static cn.work.spring.config.LibraryConfig.projectUploadPath;
@@ -25,7 +18,7 @@ import static cn.work.spring.config.LibraryConfig.projectUploadPath;
 public class SpringMVCConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new loginInterceptor()).addPathPatterns("/index")
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/index")
                 .addPathPatterns("/index")
                 .addPathPatterns("/Admin_changePwd")
                 .addPathPatterns("/Admin_table")
@@ -38,7 +31,7 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/admin/*")
                 .excludePathPatterns("/admin/login");
 
-        registry.addInterceptor(new userLoginInterceptor()).addPathPatterns("/profile");
+        registry.addInterceptor(new UserLoginInterceptor()).addPathPatterns("/profile");
     }
 
     public void addViewControllers(ViewControllerRegistry registry) {

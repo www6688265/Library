@@ -16,7 +16,6 @@
     <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css"/>
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
@@ -121,12 +120,12 @@
                                id="adv-dataTable">
                             <thead>
                             <tr>
+                                <th><i class="fa fa-bookmark"></i>订单编号</th>
                                 <th><i class="fa fa-bullhorn"></i>用户名</th>
                                 <th><i class="fa fa-bookmark"></i>书名</th>
                                 <th><i class="fa fa-bookmark"></i>借书时间</th>
                                 <th><i class="fa fa-bookmark"></i>应还时间</th>
                                 <th><i class="fa fa-bookmark"></i>还书时间</th>
-                                <th><i class="fa fa-edit"></i>管理</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -204,6 +203,7 @@
                 "url": "/borrowRec/getAllBorrowRec",
             },
             "columns": [
+                {"data": "orderid"},
                 {"data": "username"},
                 {"data": "bookname"},
                 {"data": "borrowtime"},
@@ -214,13 +214,6 @@
                             return data;
                         else
                             return "未归还"
-                    }
-                },
-                {
-                    "data": "orderid", render: function (data, type, row, meta) {
-
-                        var html = "<button class=\"btn btn-danger btn-xs\" onclick=\"recordDelete(this)\"><i class=\"fa fa-trash-o \"></i></button>"
-                        return html;
                     }
                 }
             ],
@@ -257,13 +250,13 @@
         oTable.columns.adjust().draw();
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() < 2) {
+            if ($(this).index() < 3) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
                 $(this).html('<input type="text" placeholder="搜索' + title + '" />');
             }
-            if ($(this).index() >= 2 && $(this).index() != 5) {
+            if ($(this).index() >= 3) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
-                $(this).html('<input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
+                $(this).html('<input class="input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
             }
         });
         $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
@@ -289,33 +282,33 @@
     });
 
 
-    function recordDelete(td) {
-        var nTr = $(td).parents('tr');
-        var row = oTable.row(nTr);
-        var id = row.data().orderid;
-        if (confirm("确定要删除这条记录吗?")) {
-            $.ajax({
-                url: "/borrowRec/delBorrowRec?id=" + id ,
-                async: true,
-                type: "GET",
-                dataType: "json",
-                cache: false,    //不允许缓存
-                success: function (data) {
-                    var obj = eval(data);
-                    if (obj.result == "success") {
-                        oTable.ajax.reload();
-                        alert("删除成功");
-                    }
-                    else {
-                        alert(data.msg);
-                    }
-                },
-                error: function (data) {
-                    alert("请求异常");
-                }
-            });
-        }
-    }
+    // function recordDelete(td) {
+    //     var nTr = $(td).parents('tr');
+    //     var row = oTable.row(nTr);
+    //     var id = row.data().orderid;
+    //     if (confirm("确定要删除这条记录吗?")) {
+    //         $.ajax({
+    //             url: "/borrowRec/delBorrowRec?id=" + id ,
+    //             async: true,
+    //             type: "GET",
+    //             dataType: "json",
+    //             cache: false,    //不允许缓存
+    //             success: function (data) {
+    //                 var obj = eval(data);
+    //                 if (obj.result == "success") {
+    //                     oTable.ajax.reload();
+    //                     alert("删除成功");
+    //                 }
+    //                 else {
+    //                     alert(data.msg);
+    //                 }
+    //             },
+    //             error: function (data) {
+    //                 alert("请求异常");
+    //             }
+    //         });
+    //     }
+    // }
 
 </script>
 

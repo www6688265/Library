@@ -1,43 +1,24 @@
 package cn.work.pojo;
 
 public class BookExt extends Book {
-    private Integer bookid;
 
-    private Integer floor;
+    public String booktype;
 
-    private Integer bookcase;
+    public Integer left_num;
 
-    private Integer level;
-
-    public Integer getBookid() {
-        return bookid;
+    public String getBooktype() {
+        return booktype;
     }
 
-    public void setBookid(Integer bookid) {
-        this.bookid = bookid;
+    public void setBooktype(String booktype) {
+        this.booktype = booktype;
     }
 
-    public Integer getFloor() {
-        return floor;
+    public Integer getLeft_num() {
+        return left_num;
     }
 
-    public void setFloor(Integer floor) {
-        this.floor = floor;
-    }
-
-    public Integer getBookcase() {
-        return bookcase;
-    }
-
-    public void setBookcase(Integer bookcase) {
-        this.bookcase = bookcase;
-    }
-
-    public Integer getLevel() {
-        return level;
-    }
-
-    public void setLevel(Integer level) {
-        this.level = level;
+    public void setLeft_num(Integer left_num) {
+        this.left_num = left_num;
     }
 }

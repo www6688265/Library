@@ -6,11 +6,11 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class userLoginInterceptor implements HandlerInterceptor {
+public class UserLoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         Integer userid = (Integer) request.getSession().getAttribute("userid");
-        if (userid != null && !userid.equals(""))
+        if (userid != null)
             return true;
         else {
             response.sendRedirect("/UserLogin");

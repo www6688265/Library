@@ -5,15 +5,13 @@ public class Book {
 
     private String bookname;
 
-    private String type;
+    private String booktypeid;
 
     private String press;
 
     private String brief;
 
     private Integer total;
-
-    private Integer left;
 
     private String pic;
 
@@ -22,6 +20,13 @@ public class Book {
     private String isbn;
 
     private Integer display;
+
+    private Integer floor;
+
+    private Integer bookcase;
+
+    private Integer layer;
+
 
     public Integer getBookid() {
         return bookid;
@@ -39,12 +44,12 @@ public class Book {
         this.bookname = bookname == null ? null : bookname.trim();
     }
 
-    public String getType() {
-        return type;
+    public String getBooktypeid() {
+        return booktypeid;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setBooktypeid(String booktypeid) {
+        this.booktypeid = booktypeid == null ? null : booktypeid.trim();
     }
 
     public String getPress() {
@@ -69,14 +74,6 @@ public class Book {
 
     public void setTotal(Integer total) {
         this.total = total;
-    }
-
-    public Integer getLeft() {
-        return left;
-    }
-
-    public void setLeft(Integer left) {
-        this.left = left;
     }
 
     public String getPic() {
@@ -110,4 +107,29 @@ public class Book {
     public void setDisplay(Integer display) {
         this.display = display;
     }
+
+    public Integer getFloor() {
+        return floor;
+    }
+
+    public void setFloor(Integer floor) {
+        this.floor = floor;
+    }
+
+    public Integer getBookcase() {
+        return bookcase;
+    }
+
+    public void setBookcase(Integer bookcase) {
+        this.bookcase = bookcase;
+    }
+
+    public Integer getLayer() {
+        return layer;
+    }
+
+    public void setLayer(Integer layer) {
+        this.layer = layer;
+    }
+
 }

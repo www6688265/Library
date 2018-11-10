@@ -12,5 +12,4 @@ public class TicketExt extends Ticket {
         this.borrowExt = borrowExt;
     }
 
-
 }

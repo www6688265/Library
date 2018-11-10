@@ -178,7 +178,7 @@
                 return myNavFunction(this.id);
             },
             ajax: {
-                url: "show_data.php?action=1",
+                url: "",
                 modal: true
             }
         });

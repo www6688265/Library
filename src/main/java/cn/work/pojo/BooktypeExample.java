@@ -174,73 +174,73 @@ public class BooktypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTypeIsNull() {
-            addCriterion("type is null");
+        public Criteria andBooktypeIsNull() {
+            addCriterion("booktype is null");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIsNotNull() {
-            addCriterion("type is not null");
+        public Criteria andBooktypeIsNotNull() {
+            addCriterion("booktype is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTypeEqualTo(String value) {
-            addCriterion("type =", value, "type");
+        public Criteria andBooktypeEqualTo(String value) {
+            addCriterion("booktype =", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeNotEqualTo(String value) {
-            addCriterion("type <>", value, "type");
+        public Criteria andBooktypeNotEqualTo(String value) {
+            addCriterion("booktype <>", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeGreaterThan(String value) {
-            addCriterion("type >", value, "type");
+        public Criteria andBooktypeGreaterThan(String value) {
+            addCriterion("booktype >", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("type >=", value, "type");
+        public Criteria andBooktypeGreaterThanOrEqualTo(String value) {
+            addCriterion("booktype >=", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeLessThan(String value) {
-            addCriterion("type <", value, "type");
+        public Criteria andBooktypeLessThan(String value) {
+            addCriterion("booktype <", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeLessThanOrEqualTo(String value) {
-            addCriterion("type <=", value, "type");
+        public Criteria andBooktypeLessThanOrEqualTo(String value) {
+            addCriterion("booktype <=", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeLike(String value) {
-            addCriterion("type like", value, "type");
+        public Criteria andBooktypeLike(String value) {
+            addCriterion("booktype like", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeNotLike(String value) {
-            addCriterion("type not like", value, "type");
+        public Criteria andBooktypeNotLike(String value) {
+            addCriterion("booktype not like", value, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIn(List<String> values) {
-            addCriterion("type in", values, "type");
+        public Criteria andBooktypeIn(List<String> values) {
+            addCriterion("booktype in", values, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeNotIn(List<String> values) {
-            addCriterion("type not in", values, "type");
+        public Criteria andBooktypeNotIn(List<String> values) {
+            addCriterion("booktype not in", values, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeBetween(String value1, String value2) {
-            addCriterion("type between", value1, value2, "type");
+        public Criteria andBooktypeBetween(String value1, String value2) {
+            addCriterion("booktype between", value1, value2, "booktype");
             return (Criteria) this;
         }
 
-        public Criteria andTypeNotBetween(String value1, String value2) {
-            addCriterion("type not between", value1, value2, "type");
+        public Criteria andBooktypeNotBetween(String value1, String value2) {
+            addCriterion("booktype not between", value1, value2, "booktype");
             return (Criteria) this;
         }
     }

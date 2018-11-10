@@ -18,6 +18,7 @@
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -162,37 +163,38 @@
             <div id="bookDiv" class="row mt" style="display: none">
                 <div class="col-md-12">
                     <div class="col-md-12 mb">
-                        <div class="message-p pn">
+                        <div class="message-p pn" style="min-height: 700px">
                             <div class="message-header">
-                                <h5>请输入图书ISBN编号</h5>
+                                <h5>请选择您要归还的图书</h5>
+                            </div>
+                            <div class="row mt">
+                                <div class="col-md-12">
+                                    <div class="adv-table">
+                                        <table cellpadding="0" cellspacing="0" border="0"
+                                               class="display table table-bordered"
+                                               id="adv-dataTable" width="100%">
+                                            <thead>
+                                            <tr>
+                                                <th class="select-checkbox sorting_1"></th>
+                                                <th><i class="fa fa-bookmark"></i>订单编号</th>
+                                                <th><i class="fa fa-bullhorn"></i>用户名</th>
+                                                <th><i class="fa fa-bookmark"></i>书名</th>
+                                                <th><i class="fa fa-bookmark"></i>借书时间</th>
+                                                <th><i class="fa fa-bookmark"></i>应还时间</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                            <tfoot>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="background/img/book.png" class="img-circle" width="65">
-                                </div>
-                                <div class="col-md-9">
-                                    <form id="bookForm" class="form-inline" role="form">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="isbn_1" name="isbn"
-                                                   placeholder="请输入ISBN编号">
-                                        </div>
-                                        <a href="#" class="removeclass">×</a>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"></div>
+                                <div class="col-md-5"></div>
                                 <div class="col-md-6">
-                                    <button id="AddMoreFileBox" type="button" class="btn btn-info">添加图书</button>
                                     <button id="bookSubmit" type="button" class="btn btn-default">下一步</button>
-                                </div>
-                            </div>
-                            <div id="bookNotFound" class="row" style="display: none">
-                                <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="background/img/warn.png" class="img-circle" width="40">
-                                </div>
-                                <div class="col-md-9">
-                                    <p>编号为<b id="bookNotFonudisbns"></b>图书未找到，请重新输入</p>
                                 </div>
                             </div>
                             <div id="confirm" class="row" style="display: none">
@@ -200,16 +202,8 @@
                                     <img src="background/img/prompt.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
-                                    <p>该图书名为：<b id="bookNames"></b></p>
+                                    <p>您要归还的图书名为：<b id="bookNames"></b></p>
                                     <button id="confirmButton" type="button" class="btn btn-default">确认还书</button>
-                                </div>
-                            </div>
-                            <div id="orderNotFound" class="row" style="display: none">
-                                <div class="col-md-3 centered hidden-sm hidden-xs">
-                                    <img src="background/img/warn.png" class="img-circle" width="65">
-                                </div>
-                                <div class="col-md-9">
-                                    <p>还书失败，该用户没有isbn为<b id="orderNotFoundList"></b>的借书记录</p>
                                 </div>
                             </div>
 
@@ -244,43 +238,24 @@
 <script src="background/lib/jquery.scrollTo.min.js"></script>
 <script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
 <script src="background/lib/common-scripts.js"></script>
+<script type="text/javascript" language="javascript"
+        src="background/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript"
+        src="background/lib/advanced-datatable/js/dataTables.select.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
 <!--script for this page-->
 <script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
+    var oTable;
+    var url;
     $(document).ready(function () {
         $("#idSubmit").click(function () {
-            var MaxInputs;
-            var InputsWrapper = $("#bookForm");
-            var borrowForm = $("#borrowForm");
-            var x = InputsWrapper.length;
-            var FieldCount = 1;
+            if ($("#idcard").val().trim() === "") {
+                alert("未输入身份证");
+                return;
+            }
 
-            $("#AddMoreFileBox").click(function (e) {
-                if (x < MaxInputs) {
-                    FieldCount++;
-                    $(InputsWrapper).append("<div class=\"form-group\">\n" +
-                        "                                            <input type=\"text\" class=\"form-control\" id=\"isbn_" + FieldCount + "\" name=\"isbn\"\n" +
-                        "                                                   placeholder=\"请输入ISBN编号\">\n" +
-                        "                                        </div>\n" +
-                        "                                        <a href=\"#\" class=\"removeclass\">×</a>");
-                    x++;
-                    $(borrowForm).append("<input id=\"bookid_" + FieldCount + "\" name=\"bookid\">");
-                }
-                else {
-                    alert("该用户最多可以还" + MaxInputs + "本书！");
-                }
-                return false;
-            });
-
-            $("body").on("click", ".removeclass", function (e) {
-                if (x > 1) {
-                    $(this).prev().remove();
-                    $(this).remove();
-                    $("#borrowForm >input:last").remove();
-                    x--;
-                }
-                return false;
-            })
             $.ajax({
                 url: "/return/userCheck",
                 type: "POST",
@@ -295,7 +270,8 @@
                             $("#userNotFound").hide();
                             $("#notNeedToReturn").hide();
                             $("#bookDiv").show();
-                            MaxInputs = data.maxReturnNum;
+                            url = "/borrowRec/getNotReturnList?userid=" + data.userid;
+                            oTable.ajax.url(url).load();
                             break;
                         case "2":
                             $("#userNameInfo").hide();
@@ -317,60 +293,95 @@
                 }
             })
         });
-        $("#bookSubmit").click(function () {
-            $.ajax({
-                url: "/return/bookCheck",
-                type: "POST",
-                dataType: "json",
-                data: $("#bookForm").serialize(),
-                success: function (data) {
-                    if (data.result == "1") {
-                        var booklist = data.booklist;
-                        var length = booklist.length;
-                        var html = "";
-                        for (var i = 0; i < length; i++) {
-                            if (i == length - 1)
-                                html += "《" + booklist[i].bookname + "》";
-                            else
-                                html += "《" + booklist[i].bookname + "》、";
-                        }
-                        $("#bookNames").html(html);
-                        $("#borrowForm input").each(function () {
-                            if ($(this).index() > 0 && $(this).index() < length + 1) {
-                                $(this).val(booklist[$(this).index() - 1].bookid);
-                            }
-                        });
-                        $("#bookNotFound").hide();
-                        $("#confirm").show();
-                        $("#orderNotFound").hide();
-                    }
-                    else {
-                        $("#bookNotFound").show();
-                        var notFonudList = data.notFoundList;
-                        var length = notFonudList.length;
-                        var html = "";
-                        for (var i = 0; i < length; i++) {
-                            if (i == length - 1)
-                                html += notFonudList[i];
-                            else
-                                html += notFonudList[i] + "、";
-                        }
-                        $("#bookNotFonudisbns").html(html);
-                        $("#orderNotFound").hide();
-                    }
+        oTable = $("#adv-dataTable").DataTable({
+            "dom": "<'row'<'col-sm-12'lBrtip>>",
+            "columns": [
+                {
+                    data: null,
+                    defaultContent: '',
+                    className: 'select-checkbox',
+                    orderable: false,
+                    searchable: false,
+                    width: "5%"
                 },
-                error: function () {
-                    alert("网络出现问题！");
+                {"data": "orderid"},
+                {"data": "username"},
+                {"data": "bookname"},
+                {"data": "borrowtime"},
+                {"data": "limittime"},
+                {
+                    "data": "bookid", visible: false
+                },
+                {
+                    "data": "userid", visible: false
                 }
-            })
+            ],
+            "paging": false,//开启表格分页
+            "bLengthChange": true,
+            "bRetrieve": true,
+            "aoColumnDefs": [{
+                "bSortable": false,
+                "aTargets": [0]
+            }],
+            select: {
+                style: 'mutil',
+                selector: 'td:first-child'
+            },
+            "order": [[1, 'asc']],
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoEmpty": "记录数为0",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                },
+
+            },
+            "autoWidth": true,
+            "bAutoWidth": true,
+        });
+        oTable.columns.adjust().draw();
+
+        $("#bookSubmit").click(function () {
+            var Data = oTable.rows('.selected').data();
+            var length = Data.length;
+            if (length === 0) {
+                $("#confirm").hide();
+                alert("未选择任何图书");
+                return;
+            }
+            var html = "";
+            for (var i = 0; i < length; i++) {
+                if (i === length - 1)
+                    html += "《" + Data[i].bookname + "》";
+                else
+                    html += "《" + Data[i].bookname + "》、";
+            }
+            $("#bookNames").html(html);
+            $("#confirm").show();
         });
 
         $("#confirmButton").click(function () {
+            var rowData = oTable.rows('.selected').data();
+            var data = new Array(rowData.length);
+            for (var i = 0; i < rowData.length; i++) {
+                data[i] = rowData[i];
+            }
             $.ajax({
                 url: "/return/returnBook",
                 type: "POST",
                 dataType: "json",
-                data: $("#borrowForm").serialize(),
+                contentType: 'application/json',
+                data: JSON.stringify(data),
                 success: function (data) {
                     if (data.result == "success") {
                         if (data.hasTicket == true) {
@@ -408,6 +419,10 @@
             })
         });
     });
+
+    function initTable() {
+
+    }
 </script>
 </body>
 

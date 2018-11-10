@@ -1,11 +1,9 @@
 package cn.work.pojo;
 
-import java.io.Serializable;
-
-public class Booktype implements Serializable {
+public class Booktype implements java.io.Serializable {
     private String id;
 
-    private String type;
+    private String booktype;
 
     public String getId() {
         return id;
@@ -15,11 +13,11 @@ public class Booktype implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getType() {
-        return type;
+    public String getBooktype() {
+        return booktype;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setBooktype(String booktype) {
+        this.booktype = booktype == null ? null : booktype.trim();
     }
 }

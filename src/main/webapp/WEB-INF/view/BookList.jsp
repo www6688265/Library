@@ -114,7 +114,6 @@
             <div class="container">
                 <h2 class="title-inner">
                     <c:choose>
-
                         <c:when test="${empty param.type}">
                             所有图书
                         </c:when>
@@ -247,12 +246,10 @@
 <!--search jQuery-->
 <script src="front/js/main.js"></script>
 <!--search jQuery-->
-
 <!-- Scrolling Nav JavaScript -->
 <script src="front/js/scrolling-nav.js"></script>
 <!-- //fixed-scroll-nav-js -->
 <!--//scripts-->
-
 <script src="front/js/bootstrap.js"></script>
 <!-- start-smoth-scrolling -->
 <script src="front/js/move-top.js"></script>
@@ -275,18 +272,18 @@
             url: "/book/getAllTypes",
             success: function (data) {
                 for (var type of data)
-                    $("#Types").append("<li><a href=\"${pageContext.request.contextPath}/BookList?type=" + type.id + "&typename=" + type.type + "\">" + type.type + "</a></li>")
+                    $("#Types").append("<li><a href=\"${pageContext.request.contextPath}/BookList?type=" + type.id + "&typename=" + type.booktype + "\">" + type.booktype + "</a></li>")
             }
         })
 
         var element = $("#pageInfo");
-        var pageSize = 10;
+        var pageSize = 12;
         var bookname = "";
         var author = "";
         var booktype = "";
         bookname += "${param.bookname}";
         author += "${param.author}";
-        booktype += "${param.type}"
+        booktype += "${param.type}";
         pageStart();
 
         function pageStart() {
@@ -302,7 +299,9 @@
                     "type": booktype
                 },
                 success: function (data) {
-                    for (var item of data.list)
+                    for (var item of data.list) {
+                        if (item.pic === null)
+                            item.pic = "";
                         $("#BookList").prepend(`
                         <div class="col-md-3 product-men">
                             <div class="product-chr-info chr">
@@ -317,7 +316,8 @@
                                 </div>
                             </div>
                         </div>`)
-
+                    }
+                    ;
                     var options = {
                         bootstrapMajorVersion: 3, //bootstrap的版本要求
                         currentPage: data.page,//当前页数
@@ -351,12 +351,14 @@
                                 },
                                 success: function (data) {
                                     $("#BookList").html("");
-                                    for (var item of data.list)
+                                    for (var item of data.list) {
+                                        if (item.pic === null)
+                                            item.pic = "";
                                         $("#BookList").prepend(`
                         <div class="col-md-3 product-men">
                             <div class="product-chr-info chr">
                                 <div class="thumbnail">
-                                    <a href="">
+                                    <a href="${pageContext.request.contextPath}/BookInfo?bookid=` + item.bookid + `">
                                         <img src="` + item.pic + `"onerror="this.src='/front/images/errorImg.jpg'">
                                     </a>
                                 </div>
@@ -366,6 +368,8 @@
                                 </div>
                             </div>
                         </div>`);
+                                    }
+
                                 }
                             })
                         }

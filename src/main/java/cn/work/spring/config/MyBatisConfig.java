@@ -19,11 +19,11 @@ public class MyBatisConfig {
 
     @Bean
     @ConditionalOnMissingBean
-    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource, PageInterceptor Pageinterceptor)
+    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource, PageInterceptor pageInterceptor)
     {
         SqlSessionFactoryBean sqlSessionFactoryBean=new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
-        sqlSessionFactoryBean.setPlugins(new Interceptor[]{Pageinterceptor});
+        sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageInterceptor});
         ResourcePatternResolver resolver=new PathMatchingResourcePatternResolver();
         Resource mybatisConfigXml =resolver.getResource("classpath:mybatis/mybatis-config.xml");
         sqlSessionFactoryBean.setConfigLocation(mybatisConfigXml);
@@ -31,15 +31,15 @@ public class MyBatisConfig {
     }
 
     @Bean
-    public PageInterceptor Pageinterceptor() {
-        PageInterceptor Pageinterceptor = new PageInterceptor();
+    public PageInterceptor pageinterceptor() {
+        PageInterceptor pageInterceptor = new PageInterceptor();
         Properties properties = new Properties();
         properties.setProperty("offsetAsPageNum", "true");
         properties.setProperty("rowBoundsWithCount", "true");
         properties.setProperty("reasonable", "true");
         properties.setProperty("helperDialect", "mysql");
-        Pageinterceptor.setProperties(properties);
-        return Pageinterceptor;
+        pageInterceptor.setProperties(properties);
+        return pageInterceptor;
     }
 
 }

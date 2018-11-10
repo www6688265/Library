@@ -50,13 +50,13 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a  href="${pageContext.request.contextPath}/User_table">
+                    <a href="${pageContext.request.contextPath}/User_table">
                         <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a  href="javascript:;">
+                    <a href="javascript:;">
                         <i class="fa fa-barcode"></i>
                         <span>图书管理</span>
                     </a>
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a  href="${pageContext.request.contextPath}/Borrow">
+                    <a href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
                         <span>借书</span>
                     </a>
@@ -121,19 +121,21 @@
                                id="adv-dataTable">
                             <thead>
                             <tr>
+                                <th><i class="fa fa-bullhorn"></i>罚款编号</th>
                                 <th><i class="fa fa-bullhorn"></i>用户名</th>
                                 <th><i class="fa fa-bookmark"></i>书名</th>
-                                <th><i class="fa fa-bookmark"></i>是否已归还</th>
+                                <th><i class="fa fa-bookmark"></i>归还时间</th>
+                                <th><i class="fa fa-bookmark"></i>处理时间</th>
                                 <th><i class="fa fa-bookmark"></i>过期时长</th>
                                 <th><i class="fa fa-bookmark"></i>费用</th>
                                 <th><i class="fa fa-bookmark"></i>状态</th>
-                                <th><i class="fa fa-edit"></i>管理</th>
                             </tr>
                             </thead>
                             <tbody>
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -206,21 +208,37 @@
                 "url": "/ticketRec/getAllTicketRec",
             },
             "columns": [
+                {"data": "ticketid"},
                 {"data": "borrowExt.username"},
                 {"data": "borrowExt.bookname"},
-                {"data": "borrowExt.returntime", render: function (data, type, row, meta) {
+                {
+                    "data": "borrowExt.returntime", render: function (data, type, row, meta) {
                         if (data != null && !data.toString() == "")
                             return data;
                         else
                             return "未归还"
-                    }},
-                {"data": "overduetime",render: function (data, type, row, meta) {
-                        return data+"天";
-                    }},
-                {"data": "fee",render: function (data, type, row, meta) {
-                        return data+"元";
-                    }},
-                {"data": "status", render: function (data, type, row, meta) {
+                    }
+                },
+                {
+                    "data": "dealtime", render: function (data, type, row, meta) {
+                        if (data != null && !data.toString() == "")
+                            return data;
+                        else
+                            return "未处理"
+                    }
+                },
+                {
+                    "data": "overduetime", render: function (data, type, row, meta) {
+                        return data + "天";
+                    }
+                },
+                {
+                    "data": "fee", render: function (data, type, row, meta) {
+                        return data + "元";
+                    }
+                },
+                {
+                    "data": "ticketStatus", render: function (data, type, row, meta) {
                         switch (data) {
                             case 0:
                                 return "<span class=\"label label-warning label-mini\">未处理</span>";
@@ -229,12 +247,6 @@
                                 return "<span class=\"label label-success label-mini\">已处理</span> ";
                                 break;
                         }
-                    }},
-                {
-                    "data": "ticketid", render: function (data, type, row, meta) {
-
-                        var html = "<button class=\"btn btn-danger btn-xs\" onclick=\"recordDelete(this)\"><i class=\"fa fa-trash-o \"></i></button>"
-                        return html;
                     }
                 }
             ],
@@ -242,13 +254,9 @@
             "paging": true,//开启表格分页
             "bLengthChange": true,
             "bRetrieve": true,
-            "aoColumnDefs": [{
-                "bSortable": false,
-                "aTargets": [0]
-            }],
             searching: true,
             "bFilter": true,
-            "order": [[1, 'asc']],
+            "order": [[0, 'asc']],
             "oLanguage": { // 国际化配置
                 "sProcessing": "正在获取数据，请稍后...",
                 "sLengthMenu": "显示 _MENU_ 条",
@@ -271,10 +279,18 @@
         oTable.columns.adjust().draw();
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() < 4||$(this).index() ==5) {
-                if ($(this).index() === 2) {
+            if ($(this).index() < 5 || $(this).index() == 7) {
+                if ($(this).index() === 4 || $(this).index() === 3) {
                     var title = $('#adv-dataTable thead th').eq($(this).index()).text();
-                    $(this).html('<input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
+                    $(this).html('<input class="input-medium default-date-picker" size="16" type="text" value="" placeholder="搜索' + title + '" >');
+                }
+                else if ($(this).index() === 7) {
+                    var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                    $(this).html(`<select>
+                                    <option value="">全部状态</option>
+                                    <option value="未处理">未处理</option>
+                                    <option value="已处理">已处理</option>
+                              </select>`);
                 }
                 else {
                     var title = $('#adv-dataTable thead th').eq($(this).index()).text();
@@ -294,6 +310,13 @@
                         .draw();
                 }
             });
+            $('select', this.footer()).on('change', function () {
+                if (that.search() !== this.value) {
+                    that
+                        .search(this.value)
+                        .draw();
+                }
+            });
         });
         $('.default-date-picker').datepicker({
             format: 'yyyy-mm-dd',
@@ -305,33 +328,33 @@
     });
 
 
-    function recordDelete(td) {
-        var nTr = $(td).parents('tr');
-        var row = oTable.row(nTr);
-        var id = row.data().ticketid;
-        if (confirm("确定要删除这条记录吗?")) {
-            $.ajax({
-                url: "/ticketRec/delTicketRec?id="+id,
-                async: true,
-                type: "GET",
-                dataType: "json",
-                cache: false,    //不允许缓存
-                success: function (data) {
-                    var obj = eval(data);
-                    if (obj.result == "success") {
-                        oTable.ajax.reload();
-                        alert("删除成功");
-                    }
-                    else {
-                        alert(data.msg);
-                    }
-                },
-                error: function (data) {
-                    alert("请求异常");
-                }
-            });
-        }
-    }
+    // function recordDelete(td) {
+    //     var nTr = $(td).parents('tr');
+    //     var row = oTable.row(nTr);
+    //     var id = row.data().ticketid;
+    //     if (confirm("确定要删除这条记录吗?")) {
+    //         $.ajax({
+    //             url: "/ticketRec/delTicketRec?id=" + id,
+    //             async: true,
+    //             type: "GET",
+    //             dataType: "json",
+    //             cache: false,    //不允许缓存
+    //             success: function (data) {
+    //                 var obj = eval(data);
+    //                 if (obj.result == "success") {
+    //                     oTable.ajax.reload();
+    //                     alert("删除成功");
+    //                 }
+    //                 else {
+    //                     alert(data.msg);
+    //                 }
+    //             },
+    //             error: function (data) {
+    //                 alert("请求异常");
+    //             }
+    //         });
+    //     }
+    // }
 
 </script>
 

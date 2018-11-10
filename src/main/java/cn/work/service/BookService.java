@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface BookService {
 
-    void addBook(Book book, Bookloc bookloc);
+    void addBook(BookExt book);
 
     boolean checkBookExist(Book book);
 
@@ -14,11 +14,9 @@ public interface BookService {
 
     List<BookExt> getBooksByType(String id);
 
-    void updateBook(Book book, Bookloc loc);
+    void updateBook(BookExt book);
 
     BookExt getBook(int id);
-
-    void delBook(int id) throws Exception;
 
     Book getBookByISBN(String isbn);
 
@@ -26,5 +24,5 @@ public interface BookService {
 
     List<Booktype> getAllTypes();
 
-    List<BookExt> getBooks(Book book);
+    List<BookExt> getBooks(BookExt book);
 }

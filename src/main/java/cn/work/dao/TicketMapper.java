@@ -36,7 +36,7 @@ public interface TicketMapper {
 
     int countUserTicket(int id);
 
-    Double[] getUserFee(int id);
+    List<Ticket> getUserFee(int id);
 
     void dealTicketByUserid(int id);
 

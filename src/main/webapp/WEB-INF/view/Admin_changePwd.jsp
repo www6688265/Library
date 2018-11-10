@@ -16,13 +16,7 @@
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="background/lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
-    <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
 </head>
-<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 
 
 <body>
@@ -141,20 +135,29 @@
     </footer>
 
 </section>
+<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 <script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="background/lib/jquery.scrollTo.min.js"></script>
 <script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
 <!--common script for all pages-->
-<script src="background/lib/common-scripts.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 <script src="background/lib/jquery.form.js"></script>
+<script src="background/lib/common-scripts.js"></script>
+<script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#changPwdForm").validate({
             submitHandler: function () {
                 var agaPwd = $("#agaPwd").val();
                 var newPwd = $("#newPwd").val();
+                var pwd = $("#pwd").val();
+                if (pwd === newPwd) {
+                    alert("新密码不能和旧密码相同！");
+                    return;
+                }
                 if (agaPwd === newPwd) {
                     $.ajax({
                         url: "/admin/changePwd",

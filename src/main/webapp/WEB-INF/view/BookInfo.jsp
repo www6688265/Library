@@ -276,16 +276,16 @@
         $.ajax({
             url: "/book/getBook?id=" +${param.bookid},
             success: function (data) {
-                $("#typeNav").append(data.type);
+                $("#typeNav").append(data.booktype);
                 $("#bookname").append("《" + data.bookname + "》");
                 $("#author").append(data.author);
                 $("#press").append(data.press);
-                $("#type").append(data.type);
-                $("#left").append(data.left);
+                $("#type").append(data.booktype);
+                $("#left").append(data.left_num);
                 $("#brief").append(data.brief);
                 $("#total").append(data.total);
                 $("#isbn").append(data.isbn);
-                $("#loc").append(data.floor + "楼，第" + data.bookcase + "个书架，第" + data.level + "层");
+                $("#loc").append(data.floor + "楼，第" + data.bookcase + "个书架，第" + data.layer + "层");
                 $("#pic").append(`<img src="` + data.pic + `" data-imagezoom="true" class="img-responsive" onerror="this.src='/front/images/errorImg.jpg'">`);
             }
         })

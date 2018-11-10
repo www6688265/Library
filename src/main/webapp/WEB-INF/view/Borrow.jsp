@@ -180,7 +180,7 @@
             <div id="bookDiv" class="row mt" style="display: none">
                 <div class="col-lg-12">
                     <div class="col-lg-12 mb">
-                        <div class="message-p pn">
+                        <div class="message-p pn" style="min-height: 600px">
                             <div class="message-header">
                                 <h5>请输入图书ISBN编号</h5>
                             </div>
@@ -290,6 +290,10 @@
             return false;
         })
         $("#idSubmit").click(function () {
+            if ($("#idcard").val().trim() === "") {
+                alert("未输入身份证");
+                return;
+            }
             $.ajax({
                 url: "/borrow/userCheck",
                 type: "POST",
@@ -374,6 +378,10 @@
             })
         });
         $("#bookSubmit").click(function () {
+            if ($("#isbn_1").val().trim() === "") {
+                alert("未输入图书编号");
+                return;
+            }
             $.ajax({
                 url: "/borrow/bookCheck",
                 type: "POST",
@@ -429,6 +437,9 @@
                     if (data.result == "success") {
                         alert("借书成功,当前已经借了" + data.borrowNum + "本书");
                         window.location.reload();
+                    }
+                    else {
+                        alert(data.error);
                     }
                 },
                 error: function () {

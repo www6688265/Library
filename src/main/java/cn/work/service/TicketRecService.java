@@ -8,7 +8,7 @@ import java.util.List;
 public interface TicketRecService {
     List<TicketExt> getAllTicketRec();
 
-    void delTicketRec(int id);
+//    void delTicketRec(int id);
 
     void dealTicketByUserid(String id);
 

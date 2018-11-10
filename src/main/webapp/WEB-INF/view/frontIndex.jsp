@@ -107,7 +107,7 @@
             <div class="container">
                 <p class="b-txt">Best</p>
                 <h2 class="title">
-                    图书
+                    <a href="/BookList" style="color:white;text-decoration:none">图书馆</a>
                 </h2>
                 <ul class="banner-txt">
                     <li>分享.</li>

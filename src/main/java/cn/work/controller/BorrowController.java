@@ -3,6 +3,7 @@ package cn.work.controller;
 
 import cn.work.pojo.Book;
 import cn.work.pojo.Borrow;
+import cn.work.pojo.BorrowExt;
 import cn.work.pojo.Userinfo;
 import cn.work.service.BARService;
 import cn.work.service.BookService;
@@ -13,10 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static cn.work.spring.config.LibraryConfig.limitBorrowNum;
 
@@ -38,6 +36,7 @@ public class BorrowController {
     @RequestMapping(value = "userCheck")
     @ResponseBody
     public Map<String, Object> userCheck(String idcard) {
+        idcard = idcard.trim();
         Map<String, Object> result = new HashMap<>();
         Userinfo userinfo = userService.getUserByIDcard(idcard);
         String id = "";
@@ -81,7 +80,7 @@ public class BorrowController {
     @RequestMapping(value = "dealTicket")
     @ResponseBody
     public Map<String, Object> dealTicket(String userid) {
-
+        userid = userid.trim();
         Map<String, Object> result = new HashMap<>();
         ticketService.dealTicketByUserid(userid);
         result.put("result", "success");
@@ -92,25 +91,26 @@ public class BorrowController {
     @ResponseBody
     public Map<String, Object> bookCheck(String[] isbn) {
         Map<String, Object> result = new HashMap<>();
-        List booklist = new ArrayList();
-        List notFoundlist = new ArrayList();
+        List<Book> bookList = new ArrayList<>();
+        List<String> notFoundList = new ArrayList<>();
         for (String id : isbn) {
+            id = id.trim();
             if (id != null && !id.equals("")) {
                 Book book = bookService.getBookByISBN(id);
                 if (book != null) {
-                    booklist.add(book);
+                    bookList.add(book);
                 } else {
-                    notFoundlist.add(id);
+                    notFoundList.add(id);
                 }
             }
         }
-        if (notFoundlist.size() > 0) {
+        if (notFoundList.size() > 0) {
             result.put("result", "0");
-            result.put("notFoundList", notFoundlist);
+            result.put("notFoundList", notFoundList);
             return result;
         }
         result.put("result", "1");
-        result.put("booklist", booklist);
+        result.put("booklist", bookList);
         return result;
     }
 
@@ -118,21 +118,24 @@ public class BorrowController {
     @ResponseBody
     public Map<String, Object> borrowBook(String userid, String[] bookid) {
         Map<String, Object> result = new HashMap<>();
-        int length = bookid.length;
-        for (int i = 0; i < length; i++) {
-            Borrow borrow = new Borrow();
-            borrow.setUserid(Integer.parseInt(userid));
-            borrow.setBookid(Integer.parseInt(bookid[i]));
-            barService.borrowBook(borrow);
+        Set<String> bookList = new HashSet<>();
+        for (String id : bookid) {
+            bookList.add(id);
         }
-        int NotReturnNum = userService.getNotReturnNum(userid);
-        if (NotReturnNum == limitBorrowNum || NotReturnNum > limitBorrowNum) {
-            Userinfo user = new Userinfo();
-            user.setUserid(Integer.parseInt(userid));
-            user.setAccess(0);
-            userService.updateUser(user);
+        if (bookList.size() < bookid.length) {
+            result.put("error", "不能借两本相同的图书！");
+            return result;
         }
 
+        userid = userid.trim();
+        int NotReturnNum = 0;
+        try {
+            NotReturnNum = barService.borrowBook(userid, bookid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            result.put("error", "服务器忙，请稍候重试");
+            return result;
+        }
         result.put("borrowNum", NotReturnNum);
         result.put("result", "success");
         return result;

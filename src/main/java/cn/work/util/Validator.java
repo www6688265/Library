@@ -2,11 +2,9 @@ package cn.work.util;
 
 import cn.work.pojo.Admin;
 import cn.work.pojo.Book;
+import cn.work.pojo.Error;
 import cn.work.pojo.Userinfo;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -27,6 +25,7 @@ public class Validator {
     public static final String pwd_minlength_error = "至少为8位";
     public static final String required_error = "不能为空";
     public static final String maxlength_error = "最多为";
+    public static final String digtal_error = "只能为正整数";
 
 
     public static String userValidator(Userinfo userinfo) {
@@ -118,86 +117,50 @@ public class Validator {
     }
 
     public static Map<String, Object> bookValidator(Book book) {
-        Map<String, Object> error = new HashMap<>();
-        List<Map> errors = new ArrayList<>();
-        Map<String, Object> booknameError = new HashMap<>();
-        Map<String, Object> pressError = new HashMap<>();
-        Map<String, Object> totalError = new HashMap<>();
-        Map<String, Object> isbnError = new HashMap<>();
-        Map<String, Object> leftError = new HashMap<>();
+        Error error = new Error();
         String bookname = book.getBookname();
         String press = book.getPress();
         Integer total = book.getTotal();
         String isbn = book.getIsbn();
-        Integer left = book.getLeft();
         if (bookname != null) {
             if (bookname.equals("")) {
-                booknameError.put("name", "bookname");
-                booknameError.put("status", required_error);
-                errors.add(booknameError);
+                error.addError("bookname", "required_error");
             } else {
                 if (bookname.length() > 50) {
-                    booknameError.put("name", "bookname");
-                    booknameError.put("status", maxlength_error + "50位");
-                    errors.add(booknameError);
+                    error.addError("bookname", maxlength_error + "50位");
                 }
             }
         }
         if (press != null) {
             if (press.equals("")) {
-                pressError.put("name", "press");
-                pressError.put("status", required_error);
-                errors.add(booknameError);
+                error.addError("press", required_error);
             } else {
                 if (press.length() > 50) {
-                    pressError.put("name", "press");
-                    pressError.put("status", maxlength_error + "50位");
-                    errors.add(booknameError);
+                    error.addError("press", maxlength_error + "50位");
                 }
             }
         }
         if (isbn != null) {
             if (isbn.equals("")) {
-                isbnError.put("name", "isbn");
-                isbnError.put("status", required_error);
-                errors.add(isbnError);
-            } else {
-                if (isbn.length() > 20) {
-                    isbnError.put("name", "isbn");
-                    isbnError.put("status", maxlength_error + "20位");
-                    errors.add(isbnError);
-                }
+                error.addError("isbn", required_error);
+            } else if (isbn.length() > 20) {
+                error.addError("isbn", maxlength_error + "20位");
+            } else if (!Pattern.matches("^\\d+$", isbn)) {
+                error.addError("isbn", digtal_error);
             }
         }
+
         if (total != null) {
-            if (total.equals("")) {
-                totalError.put("name", "total");
-                totalError.put("status", required_error);
-                errors.add(totalError);
-            } else {
-                if (total.toString().length() > 4) {
-                    totalError.put("name", "total");
-                    totalError.put("status", maxlength_error + "4位");
-                    errors.add(totalError);
-                }
+            if (Pattern.matches("^//d+$", Integer.toString(total)) || total < 0) {
+                error.addError("total", digtal_error);
+            } else if (total.toString().length() > 4) {
+                error.addError("total", maxlength_error + "4位");
             }
+        } else {
+            error.addError("total", required_error);
         }
-        if (left != null) {
-            if (left.equals("")) {
-                leftError.put("name", "left");
-                leftError.put("status", required_error);
-                errors.add(leftError);
-            } else {
-                if (left.toString().length() > 4) {
-                    leftError.put("name", "left");
-                    leftError.put("status", maxlength_error + "4位");
-                    errors.add(leftError);
-                }
-            }
-        }
-        if (errors.size() > 0) {
-            error.put("fieldErrors", errors);
-            return error;
+        if (error.getCount() > 0) {
+            return error.getFieldErrors();
         } else
             return null;
     }

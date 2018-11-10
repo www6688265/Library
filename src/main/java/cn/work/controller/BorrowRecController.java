@@ -27,6 +27,15 @@ public class BorrowRecController {
         return result;
     }
 
+    @RequestMapping(value = "getNotReturnList")
+    @ResponseBody
+    public Map<String, Object> getNotReturnList(String userid) {
+        Map<String, Object> result = new HashMap<>();
+        List<BorrowExt> borrowList = borrowService.getNotReturnRec(userid);
+        result.put("data", borrowList);
+        return result;
+    }
+
     @RequestMapping(value = "delBorrowRec")
     @ResponseBody
     public Map delBorrowRec(String id){
@@ -47,13 +56,13 @@ public class BorrowRecController {
 
     @RequestMapping(value = "renew")
     @ResponseBody
-    public Map renew(String orderid) {
+    public Map renew(String orderid, String bookid) {
         Map<String, Object> result = new HashMap<>();
-        boolean done = borrowService.renewBorrow(orderid);
+        boolean done = borrowService.renewBorrow(orderid, bookid);
         if (done) {
             result.put("result", "success");
         } else {
-            result.put("msg", "以达到最大续借时长");
+            result.put("msg", "已达到最大续借时长");
         }
         return result;
     }

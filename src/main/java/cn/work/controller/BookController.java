@@ -1,29 +1,23 @@
 package cn.work.controller;
 
 import cn.work.pojo.*;
+import cn.work.pojo.Error;
 import cn.work.service.BookService;
 import cn.work.util.FIleUtil;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.github.pagehelper.Page;
+import com.alibaba.fastjson.TypeReference;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.ibatis.annotations.Param;
 import org.aspectj.util.FileUtil;
-import org.eclipse.jdt.internal.compiler.batch.ClasspathSourceJar;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -54,7 +48,7 @@ public class BookController {
 
     @RequestMapping(value = "addBook")
     @ResponseBody
-    public Map addBook(Book book, Bookloc loc, MultipartFile file) throws IOException {
+    public Map addBook(BookExt book, MultipartFile file) throws IOException {
         String picPath = "";
         Map<String, Object> result = new HashMap<>();
         if (!bookService.checkBookExist(book)) {
@@ -70,8 +64,7 @@ public class BookController {
             result.remove("picName");
             book.setPic(picPath);
         }
-        book.setLeft(book.getTotal());
-        bookService.addBook(book, loc);
+        bookService.addBook(book);
         if (file != null && file.getSize() > 0) {
             moveFileFromTemp(picPath.substring(picPath.lastIndexOf("/")));
         }
@@ -81,15 +74,19 @@ public class BookController {
 
     @RequestMapping(value = "getAllBooks")
     @ResponseBody
-    public Map getAllBooks(@RequestBody JSONObject jsonParam) {
+    public Map getAllBooks(@RequestBody DataTablePage page) {
         Map<String, Object> result = new HashMap<>();
         List<BookExt> bookList;
-        dataTablePage page = new dataTablePage(jsonParam, "Book");
-        if (page.getBook() != null) {
-            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrder());
-            bookList = bookService.getBooks(page.getBook());
+        BookExt searchBook = new BookExt();
+        String searchContent = page.getSearch().getValue();
+        if (!StringUtils.isEmpty(searchContent))
+            searchBook = JSON.parseObject(searchContent, new TypeReference<BookExt>() {
+            });
+        if (searchBook != null) {
+            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrderList());
+            bookList = bookService.getBooks(searchBook);
         } else {
-            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrder());
+            PageHelper.startPage(page.getStart() / page.getLength() + 1, page.getLength(), page.getOrderList());
             bookList = bookService.getAllBooks();
         }
         PageInfo pageInfo = new PageInfo<>(bookList);
@@ -102,13 +99,13 @@ public class BookController {
 
     @RequestMapping(value = "updateBook")
     @ResponseBody
-    public Map updateBook(Book book, Bookloc loc, MultipartFile upload) throws IOException {
+    public Map updateBook(BookExt book, MultipartFile upload) throws IOException {
         Map<String, Object> result = new HashMap<>();
         Map<String, Object> errorMap = new HashMap<>();
         if (upload != null) {
             String name = upload.getOriginalFilename();
             System.out.println(name);
-            String type = name.substring(name.lastIndexOf(".") + 1);
+            String type = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
             long size = upload.getSize();
             if (!type.equals("jpg") && !type.equals("png") && !type.equals("gif")) {
                 errorMap.put("error", "文件类型应为jpg,png,gif");
@@ -139,7 +136,14 @@ public class BookController {
                     book.setPic(fileName);
                 }
             }
-            bookService.updateBook(book, loc);
+            if (book.getTotal() != null) {
+                if (book.getLeft_num() > book.getTotal()) {
+                    Error error = new Error();
+                    error.addError("total", "库存不可以小于剩余数量");
+                    return error.getFieldErrors();
+                }
+            }
+            bookService.updateBook(book);
             BookExt returnBook = bookService.getBook(book.getBookid());
             List<BookExt> list = new ArrayList<BookExt>();
             list.add(returnBook);
@@ -154,37 +158,17 @@ public class BookController {
         return bookService.getBook(Integer.parseInt(id));
     }
 
-    @RequestMapping(value = "delBook")
-    @ResponseBody
-    public Map<String, Object> delBook(String id, String pic) throws IOException {
-        Map<String, Object> result = new HashMap<>();
-        try {
-            bookService.delBook(Integer.parseInt(id));
-        } catch (Exception e) {
-            e.printStackTrace();
-            result.put("result", "error");
-            result.put("msg", e.getMessage());
-            return result;
-        }
-        if (pic != null && !pic.equals("") && !pic.equals("null")) {
-            File file = new File(projectPath + pic);
-            if (file.exists())
-                FileUtils.forceDelete(file);
-        }
-        result.put("result", "success");
-        return result;
-    }
 
     @RequestMapping(value = "showBook")
     @ResponseBody
     public Map<String, Object> showBook(String id, boolean display) throws IOException {
         Map<String, Object> result = new HashMap<>();
         try {
-            Book book = new Book();
+            BookExt book = new BookExt();
             book.setBookid(Integer.parseInt(id));
             int show = display ? 1 : 0;
             book.setDisplay(show);
-            bookService.updateBook(book, null);
+            bookService.updateBook(book);
         } catch (Exception e) {
             e.printStackTrace();
             result.put("result", "error");

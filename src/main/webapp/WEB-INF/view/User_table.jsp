@@ -20,7 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -50,7 +50,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="mt">
-                    <a class="active"  href="${pageContext.request.contextPath}/User_table">
+                    <a class="active" href="${pageContext.request.contextPath}/User_table">
                         <i class="fa fa-group"></i>
                         <span>用户管理</span>
                     </a>
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a  href="${pageContext.request.contextPath}/Borrow">
+                    <a href="${pageContext.request.contextPath}/Borrow">
                         <i class="fa fa-book"></i>
                         <span>借书</span>
                     </a>
@@ -121,19 +121,15 @@
                                id="adv-dataTable">
                             <button class="btn btn-round btn-primary" id="addUser" data-toggle="modal"
                                     data-target="#myModal" onclick="">增加用户
-                            </button>&nbsp;
-                            <button class="btn btn-round btn-danger" id="delUser" onclick="delUsers()">批量删除用户
                             </button>
-
                             <thead>
                             <tr>
-                                <th class="select-checkbox sorting_1"><input type="checkbox" name="select_all"
-                                                                             id="select-all"></th>
                                 <th><i class="fa fa-bullhorn"></i>姓名</th>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i>身份证</th>
                                 <th><i class="fa fa-bookmark"></i>性别</th>
                                 <th><i class="fa fa-bookmark"></i> 联系方式</th>
                                 <th><i class="fa fa-bookmark"></i>权限</th>
+                                <th><i class="fa fa-bookmark"></i>状态</th>
                                 <th><i class=" fa fa-edit"></i>管理</th>
                             </tr>
                             </thead>
@@ -164,7 +160,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
+                                    aria-hidden="true" onclick="reset()">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">新增</h4>
                         </div>
                         <div class="modal-body">
@@ -196,6 +192,8 @@
                                         <input class="form-control " id="usertele" name="usertele" type="text"/>
                                     </div>
                                 </div>
+                                <input style="display: none" class="form-control " id="userStatus" name="userStatus"
+                                       type="text" value="1"/>
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
                                         <button class="btn btn-theme" type="submit">保存</button>
@@ -274,9 +272,6 @@
             }, {
                 label: "",
                 name: "usertele"
-            }, {
-                label: "0：不可借书，1：正常</br>空值不变",
-                name: "access"
             }
             ],
             idSrc: 'userid',
@@ -301,12 +296,6 @@
                 "url": "${pageContext.request.contextPath}/user/getAllUsers",
             },
             "columns": [
-                {
-                    data: null,
-                    defaultContent: '',
-                    className: 'select-checkbox',
-                    orderable: false
-                },
                 {"data": "username"},
                 {"data": "idcard"},
                 {"data": "sex"},
@@ -322,21 +311,35 @@
                                 break;
                         }
                     }
-                }
-                ,
+                },
+                {
+                    "data": "userStatus", render: function (data, type, row, meta) {
+                        switch (data) {
+                            case 0:
+                                return "<span class=\"label label-warning label-mini\">已注销</span>";
+                                break;
+                            case 1:
+                                return "<span class=\"label label-success label-mini\">已启用</span> ";
+                                break;
+                        }
+                    }
+                },
                 {
                     "data": "userid", render: function (data, type, row, meta) {
-                        var html = "<i><button class=\"btn btn-success btn-xs\" onclick=\"showDetail(this)\"><i class=\"fa fa-exclamation-circle\"></i></button></i>";
-                        html += "<button class=\"btn btn-danger btn-xs\" onclick=\"userDelete(" + data + ")\"><i class=\"fa fa-trash-o \"></i></button>"
+                        var html = "<i><button class=\"btn btn-info btn-xs\" onclick=\"showDetail(this)\">权限详情</button></i>";
+                        if (oTable.row(meta.row).data().userStatus === 1)
+                            html += "<button class=\"btn btn-danger btn-xs\" onclick=\"hideUser(" + data + ")\">注销用户</button>"
+                        else
+                            html += "<button class=\"btn btn-success btn-xs\" onclick=\"showUser(" + data + ")\">启用用户</button>"
                         return html;
                     }
                 }
             ],
             select: {
-                style: 'multi',
+                style: 'os',
                 selector: 'td:first-child'
             },
-            "pagingType": "full_numbers",
+            // "pagingType": "full_numbers",
             "paging": true,//开启表格分页
             "bLengthChange": true,
             "bRetrieve": true,
@@ -368,9 +371,34 @@
         });
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() > 0 && $(this).index() < 6) {
+            if ($(this).index() < 5) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
                 $(this).html('<input type="text" placeholder="搜索' + title + '" />');
+            }
+            if ($(this).index() === 2) {
+                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                $(this).html(`<select>
+                                    <option value="">全部性别</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                              </select>`);
+            }
+
+            if ($(this).index() === 4) {
+                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                $(this).html(`<select>
+                                    <option value="">全部权限</option>
+                                    <option value="不可借书">不可借书</option>
+                                    <option value="正常">正常</option>
+                              </select>`);
+            }
+            if ($(this).index() === 5) {
+                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                $(this).html(`<select>
+                                    <option value="">全部状态</option>
+                                    <option value="已注销">已注销</option>
+                                    <option value="已启用">已启用</option>
+                              </select>`);
             }
 
         });
@@ -387,16 +415,13 @@
                         .draw();
                 }
             });
-        });
-
-
-        $('#select-all').on('click', function () {
-            if (this.checked) {
-                oTable.rows().select();
-            }
-            else {
-                oTable.rows().deselect();
-            }
+            $('select', this.footer()).on('change', function () {
+                if (that.search() !== this.value) {
+                    that
+                        .search(this.value)
+                        .draw();
+                }
+            });
         });
 
 
@@ -441,53 +466,23 @@
         }
     }
 
-    function delUsers() {
-        var data = oTable.rows({selected: true}).data();
-        var count=oTable.rows({selected: true}).count();
-        var array=new Array();
-        for (var index=0;index<count;index++) {
-            array[index]=data[index];
-        }
-        var jsonData=JSON.stringify(array);
-        if (confirm("确定要删除这些记录吗?")) {
+
+    function showUser(id) {
+        if (confirm("确定要启用此用户吗?")) {
             $.ajax({
-                url: "/user/delUsers",
+                url: "/user/showUser",
                 async: true,
                 type: "POST",
-                data: jsonData,
-                dataType: "json",
-                contentType:"application/json",
-                cache: false,    //不允许缓存
-                success: function (data) {
-                    var obj = eval(data);
-                    if (obj.result == "success") {
-                        alert("删除成功");
-                        oTable.ajax.reload();
-                    }
-                    else {
-                        alert("所选用户中有人"+data.msg);
-                    }
+                data: {
+                    id: id,
+                    display: true
                 },
-                error: function (data) {
-                    alert("请求异常");
-                }
-            });
-        }
-    }
-
-
-    function userDelete(id) {
-        if (confirm("确定要删除这条记录吗?")) {
-            $.ajax({
-                url: "/user/delUser?id=" + id,
-                async: true,
-                type: "GET",
                 dataType: "json",
                 cache: false,    //不允许缓存
                 success: function (data) {
                     var obj = eval(data);
-                    if (obj.result == "success") {
-                        alert("删除成功");
+                    if (obj.result === "success") {
+                        alert("启用成功");
                         oTable.ajax.reload();
                     }
                     else {
@@ -499,6 +494,39 @@
                 }
             });
         }
+    }
+
+    function hideUser(id) {
+        if (confirm("确定要注销此用户吗?")) {
+            $.ajax({
+                url: "/user/showUser",
+                async: true,
+                type: "POST",
+                data: {
+                    id: id,
+                    display: false
+                },
+                dataType: "json",
+                cache: false,    //不允许缓存
+                success: function (data) {
+                    var obj = eval(data);
+                    if (obj.result === "success") {
+                        alert("注销成功");
+                        oTable.ajax.reload();
+                    }
+                    else {
+                        alert(data.msg);
+                    }
+                },
+                error: function (data) {
+                    alert("请求异常");
+                }
+            });
+        }
+    }
+
+    function reset() {
+        $("#userForm")[0].reset();
     }
 
 

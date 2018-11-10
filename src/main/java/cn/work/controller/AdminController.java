@@ -2,10 +2,6 @@ package cn.work.controller;
 
 import cn.work.pojo.Admin;
 import cn.work.service.AdminService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -15,6 +11,11 @@ import java.util.Map;
 
 import static cn.work.util.SHAUtil.getEncrypt;
 import static cn.work.util.Validator.adminValidator;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -54,7 +55,7 @@ public class AdminController {
     @RequestMapping("logOut")
     public String logOut(HttpServletRequest request) {
         Integer admid = (Integer) request.getSession().getAttribute("admid");
-        if (admid != null && !admid.equals("")) {
+        if (admid != null) {
             request.getSession().removeAttribute("admid");
             return "redirect:/login";
         } else
@@ -109,7 +110,7 @@ public class AdminController {
 
     @RequestMapping(value = "updateAdmin")
     @ResponseBody
-    public Map<String, Object> updateUser(Admin admin) {
+    public Map<String, Object> updateAdmin(Admin admin) {
         Map<String, Object> result = new HashMap<>();
         String msg = adminValidator(admin);
         if (msg != null) {
@@ -137,11 +138,14 @@ public class AdminController {
         pwd = getEncrypt(pwd);
         if (admid != null) {
             Admin admin = adminService.getAdminByAdmid(Integer.toString(admid));
+            if (newPwd.equals(pwd)) {
+                result.put("result", "新密码不能与旧密码相同！");
+                return result;
+            }
             if (pwd.equals(admin.getAdmpassword())) {
                 admin.setAdmpassword(newPwd);
                 adminService.updateAdmin(admin);
                 result.put("result", "success");
-
                 request.getSession().removeAttribute("admid");
                 return result;
             } else {

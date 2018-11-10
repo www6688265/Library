@@ -20,7 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -245,8 +245,9 @@
                 label: "",
                 name: "idcard"
             }, {
-                label: "“1”为系统管理员，“0为图书管理员”",
-                name: "admright"
+                label: "",
+                name: "admright",
+                type: "select"
             }, {
                 label: "",
                 name: "admid"
@@ -254,6 +255,8 @@
             ],
             idSrc: 'admid',
         });
+        var accessOptions = [{label: "系统管理员", value: "1"}, {label: "图书管理员", value: "0"}];
+        editor.field('admright').update(accessOptions);
 
         //修改用户信息方法
         $('#adv-dataTable').on('click', 'tbody td:not(:nth-child(3)):not(:first-child)', function (e) {
@@ -324,9 +327,17 @@
         });
 
         $('#adv-dataTable tfoot th').each(function () {
-            if ($(this).index() < 2) {
+            if ($(this).index() === 0) {
                 var title = $('#adv-dataTable thead th').eq($(this).index()).text();
                 $(this).html('<input type="text" placeholder="搜索' + title + '" />');
+            }
+            if ($(this).index() === 1) {
+                var title = $('#adv-dataTable thead th').eq($(this).index()).text();
+                $(this).html(`<select>
+                                    <option value="">全部权限</option>
+                                    <option value="系统管理员">系统管理员</option>
+                                    <option value="图书管理员">图书管理员</option>
+                              </select>`);
             }
 
         });
@@ -337,6 +348,13 @@
         oTable.columns().every(function () {
             var that = this;
             $('input', this.footer()).on('keyup change', function () {
+                if (that.search() !== this.value) {
+                    that
+                        .search(this.value)
+                        .draw();
+                }
+            });
+            $('select', this.footer()).on('change', function () {
                 if (that.search() !== this.value) {
                     that
                         .search(this.value)

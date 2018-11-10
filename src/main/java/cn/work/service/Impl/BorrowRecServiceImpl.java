@@ -1,10 +1,13 @@
 package cn.work.service.Impl;
 
 import cn.work.dao.BorrowMapper;
+import cn.work.dao.BorrowedbooksMapper;
 import cn.work.pojo.Borrow;
-import cn.work.pojo.BorrowExample;
 import cn.work.pojo.BorrowExt;
+import cn.work.pojo.Borrowedbooks;
+import cn.work.pojo.BorrowedbooksKey;
 import cn.work.service.BorrowRecService;
+import org.springframework.retry.annotation.Recover;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,6 +22,8 @@ import static cn.work.spring.config.LibraryConfig.limitMonth;
 public class BorrowRecServiceImpl implements BorrowRecService {
     @Resource
     BorrowMapper borrowMapper;
+    @Resource
+    BorrowedbooksMapper borrowedbooksMapper;
 
     @Override
     public List<BorrowExt> getAllBorrowRec() {
@@ -32,10 +37,8 @@ public class BorrowRecServiceImpl implements BorrowRecService {
     }
 
     @Override
-    public List<Borrow> getNotReturnRec(String userid) {
-        BorrowExample example = new BorrowExample();
-        example.createCriteria().andUseridEqualTo(Integer.parseInt(userid)).andReturntimeIsNull();
-        List<Borrow> list = borrowMapper.selectByExample(example);
+    public List<BorrowExt> getNotReturnRec(String userid) {
+        List<BorrowExt> list = borrowMapper.getNotReturnRec(Integer.parseInt(userid));
         return  list;
     }
 
@@ -45,8 +48,11 @@ public class BorrowRecServiceImpl implements BorrowRecService {
     }
 
     @Override
-    public boolean renewBorrow(String orderid) {
-        Borrow borrow = borrowMapper.selectByPrimaryKey(Integer.parseInt(orderid));
+    public boolean renewBorrow(String orderid, String bookid) {
+        BorrowedbooksKey key = new BorrowedbooksKey();
+        key.setOrderid(Integer.parseInt(orderid));
+        key.setBookid(Integer.parseInt(bookid));
+        Borrowedbooks borrow = borrowedbooksMapper.selectByPrimaryKey(key);
         Date borrowTime = borrow.getBorrowtime();
         Calendar ca = Calendar.getInstance();
         ca.setTime(borrowTime);
@@ -60,7 +66,7 @@ public class BorrowRecServiceImpl implements BorrowRecService {
             ca2.setTime(limitTime);
             ca2.add(Calendar.MONTH, borrowMonthPeriod);
             borrow.setLimittime(ca2.getTime());
-            borrowMapper.updateByPrimaryKeySelective(borrow);
+            borrowedbooksMapper.updateByPrimaryKeySelective(borrow);
             return true;
         }
     }

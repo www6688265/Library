@@ -3,14 +3,14 @@ package cn.work.pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BooklocExample {
+public class InventoryExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BooklocExample() {
+    public InventoryExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,183 +164,63 @@ public class BooklocExample {
             return (Criteria) this;
         }
 
-        public Criteria andFloorIsNull() {
-            addCriterion("floor is null");
+        public Criteria andLeftNumIsNull() {
+            addCriterion("left_num is null");
             return (Criteria) this;
         }
 
-        public Criteria andFloorIsNotNull() {
-            addCriterion("floor is not null");
+        public Criteria andLeftNumIsNotNull() {
+            addCriterion("left_num is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFloorEqualTo(Integer value) {
-            addCriterion("floor =", value, "floor");
+        public Criteria andLeftNumEqualTo(Integer value) {
+            addCriterion("left_num =", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorNotEqualTo(Integer value) {
-            addCriterion("floor <>", value, "floor");
+        public Criteria andLeftNumNotEqualTo(Integer value) {
+            addCriterion("left_num <>", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorGreaterThan(Integer value) {
-            addCriterion("floor >", value, "floor");
+        public Criteria andLeftNumGreaterThan(Integer value) {
+            addCriterion("left_num >", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorGreaterThanOrEqualTo(Integer value) {
-            addCriterion("floor >=", value, "floor");
+        public Criteria andLeftNumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("left_num >=", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorLessThan(Integer value) {
-            addCriterion("floor <", value, "floor");
+        public Criteria andLeftNumLessThan(Integer value) {
+            addCriterion("left_num <", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorLessThanOrEqualTo(Integer value) {
-            addCriterion("floor <=", value, "floor");
+        public Criteria andLeftNumLessThanOrEqualTo(Integer value) {
+            addCriterion("left_num <=", value, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorIn(List<Integer> values) {
-            addCriterion("floor in", values, "floor");
+        public Criteria andLeftNumIn(List<Integer> values) {
+            addCriterion("left_num in", values, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorNotIn(List<Integer> values) {
-            addCriterion("floor not in", values, "floor");
+        public Criteria andLeftNumNotIn(List<Integer> values) {
+            addCriterion("left_num not in", values, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorBetween(Integer value1, Integer value2) {
-            addCriterion("floor between", value1, value2, "floor");
+        public Criteria andLeftNumBetween(Integer value1, Integer value2) {
+            addCriterion("left_num between", value1, value2, "leftNum");
             return (Criteria) this;
         }
 
-        public Criteria andFloorNotBetween(Integer value1, Integer value2) {
-            addCriterion("floor not between", value1, value2, "floor");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseIsNull() {
-            addCriterion("bookcase is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseIsNotNull() {
-            addCriterion("bookcase is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseEqualTo(Integer value) {
-            addCriterion("bookcase =", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseNotEqualTo(Integer value) {
-            addCriterion("bookcase <>", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseGreaterThan(Integer value) {
-            addCriterion("bookcase >", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseGreaterThanOrEqualTo(Integer value) {
-            addCriterion("bookcase >=", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseLessThan(Integer value) {
-            addCriterion("bookcase <", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseLessThanOrEqualTo(Integer value) {
-            addCriterion("bookcase <=", value, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseIn(List<Integer> values) {
-            addCriterion("bookcase in", values, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseNotIn(List<Integer> values) {
-            addCriterion("bookcase not in", values, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseBetween(Integer value1, Integer value2) {
-            addCriterion("bookcase between", value1, value2, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andBookcaseNotBetween(Integer value1, Integer value2) {
-            addCriterion("bookcase not between", value1, value2, "bookcase");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelEqualTo(Integer value) {
-            addCriterion("level =", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelNotEqualTo(Integer value) {
-            addCriterion("level <>", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelGreaterThan(Integer value) {
-            addCriterion("level >", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelGreaterThanOrEqualTo(Integer value) {
-            addCriterion("level >=", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelLessThan(Integer value) {
-            addCriterion("level <", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelLessThanOrEqualTo(Integer value) {
-            addCriterion("level <=", value, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelIn(List<Integer> values) {
-            addCriterion("level in", values, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelNotIn(List<Integer> values) {
-            addCriterion("level not in", values, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelBetween(Integer value1, Integer value2) {
-            addCriterion("level between", value1, value2, "level");
-            return (Criteria) this;
-        }
-
-        public Criteria andLevelNotBetween(Integer value1, Integer value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andLeftNumNotBetween(Integer value1, Integer value2) {
+            addCriterion("left_num not between", value1, value2, "leftNum");
             return (Criteria) this;
         }
     }

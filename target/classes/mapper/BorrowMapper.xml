@@ -4,10 +4,6 @@
   <resultMap id="BaseResultMap" type="cn.work.pojo.Borrow" >
     <id column="orderId" property="orderid" jdbcType="INTEGER" />
     <result column="userID" property="userid" jdbcType="INTEGER" />
-    <result column="BookID" property="bookid" jdbcType="INTEGER" />
-    <result column="BorrowTime" property="borrowtime" jdbcType="TIMESTAMP" />
-    <result column="ReturnTime" property="returntime" jdbcType="TIMESTAMP" />
-    <result column="LimitTime" property="limittime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    orderId, userID, BookID, BorrowTime, ReturnTime, LimitTime
+    orderId, userID
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.work.pojo.BorrowExample" >
     select
@@ -85,7 +81,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
+    select 
     <include refid="Base_Column_List" />
     from borrow
     where orderId = #{orderid,jdbcType=INTEGER}
@@ -101,14 +97,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.work.pojo.Borrow" >
-    insert into borrow (orderId, userID, BookID, 
-      BorrowTime, ReturnTime, LimitTime
-      )
-    values (#{orderid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{bookid,jdbcType=INTEGER}, 
-      #{borrowtime,jdbcType=TIMESTAMP}, #{returntime,jdbcType=TIMESTAMP}, #{limittime,jdbcType=TIMESTAMP}
-      )
+    insert into borrow (orderId, userID)
+    values (#{orderid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="cn.work.pojo.Borrow" >
+  <insert id="insertSelective" parameterType="cn.work.pojo.Borrow" useGeneratedKeys="true"
+          keyProperty="orderid">
     insert into borrow
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="orderid != null" >
@@ -117,18 +110,6 @@
       <if test="userid != null" >
         userID,
       </if>
-      <if test="bookid != null" >
-        BookID,
-      </if>
-      <if test="borrowtime != null" >
-        BorrowTime,
-      </if>
-      <if test="returntime != null" >
-        ReturnTime,
-      </if>
-      <if test="limittime != null" >
-        LimitTime,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="orderid != null" >
@@ -136,18 +117,6 @@
       </if>
       <if test="userid != null" >
         #{userid,jdbcType=INTEGER},
-      </if>
-      <if test="bookid != null" >
-        #{bookid,jdbcType=INTEGER},
-      </if>
-      <if test="borrowtime != null" >
-        #{borrowtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="returntime != null" >
-        #{returntime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="limittime != null" >
-        #{limittime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -166,18 +135,6 @@
       <if test="record.userid != null" >
         userID = #{record.userid,jdbcType=INTEGER},
       </if>
-      <if test="record.bookid != null" >
-        BookID = #{record.bookid,jdbcType=INTEGER},
-      </if>
-      <if test="record.borrowtime != null" >
-        BorrowTime = #{record.borrowtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.returntime != null" >
-        ReturnTime = #{record.returntime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.limittime != null" >
-        LimitTime = #{record.limittime,jdbcType=TIMESTAMP},
-      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -186,11 +143,7 @@
   <update id="updateByExample" parameterType="map" >
     update borrow
     set orderId = #{record.orderid,jdbcType=INTEGER},
-      userID = #{record.userid,jdbcType=INTEGER},
-      BookID = #{record.bookid,jdbcType=INTEGER},
-      BorrowTime = #{record.borrowtime,jdbcType=TIMESTAMP},
-      ReturnTime = #{record.returntime,jdbcType=TIMESTAMP},
-      LimitTime = #{record.limittime,jdbcType=TIMESTAMP}
+      userID = #{record.userid,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -201,62 +154,65 @@
       <if test="userid != null" >
         userID = #{userid,jdbcType=INTEGER},
       </if>
-      <if test="bookid != null" >
-        BookID = #{bookid,jdbcType=INTEGER},
-      </if>
-      <if test="borrowtime != null" >
-        BorrowTime = #{borrowtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="returntime != null" >
-        ReturnTime = #{returntime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="limittime != null" >
-        LimitTime = #{limittime,jdbcType=TIMESTAMP},
-      </if>
     </set>
     where orderId = #{orderid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.work.pojo.Borrow" >
     update borrow
-    set userID = #{userid,jdbcType=INTEGER},
-      BookID = #{bookid,jdbcType=INTEGER},
-      BorrowTime = #{borrowtime,jdbcType=TIMESTAMP},
-      ReturnTime = #{returntime,jdbcType=TIMESTAMP},
-      LimitTime = #{limittime,jdbcType=TIMESTAMP}
+    set userID = #{userid,jdbcType=INTEGER}
     where orderId = #{orderid,jdbcType=INTEGER}
   </update>
   <select id="getAllBorrowRec" resultType="cn.work.pojo.BorrowExt">
     SELECT
     userinfo.username,
 	book.bookName,
-	orderid,
+	borrow.orderid,
 	BorrowTime,
 	ReturnTime,
 	LimitTime
 	FROM
 	userinfo,
 	book,
-	borrow
+	borrow,
+	BorrowedBooks
 	WHERE
 	borrow.userid = userinfo.userID and
-	borrow.BookID=book.bookID
+	BorrowedBooks.BookID=book.bookID and BorrowedBooks.orderid=borrow.orderId
   </select>
   <select id="getBorrowRecByUserID" resultType="cn.work.pojo.BorrowExt" parameterType="java.lang.Integer">
     SELECT
     userinfo.username,
+    book.bookid,
 	book.bookName,
-	orderid,
+	borrow.orderid,
 	BorrowTime,
 	ReturnTime,
 	LimitTime
 	FROM
 	userinfo,
 	book,
-	borrow
+	borrow,
+	BorrowedBooks
 	WHERE
 	borrow.userid = userinfo.userID and
-	borrow.BookID=book.bookID and
-	userinfo.userid=#{id}
+	BorrowedBooks.BookID=book.bookID and BorrowedBooks.orderid=borrow.orderId and userinfo.userid=#{id}
   </select>
-
+  <select id="getNotReturnRec" resultType="cn.work.pojo.BorrowExt" parameterType="java.lang.Integer">
+    SELECT
+    userinfo.username,
+		userinfo.userid,
+	book.bookName,
+	borrow.orderid,
+	BorrowedBooks.bookid,
+	BorrowTime,
+	LimitTime
+	FROM
+	userinfo,
+	book,
+	borrow,
+	BorrowedBooks
+	WHERE
+	borrow.userid = userinfo.userID and
+	BorrowedBooks.BookID=book.bookID and BorrowedBooks.orderid=borrow.orderId and userinfo.userid=#{id} and ReturnTime is null
+  </select>
 </mapper>

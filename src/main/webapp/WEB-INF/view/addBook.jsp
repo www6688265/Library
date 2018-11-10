@@ -15,9 +15,7 @@
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="background/lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
-    <link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
 </head>
 <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -122,7 +120,7 @@
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">类型</label>
                                 <div class="col-sm-3">
-                                    <select id="type" name="type" class="form-control">
+                                    <select id="booktypeid" name="booktypeid" class="form-control">
 
                                     </select>
                                 </div>
@@ -189,7 +187,7 @@
                                     <b class="help-block">书架</b>
                                 </div>
                                 <div class="col-sm-2">
-                                    <select id="level" name="level" class="form-control">
+                                    <select id="layer" name="layer" class="form-control">
                                         <c:forEach var="i" begin="1" end="10" step="1">
                                             <option value="${i}">${i}</option>
                                         </c:forEach>
@@ -273,15 +271,9 @@
 <script src="background/lib/common-scripts.js"></script>
 <!--script for this page-->
 <script src="background/lib/jquery-ui-1.9.2.custom.min.js"></script>
-<!--custom switch-->
-<script src="background/lib/bootstrap-switch.js"></script>
-<!--custom tagsinput-->
-<script src="background/lib/jquery.tagsinput.js"></script>
-<!--custom checkbox & radio-->
-<script src="background/lib/jquery-ui-1.9.2.custom.min.js"></script>
 <script type="text/javascript" src="background/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script src="background/lib/jquery.form.js"></script>
 <script src="background/lib/form-validation-script.js"></script>
+<script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
 <script type="text/javascript">
     jQuery.browser = {};
     (function () {
@@ -292,20 +284,77 @@
             jQuery.browser.version = RegExp.$1;
         }
     })();
-    $(document).ready(function () {
-        $.ajax({
+    $.ajax({
             url: "/book/getAllTypes",
             success: function (data) {
                 for (var type of data)
-                    $("#type").append(`<option value=` + type.id + `>` + type.type + `</option>`)
+                    $("#booktypeid").append(`<option value=` + type.id + `>` + type.booktype + `</option>`)
+            }
+    });
+    $(document).ready(function () {
+        $("#addBookForm").validate({
+            rules: {
+                bookname: {
+                    required: true,
+                    maxlength: 50,
+                },
+                booktypeid: {
+                    required: true
+                },
+                press: {
+                    required: true,
+                    maxlength: 50,
+                },
+                total: {
+                    required: true,
+                    digits: true,
+                    maxlength: 4,
+                },
+                floor: {
+                    required: true,
+                    digits: true
+                },
+                bookcase: {
+                    required: true,
+                    digits: true
+                },
+                level: {
+                    required: true,
+                    digits: true
+                },
+                isbn: {
+                    required: true,
+                    digits: true,
+                    maxlength: 20,
+                },
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    url: "/book/addBook",
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.result === "success") {
+                            alert("添加图书成功");
+                            window.open('/Book_table', '_self');
+                        }
+                        else {
+                            alert(data.msg);
+                        }
+                    },
+                    error: function () {
+                        alert("网络出现问题！");
+                    }
+                });
             }
         });
     });
 
+
     function checkFile(target) {
         var file = $("#file");
         var name = file.val();
-        var type = name.substring(name.lastIndexOf(".") + 1, name.length);
+        var type = name.substring(name.lastIndexOf(".") + 1, name.length).toLocaleLowerCase();
         var size = $("#file")[0].files[0].size;
         console.log(type);
         if (type !== "jpg" && type !== "png" && type !== "gif") {

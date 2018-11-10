@@ -3,7 +3,7 @@
 <mapper namespace="cn.work.dao.BooktypeMapper">
     <resultMap id="BaseResultMap" type="cn.work.pojo.Booktype">
         <id column="id" property="id" jdbcType="VARCHAR"/>
-        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="booktype" property="booktype" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -66,7 +66,7 @@
         </where>
     </sql>
     <sql id="Base_Column_List">
-    id, type
+    id, booktype
   </sql>
     <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.work.pojo.BooktypeExample">
         select
@@ -99,8 +99,8 @@
         </if>
     </delete>
     <insert id="insert" parameterType="cn.work.pojo.Booktype">
-    insert into booktype (id, type)
-    values (#{id,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR})
+    insert into booktype (id, booktype)
+    values (#{id,jdbcType=VARCHAR}, #{booktype,jdbcType=VARCHAR})
   </insert>
     <insert id="insertSelective" parameterType="cn.work.pojo.Booktype">
         insert into booktype
@@ -108,16 +108,16 @@
             <if test="id != null">
                 id,
             </if>
-            <if test="type != null">
-                type,
+            <if test="booktype != null">
+                booktype,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 #{id,jdbcType=VARCHAR},
             </if>
-            <if test="type != null">
-                #{type,jdbcType=VARCHAR},
+            <if test="booktype != null">
+                #{booktype,jdbcType=VARCHAR},
             </if>
         </trim>
     </insert>
@@ -133,8 +133,8 @@
             <if test="record.id != null">
                 id = #{record.id,jdbcType=VARCHAR},
             </if>
-            <if test="record.type != null">
-                type = #{record.type,jdbcType=VARCHAR},
+            <if test="record.booktype != null">
+                booktype = #{record.booktype,jdbcType=VARCHAR},
             </if>
         </set>
         <if test="_parameter != null">
@@ -144,7 +144,7 @@
     <update id="updateByExample" parameterType="map">
         update booktype
         set id = #{record.id,jdbcType=VARCHAR},
-        type = #{record.type,jdbcType=VARCHAR}
+        booktype = #{record.booktype,jdbcType=VARCHAR}
         <if test="_parameter != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
@@ -152,15 +152,15 @@
     <update id="updateByPrimaryKeySelective" parameterType="cn.work.pojo.Booktype">
         update booktype
         <set>
-            <if test="type != null">
-                type = #{type,jdbcType=VARCHAR},
+            <if test="booktype != null">
+                booktype = #{booktype,jdbcType=VARCHAR},
             </if>
         </set>
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <update id="updateByPrimaryKey" parameterType="cn.work.pojo.Booktype">
     update booktype
-    set type = #{type,jdbcType=VARCHAR}
+    set booktype = #{booktype,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
     <select id="getAllTypes" resultType="cn.work.pojo.Booktype">
