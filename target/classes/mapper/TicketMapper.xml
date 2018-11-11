@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.work.dao.TicketMapper" >
-  <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket" >
-    <id column="TicketId" property="ticketid" jdbcType="INTEGER" />
+  <resultMap id="BaseResultMap" type="cn.work.pojo.Ticket">
+    <id column="TicketId" property="ticketid" jdbcType="INTEGER"/>
     <result column="orderId" property="orderid" jdbcType="INTEGER" />
     <result column="overdueTime" property="overduetime" jdbcType="INTEGER" />
-    <result column="dealTime" property="dealtime" jdbcType="TIMESTAMP" />
-    <result column="fee" property="fee" jdbcType="DECIMAL" />
-    <result column="ticket_status" property="ticketStatus" jdbcType="INTEGER" />
-    <result column="bookid" property="bookid" jdbcType="INTEGER" />
+    <result column="dealTime" property="dealtime" jdbcType="TIMESTAMP"/>
+    <result column="fee" property="fee" jdbcType="DECIMAL"/>
+    <result column="ticket_status" property="ticketStatus" jdbcType="INTEGER"/>
+    <result column="bookid" property="bookid" jdbcType="INTEGER"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -121,16 +121,16 @@
       <if test="overduetime != null" >
         overdueTime,
       </if>
-      <if test="dealtime != null" >
+      <if test="dealtime != null">
         dealTime,
       </if>
       <if test="fee != null" >
         fee,
       </if>
-      <if test="ticketStatus != null" >
+      <if test="ticketStatus != null">
         ticket_status,
       </if>
-      <if test="bookid != null" >
+      <if test="bookid != null">
         bookid,
       </if>
     </trim>
@@ -144,16 +144,16 @@
       <if test="overduetime != null" >
         #{overduetime,jdbcType=INTEGER},
       </if>
-      <if test="dealtime != null" >
+      <if test="dealtime != null">
         #{dealtime,jdbcType=TIMESTAMP},
       </if>
       <if test="fee != null" >
         #{fee,jdbcType=DECIMAL},
       </if>
-      <if test="ticketStatus != null" >
+      <if test="ticketStatus != null">
         #{ticketStatus,jdbcType=INTEGER},
       </if>
-      <if test="bookid != null" >
+      <if test="bookid != null">
         #{bookid,jdbcType=INTEGER},
       </if>
     </trim>
@@ -176,16 +176,16 @@
       <if test="record.overduetime != null" >
         overdueTime = #{record.overduetime,jdbcType=INTEGER},
       </if>
-      <if test="record.dealtime != null" >
+      <if test="record.dealtime != null">
         dealTime = #{record.dealtime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.fee != null" >
         fee = #{record.fee,jdbcType=DECIMAL},
       </if>
-      <if test="record.ticketStatus != null" >
+      <if test="record.ticketStatus != null">
         ticket_status = #{record.ticketStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.bookid != null" >
+      <if test="record.bookid != null">
         bookid = #{record.bookid,jdbcType=INTEGER},
       </if>
     </set>
@@ -198,10 +198,10 @@
     set TicketId = #{record.ticketid,jdbcType=INTEGER},
       orderId = #{record.orderid,jdbcType=INTEGER},
       overdueTime = #{record.overduetime,jdbcType=INTEGER},
-      dealTime = #{record.dealtime,jdbcType=TIMESTAMP},
-      fee = #{record.fee,jdbcType=DECIMAL},
-      ticket_status = #{record.ticketStatus,jdbcType=INTEGER},
-      bookid = #{record.bookid,jdbcType=INTEGER}
+    dealTime = #{record.dealtime,jdbcType=TIMESTAMP},
+    fee = #{record.fee,jdbcType=DECIMAL},
+    ticket_status = #{record.ticketStatus,jdbcType=INTEGER},
+    bookid = #{record.bookid,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -215,16 +215,16 @@
       <if test="overduetime != null" >
         overdueTime = #{overduetime,jdbcType=INTEGER},
       </if>
-      <if test="dealtime != null" >
+      <if test="dealtime != null">
         dealTime = #{dealtime,jdbcType=TIMESTAMP},
       </if>
       <if test="fee != null" >
         fee = #{fee,jdbcType=DECIMAL},
       </if>
-      <if test="ticketStatus != null" >
+      <if test="ticketStatus != null">
         ticket_status = #{ticketStatus,jdbcType=INTEGER},
       </if>
-      <if test="bookid != null" >
+      <if test="bookid != null">
         bookid = #{bookid,jdbcType=INTEGER},
       </if>
     </set>

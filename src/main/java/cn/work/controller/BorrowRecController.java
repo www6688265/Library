@@ -12,52 +12,86 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * @Description: 处理借书记录的控制器
+ * @Author: Aaron Ke
+ */
 @Controller
 @RequestMapping(value = "/borrowRec")
 public class BorrowRecController {
     @Autowired
     BorrowRecService borrowService;
 
+    /**
+     * @Description: 得到所有借书记录
+     * @Param: 无
+     * @return: 借书记录结果集
+     * @Author: Aaron Ke
+     */
     @RequestMapping(value = "getAllBorrowRec")
     @ResponseBody
     public Map getAllBorrowRec() {
         Map<String, Object> result = new HashMap<>();
+        //得到所有借书记录
         List<BorrowExt> borrowList = borrowService.getAllBorrowRec();
         result.put("data", borrowList);
         return result;
     }
 
+    /**
+     * @Description: 得到用户没有归还的书籍记录
+     * @Param: userid:用户编号
+     * @return: 没有归还图书的结果集
+     * @Author: Aaron Ke
+     */
     @RequestMapping(value = "getNotReturnList")
     @ResponseBody
     public Map<String, Object> getNotReturnList(String userid) {
         Map<String, Object> result = new HashMap<>();
+        //得到用户未归还图书
         List<BorrowExt> borrowList = borrowService.getNotReturnRec(userid);
         result.put("data", borrowList);
         return result;
     }
 
-    @RequestMapping(value = "delBorrowRec")
-    @ResponseBody
-    public Map delBorrowRec(String id){
-        Map<String, Object> result = new HashMap<>();
-        borrowService.delBorrowRec(id);
-        result.put("result","success");
-        return result;
-    }
+    //废弃的方法
+//    @RequestMapping(value = "delBorrowRec")
+//    @ResponseBody
+//    public Map delBorrowRec(String id){
+//        Map<String, Object> result = new HashMap<>();
+//        borrowService.delBorrowRec(id);
+//        result.put("result","success");
+//        return result;
+//    }
 
+    /**
+     * @Description: 得到用户所有的借书记录
+     * @Param: id: 用户编号
+     * @return: 借书记录结果集
+     * @Author: Aaron Ke
+     */
     @RequestMapping(value = "getBorrowRecByUserID")
     @ResponseBody
     public Map getBorrowRecByUserID(String id) {
         Map<String, Object> result = new HashMap<>();
+        //得到用户所有的借书记录
         List<BorrowExt> borrowList = borrowService.getBorrowRecByUserID(id);
         result.put("data", borrowList);
         return result;
     }
 
+    /**
+     * @Description: 续借图书
+     * @Param: order:借书记录的编号，bookid:图书的编号
+     * @return: 操作结果
+     * @Author: Aaron Ke
+     */
     @RequestMapping(value = "renew")
     @ResponseBody
     public Map renew(String orderid, String bookid) {
         Map<String, Object> result = new HashMap<>();
+        //调用续借方法
         boolean done = borrowService.renewBorrow(orderid, bookid);
         if (done) {
             result.put("result", "success");

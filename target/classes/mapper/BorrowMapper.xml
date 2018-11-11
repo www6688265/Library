@@ -143,7 +143,7 @@
   <update id="updateByExample" parameterType="map" >
     update borrow
     set orderId = #{record.orderid,jdbcType=INTEGER},
-      userID = #{record.userid,jdbcType=INTEGER}
+    userID = #{record.userid,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>

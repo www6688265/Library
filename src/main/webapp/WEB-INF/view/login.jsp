@@ -21,7 +21,7 @@
  <div id="login-page">
     <div class="container">
       <form class="form-login" method="post" id="data">
-        <h2 class="form-login-heading">sign in now</h2>
+          <h2 class="form-login-heading">管理员登录</h2>
         <div class="login-wrap">
           <input type="text" id="idcard" name="idcard" class="form-control" placeholder="管理员用户名" autofocus>
           <br>

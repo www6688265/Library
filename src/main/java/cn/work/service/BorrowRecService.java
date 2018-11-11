@@ -7,7 +7,7 @@ import java.util.List;
 public interface BorrowRecService {
     List<BorrowExt> getAllBorrowRec();
 
-    void delBorrowRec(String id);
+//    void delBorrowRec(String id);
 
     List<BorrowExt> getNotReturnRec(String userid);
 

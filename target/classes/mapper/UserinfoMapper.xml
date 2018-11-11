@@ -8,7 +8,7 @@
     <result column="sex" property="sex" jdbcType="CHAR" />
     <result column="userTele" property="usertele" jdbcType="VARCHAR" />
     <result column="access" property="access" jdbcType="INTEGER" />
-    <result column="user_status" property="userStatus" jdbcType="INTEGER" />
+    <result column="user_status" property="userStatus" jdbcType="INTEGER"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -130,7 +130,7 @@
       <if test="access != null" >
         access,
       </if>
-      <if test="userStatus != null" >
+      <if test="userStatus != null">
         user_status,
       </if>
     </trim>
@@ -153,7 +153,7 @@
       <if test="access != null" >
         #{access,jdbcType=INTEGER},
       </if>
-      <if test="userStatus != null" >
+      <if test="userStatus != null">
         #{userStatus,jdbcType=INTEGER},
       </if>
     </trim>
@@ -185,7 +185,7 @@
       <if test="record.access != null" >
         access = #{record.access,jdbcType=INTEGER},
       </if>
-      <if test="record.userStatus != null" >
+      <if test="record.userStatus != null">
         user_status = #{record.userStatus,jdbcType=INTEGER},
       </if>
     </set>
@@ -200,8 +200,8 @@
       IDcard = #{record.idcard,jdbcType=CHAR},
       sex = #{record.sex,jdbcType=CHAR},
       userTele = #{record.usertele,jdbcType=VARCHAR},
-      access = #{record.access,jdbcType=INTEGER},
-      user_status = #{record.userStatus,jdbcType=INTEGER}
+    access = #{record.access,jdbcType=INTEGER},
+    user_status = #{record.userStatus,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -224,7 +224,7 @@
       <if test="access != null" >
         access = #{access,jdbcType=INTEGER},
       </if>
-      <if test="userStatus != null" >
+      <if test="userStatus != null">
         user_status = #{userStatus,jdbcType=INTEGER},
       </if>
     </set>
