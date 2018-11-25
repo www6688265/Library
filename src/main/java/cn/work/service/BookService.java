@@ -25,4 +25,5 @@ public interface BookService {
     List<Booktype> getAllTypes();
 
     List<BookExt> getBooks(BookExt book);
+
 }

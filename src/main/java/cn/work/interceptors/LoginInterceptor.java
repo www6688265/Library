@@ -1,5 +1,6 @@
 package cn.work.interceptors;
 
+import cn.work.pojo.Admin;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -9,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Integer admid = (Integer) request.getSession().getAttribute("admid");
-        if (admid != null)
+        Admin admin = (Admin) request.getSession().getAttribute("admin");
+        if (admin != null)
             return true;
         else {
             response.sendRedirect("/login");

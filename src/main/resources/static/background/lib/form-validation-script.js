@@ -18,7 +18,6 @@ var Script = function () {
         return this.optional(element) || (tel.test(value));
     }, "只能输入中文或英文");
 
-
     $().ready(function() {
         // validate the comment form when it is submitted
         $("#commentForm").validate();

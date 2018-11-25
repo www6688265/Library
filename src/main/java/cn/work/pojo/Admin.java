@@ -1,6 +1,6 @@
 package cn.work.pojo;
 
-public class Admin {
+public class Admin implements java.io.Serializable {
     private Integer admid;
 
     private String idcard;

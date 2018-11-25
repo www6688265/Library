@@ -1,10 +1,11 @@
 package cn.work.util;
 
-import cn.work.pojo.Admin;
-import cn.work.pojo.Book;
+import cn.work.dao.BooktypeMapper;
+import cn.work.pojo.*;
 import cn.work.pojo.Error;
-import cn.work.pojo.Userinfo;
 
+import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -116,15 +117,16 @@ public class Validator {
         return null;
     }
 
-    public static Map<String, Object> bookValidator(Book book) {
+    public static Map<String, Object> bookValidator(BookExt book) {
         Error error = new Error();
         String bookname = book.getBookname();
         String press = book.getPress();
         Integer total = book.getTotal();
+        Integer left_num = book.getLeft_num();
         String isbn = book.getIsbn();
         if (bookname != null) {
             if (bookname.equals("")) {
-                error.addError("bookname", "required_error");
+                error.addError("bookname", required_error);
             } else {
                 if (bookname.length() > 50) {
                     error.addError("bookname", maxlength_error + "50位");
@@ -159,9 +161,129 @@ public class Validator {
         } else {
             error.addError("total", required_error);
         }
+        if (left_num != null) {
+            if (Pattern.matches("^//d+$", Integer.toString(left_num)) || left_num < 0) {
+                error.addError("left_num", digtal_error);
+            } else if (total.toString().length() > 4) {
+                error.addError("left_num", maxlength_error + "4位");
+            }
+        } else {
+            error.addError("left_num", required_error);
+        }
         if (error.getCount() > 0) {
             return error.getFieldErrors();
         } else
             return null;
+    }
+
+    public static boolean bookValidator(BookExcel book, int row, ExcelResult result, Map<String, String> booktypeMap) {
+        String bookname = book.getBookname();
+        String press = book.getPress();
+        Integer total = book.getTotal();
+        String isbn = book.getIsbn();
+        Integer floor = book.getFloor();
+        Integer bookcase = book.getBookcase();
+        Integer layer = book.getLayer();
+        String booktype = book.getBooktypeid();
+        boolean isPass = true;
+
+        if (bookname == null || bookname.equals("")) {
+            result.addRowError(row, "图书名" + required_error);
+            isPass = false;
+        } else {
+            if (bookname.length() > 50) {
+                result.addRowError(row, "图书名" + maxlength_error + "50位");
+                isPass = false;
+            }
+        }
+
+        if (press == null || press.equals("")) {
+            result.addRowError(row, "出版社" + required_error);
+            isPass = false;
+        } else {
+            if (press.length() > 50) {
+                result.addRowError(row, "出版社" + maxlength_error + "50位");
+                isPass = false;
+            }
+        }
+
+        if (booktype == null || booktype.equals("")) {
+            result.addRowError(row, "图书类型" + required_error);
+            isPass = false;
+        } else {
+            if (booktypeMap.get(booktype) == null) {
+                result.addRowError(row, "图书类型" + "不正确");
+                isPass = false;
+            } else {
+                book.setBooktypeid(booktypeMap.get(booktype));
+            }
+        }
+
+        if (isbn == null || isbn.equals("")) {
+            result.addRowError(row, "ISBN编号" + required_error);
+            isPass = false;
+        } else {
+            if (isbn.length() > 20) {
+                result.addRowError(row, "ISBN编号" + maxlength_error + "20位");
+                isPass = false;
+            }
+            if (!Pattern.matches("^\\d+$", isbn)) {
+                result.addRowError(row, "ISBN编号" + digtal_error);
+                isPass = false;
+            }
+        }
+
+        if (total != null) {
+            if (Pattern.matches("^//d+$", Integer.toString(total)) || total < 0) {
+                result.addRowError(row, "库存" + digtal_error);
+                isPass = false;
+            } else if (total.toString().length() > 4) {
+                result.addRowError(row, "库存" + maxlength_error + "4位");
+                isPass = false;
+            }
+        } else {
+            result.addRowError(row, "库存" + required_error);
+            isPass = false;
+        }
+
+        if (floor != null) {
+            if (Pattern.matches("^//d+$", Integer.toString(floor)) || floor < 0) {
+                result.addRowError(row, "楼层" + digtal_error);
+                isPass = false;
+            } else if (floor.toString().length() > 2) {
+                result.addRowError(row, "楼层" + maxlength_error + "2位");
+                isPass = false;
+            }
+        } else {
+            result.addRowError(row, "楼层" + required_error);
+            isPass = false;
+        }
+
+        if (bookcase != null) {
+            if (Pattern.matches("^//d+$", Integer.toString(bookcase)) || bookcase < 0) {
+                result.addRowError(row, "书架数" + digtal_error);
+                isPass = false;
+            } else if (bookcase.toString().length() > 2) {
+                result.addRowError(row, "书架数" + maxlength_error + "2位");
+                isPass = false;
+            }
+        } else {
+            result.addRowError(row, "书架数" + required_error);
+            isPass = false;
+        }
+
+        if (layer != null) {
+            if (Pattern.matches("^//d+$", Integer.toString(layer)) || layer < 0) {
+                result.addRowError(row, "书架层数" + digtal_error);
+                isPass = false;
+            } else if (layer.toString().length() > 2) {
+                result.addRowError(row, "书架层数" + maxlength_error + "2位");
+                isPass = false;
+            }
+        } else {
+            result.addRowError(row, "书架层数" + required_error);
+            isPass = false;
+        }
+        return isPass;
     }
 }

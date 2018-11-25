@@ -142,9 +142,6 @@
 <script src="background/lib/jquery.scrollTo.min.js"></script>
 <script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
 <!--common script for all pages-->
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
-<script src="background/lib/jquery.form.js"></script>
 <script src="background/lib/common-scripts.js"></script>
 <script class="include" type="text/javascript" src="background/lib/jquery.dcjqaccordion.2.7.js"></script>
 <script type="text/javascript">
@@ -152,7 +149,15 @@
         $("#changPwdForm").validate({
             submitHandler: function () {
                 var agaPwd = $("#agaPwd").val();
+                if (agaPwd.indexOf(" ") >= 0) {
+                    alert("密码不能包含空格");
+                    return false;
+                }
                 var newPwd = $("#newPwd").val();
+                if (newPwd.indexOf(" ") >= 0) {
+                    alert("密码不能包含空格");
+                    return false;
+                }
                 var pwd = $("#pwd").val();
                 if (pwd === newPwd) {
                     alert("新密码不能和旧密码相同！");
@@ -165,7 +170,7 @@
                         dataType: "json",
                         data: $("#changPwdForm").serialize(),
                         success: function (data) {
-                            if (data.result == "success") {
+                            if (data.result === "success") {
                                 alert("修改密码成功");
                                 window.location.href = "${pageContext.request.contextPath}/login";
                             }
@@ -174,8 +179,7 @@
                             }
                         },
                         error: function (data) {
-                            alert(data.error);
-                            window.location.href = "${pageContext.request.contextPath}/login";
+                            alert(data.result);
                         }
                     })
                 }

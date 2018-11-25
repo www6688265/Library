@@ -21,4 +21,5 @@ public class BookExt extends Book {
     public void setLeft_num(Integer left_num) {
         this.left_num = left_num;
     }
+
 }

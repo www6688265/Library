@@ -2,13 +2,19 @@ package cn.work.controller;
 
 import cn.work.pojo.Admin;
 import cn.work.service.AdminService;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import static cn.work.util.SHAUtil.getEncrypt;
 import static cn.work.util.Validator.adminValidator;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,26 +43,25 @@ public class AdminController {
         Map<String, Object> result = new HashMap<>();
         //初始化存密码的变量
         String pwd = "";
+        Subject subject = SecurityUtils.getSubject();
         if (admin != null) {
-            //得到用户正确的密码
-            Admin va_admin = adminService.getAdminByCardId(admin.getIdcard());
-            if (va_admin != null) {
-                //将传过来的密码进行加密操作。
-                pwd = getEncrypt(admin.getAdmpassword());
-            } else {
-                //返回错误信息
+            pwd = getEncrypt(admin.getAdmpassword());
+            AuthenticationToken token = new UsernamePasswordToken(admin.getIdcard(), pwd);
+            try {
+                subject.login(token);
+            } catch (UnknownAccountException e) {
                 result.put("result", "找不到用户名！");
                 return result;
-            }
-            if (va_admin.getAdmpassword().equals(pwd)) {
-                //将用户信息存入Session，方便进行用户登录拦截
-                request.getSession().setAttribute("admid", va_admin.getAdmid());
-                result.put("result", "success");
-                return result;
-            } else {
+            } catch (IncorrectCredentialsException e) {
                 result.put("result", "密码错误！");
                 return result;
+            } catch (ExcessiveAttemptsException e) {
+                result.put("result", "尝试登录超过5次，请1分钟后重试 ");
+                return result;
             }
+            request.getSession().setAttribute("admin", admin);
+            result.put("result", "success");
+            return result;
         } else {
             result.put("result", "未输入信息！");
             return result;
@@ -72,14 +77,9 @@ public class AdminController {
     @RequestMapping("logOut")
     public String logOut(HttpServletRequest request) {
         //取到用户存在Session的对象
-        Integer admid = (Integer) request.getSession().getAttribute("admid");
-        if (admid != null) {
-            //将用户的Session对象销毁
-            request.getSession().removeAttribute("admid");
-            //重定向至登录界面
-            return "redirect:/login";
-        } else
-            return "redirect:/login";
+        request.getSession().invalidate();
+        //重定向至登录界面
+        return "redirect:/login";
     }
 
     /**
@@ -164,7 +164,6 @@ public class AdminController {
             result.put("error", msg);
             return result;
         }
-        //todo 此处要更新一下逻辑
         //更新管理员信息信息，并得到返回的admin
         admin = adminService.updateAdmin(admin);
         //如果为空说明有相同的admin被使用
@@ -190,11 +189,11 @@ public class AdminController {
     @ResponseBody
     public Map<String, Object> changePwd(String pwd, String newPwd, HttpServletRequest request) {
         Map<String, Object> result = new HashMap<>();
-        Integer admid = (Integer) request.getSession().getAttribute("admid");
+        Admin sAdmin = (Admin) request.getSession().getAttribute("admin");
         pwd = getEncrypt(pwd);
-        if (admid != null) {
+        if (sAdmin != null) {
             //得到正确的用户密码
-            Admin admin = adminService.getAdminByAdmid(Integer.toString(admid));
+            Admin admin = adminService.getAdminByCardId(sAdmin.getIdcard());
             if (newPwd.equals(pwd)) {
                 result.put("result", "新密码不能与旧密码相同！");
                 return result;
@@ -206,14 +205,14 @@ public class AdminController {
                 adminService.updateAdmin(admin);
                 result.put("result", "success");
                 //删除用户的Session对象
-                request.getSession().removeAttribute("admid");
+                request.getSession().invalidate();
                 return result;
             } else {
                 result.put("result", "当前密码不正确");
                 return result;
             }
         } else {
-            result.put("error", "您尚未登录!");
+            result.put("result", "密码不能为空!");
             return result;
         }
     }

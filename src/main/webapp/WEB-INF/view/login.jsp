@@ -15,6 +15,9 @@
   <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="background/css/style-responsive.css" rel="stylesheet">
+    <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 </head>
 
 <body>
@@ -23,19 +26,24 @@
       <form class="form-login" method="post" id="data">
           <h2 class="form-login-heading">管理员登录</h2>
         <div class="login-wrap">
-          <input type="text" id="idcard" name="idcard" class="form-control" placeholder="管理员用户名" autofocus>
+            <input type="text" id="idcard" name="idcard" class="form-control" placeholder="管理员用户名" autofocus required>
           <br>
-          <input type="password" id="admpassword" name="admpassword" class="form-control" placeholder="密码">
+            <input type="password" id="admpassword" name="admpassword" class="form-control" placeholder="密码" required>
           <br>
+            <center>
+                <div id="errorMsg" style="color: red;">
+
+                </div>
+            </center>
           <button id="login"class="btn btn-theme btn-block" type="button">
               <i class="fa fa-lock"></i> 登录</button>
           <br>
+
         </div>
       </form>
     </div>
   </div>
   <!-- js placed at the end of the document so the pages load faster -->
- <script src="background/lib/jquery/jquery.min.js"></script>
  <script src="background/lib/bootstrap/js/bootstrap.min.js"></script>
   <!--BACKSTRETCH-->
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
@@ -45,8 +53,15 @@
       speed: 500
     });
     $(document).ready(function() {
+
         $("#login").click(function () {
-            $.ajax({url:"/admin/login",
+            $("#errorMsg").html("");
+            if ($("#idcard").val() === "" || $("#admpassword").val() === "") {
+                $("#errorMsg").html('<lable class="error">用户名或密码不能为空 </lable> ');
+                return;
+            }
+            $.ajax({
+                url: "/admin/login",
                 type:"POST",
                 dataType:"json",
                 data:$("#data").serialize(),

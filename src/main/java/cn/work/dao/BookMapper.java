@@ -2,6 +2,7 @@ package cn.work.dao;
 
 import cn.work.pojo.Book;
 import cn.work.pojo.BookExample;
+import cn.work.pojo.BookExcel;
 import cn.work.pojo.BookExt;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -40,4 +41,6 @@ public interface BookMapper {
     List<BookExt> getBooksByType(String id);
 
     List<BookExt> getBooks(BookExample example);
+
+
 }

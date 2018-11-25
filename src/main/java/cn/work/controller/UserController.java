@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
+
 import static cn.work.util.SHAUtil.getEncrypt;
 import static cn.work.util.Validator.userValidator;
 
@@ -69,14 +71,8 @@ public class UserController {
      */
     @RequestMapping("logOut")
     public String logOut(HttpServletRequest request) {
-        //得到Session中的用户信息
-        Integer userid = (Integer) request.getSession().getAttribute("userid");
-        if (userid != null) {
-            request.getSession().removeAttribute("userid");
-            //重定向页面
-            return "redirect:/UserLogin";
-        } else
-            return "redirect:/UserLogin";
+        request.getSession().invalidate();
+        return "redirect:/UserLogin";
     }
 
     /**
@@ -106,7 +102,7 @@ public class UserController {
                 return result;
             }
         } else {
-            result.put("error", "您尚未登录!");
+            result.put("result", "密码不能为空!");
             return result;
         }
     }

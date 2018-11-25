@@ -625,7 +625,15 @@
         $("#changPwdForm").validate({
             submitHandler: function () {
                 var agaPwd = $("#agaPwd").val();
+                if (agaPwd.indexOf(" ") >= 0) {
+                    alert("密码不能包含空格");
+                    return false;
+                }
                 var newPwd = $("#newPwd").val();
+                if (newPwd.indexOf(" ") >= 0) {
+                    alert("密码不能包含空格");
+                    return false;
+                }
                 var pwd = $("#pwd").val();
                 if (pwd === newPwd) {
                     alert("新密码不能和旧密码相同！");
@@ -647,8 +655,7 @@
                             }
                         },
                         error: function (data) {
-                            alert(data.error);
-                            window.location.reload();
+                            alert(data.result);
                         }
                     })
                 }

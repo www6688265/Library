@@ -150,6 +150,11 @@
                                 <input id="login-password" type="password" class="form-control" name="password"
                                        placeholder="密码" required="">
                             </div>
+                            <center>
+                                <div id="errorMsg" style="color: red;">
+
+                                </div>
+                            </center>
                             <div style="margin-top:10px" class="form-group">
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">
@@ -244,6 +249,11 @@
         });
 
         $("#btn-login").click(function () {
+            $("#errorMsg").html("");
+            if ($("#login-username").val() === "" || $("#login-password").val() === "") {
+                $("#errorMsg").html('<lable class="error">用户名或密码不能为空 </lable> ');
+                return;
+            }
             $.ajax({
                 url: "/user/login",
                 type: "POST",

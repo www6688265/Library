@@ -17,6 +17,8 @@
     <link href="background/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
     <link href="background/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/bootstrap-fileinput/4.5.1/css/fileinput.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css" rel="stylesheet">
@@ -174,6 +176,9 @@
                         <!-- /form-panel -->
                         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered"
                                id="adv-dataTable">
+                            <button class="btn btn-round btn-primary" id="addBook" data-toggle="modal"
+                                    data-target="#myModal" onclick="">批量导入图书
+                            </button>
                             <thead>
                             <tr>
                                 <th class="select-checkbox sorting_1"></th>
@@ -214,6 +219,38 @@
     <!--footer end-->
 </section>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <form>
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span id="close_form"
+                                                                                                      aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">请选择Excel文件</h4>
+                </div>
+                <div class="modal-body">
+                    <a href="${pageContext.request.contextPath}/excel/getTemplate?type=图书" class="form-control"
+                       style="border:none;">下载导入模板</a>
+                    <input type="file" name="file" id="txt_file" class="file"
+                           data-show-preview="false" data-show-upload="true" data-allowed-file-extensions='["xls"]'/>
+                    <div class="pre-scrollable" id="info" style="display: none">
+                        <div style=" overflow:scroll; width:100%; height:400px" id="upload_msg">
+                            <h2>导入结果</h2>
+                            <span id="sumRow"></span></br>
+                            <span id="successRow"></span></br>
+                            <span id="failRow"></span></br>
+                            <span>原因：</span></br>
+                            <span id="reason"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
 <!-- js placed at the end of the document so the pages load faster -->
 
 <script type="text/javascript" language="javascript"
@@ -230,9 +267,36 @@
 <script src="background/lib/dataTables.editor.min.js"></script>
 <script src="background/lib/jquery.nicescroll.js" type="text/javascript"></script>
 <script type="text/javascript" src="background/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-fileinput/4.5.1/js/fileinput.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-fileinput/4.5.1/js/locales/zh.js"></script>
 <script src="background/lib/common-scripts.js"></script>
 <script src="background/lib/form-validation-script.js"></script>
 <script type="text/javascript">
+    $(document).on("click", "#close_form", function () {
+        $("#info").hide();
+        $("#txt_file").fileinput("clear");
+    });
+    $("#txt_file").fileinput({
+        language: "zh",
+        uploadUrl: "/excel/upload"
+    }).on("filebatchselected", function (event, files) {
+        $(this).fileinput("upload");
+    })
+        .on("fileuploaded", function (event, data) {
+            console.log(data);
+            var Data = data.response;
+            if (data.response) {
+
+                $("#info").show();
+                $("#sumRow").html("一共导入：" + Data.sumRowNum + "条");
+                $("#failRow").html("失败：" + Data.errorRowNum + "条");
+                $("#successRow").html("成功：" + Data.passRowNum + "条");
+                $("#reason").html("");
+                for (key in Data.errorList) {
+                    $("#reason").append("<span>" + Data.errorList[key] + "</span><br/>");
+                }
+            }
+        });
     var oTable;
     var editor;
     var sOut;
@@ -611,6 +675,7 @@
             });
         }
     }
+
 </script>
 
 </body>

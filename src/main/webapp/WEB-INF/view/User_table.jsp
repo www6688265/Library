@@ -242,7 +242,6 @@
     var sOut;
     $(document).ready(function () {
 
-
         editor = new $.fn.dataTable.Editor({
             ajax: {
                 url: "/user/updateUser",

@@ -269,6 +269,7 @@
                             $("#userNameInfo").show();
                             $("#userNotFound").hide();
                             $("#notNeedToReturn").hide();
+                            $("#confirm").hide();
                             $("#bookDiv").show();
                             url = "/borrowRec/getNotReturnList?userid=" + data.userid;
                             oTable.ajax.url(url).load();

@@ -28,4 +28,5 @@ public interface InventoryMapper {
     int updateByPrimaryKeySelective(Inventory record);
 
     int updateByPrimaryKey(Inventory record);
+
 }
