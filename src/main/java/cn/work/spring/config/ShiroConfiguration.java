@@ -72,6 +72,7 @@ public class ShiroConfiguration {
         map.put("/Return*", "authc");
         map.put("/Ticket_table*", "authc");
         map.put("/User_table*", "authc");
+        map.put("/overDueReminder*", "authc");
         map.put("/admin/*", "authc");
         //登录
         shiroFilterFactoryBean.setLoginUrl("/login");
@@ -109,6 +110,7 @@ public class ShiroConfiguration {
         manager.setSessionDAO(sessionDAO);
         manager.setGlobalSessionTimeout(3600000);
         manager.setSessionValidationInterval(3600000);
+        manager.setSessionIdUrlRewritingEnabled(false);
         return manager;
     }
 
@@ -122,7 +124,6 @@ public class ShiroConfiguration {
         ReTryCredentialsMatcher retryLimitCredentialsMatcher = new ReTryCredentialsMatcher(ehCacheManager());
         retryLimitCredentialsMatcher.setMaxRetryNum(5);
         return retryLimitCredentialsMatcher;
-
     }
 
 

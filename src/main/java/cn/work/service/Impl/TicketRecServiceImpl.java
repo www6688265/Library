@@ -9,6 +9,7 @@ import cn.work.pojo.Userinfo;
 import cn.work.pojo.UserinfoExample;
 import cn.work.service.TicketRecService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -48,6 +49,7 @@ public class TicketRecServiceImpl implements TicketRecService {
      * @Author: Aaron Ke
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void dealTicketByUserid(String id) {
         //更新罚款处理状态
         ticketMapper.dealTicketByUserid(Integer.parseInt(id));

@@ -36,8 +36,7 @@ public class AdminServiceImpl implements AdminService {
             return null;
         }
         if (list.size() > 0) {
-            Admin admin = list.get(0);
-            return admin;
+            return list.get(0);
         } else
             return null;
     }

@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
 </head>
-<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 
@@ -87,6 +87,12 @@
                     </a>
                 </li>
                 <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/overDueReminder">
+                        <i class="fa fa-clock-o"></i>
+                        <span>超期提醒设置</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Admin_table">
                         <i class="fa fa-group"></i>
                         <span>管理员管理</span>
@@ -110,6 +116,7 @@
     <section id="main-content">
         <section class="wrapper site-min-height">
             <h3><i class="fa fa-angle-right"></i>借书</h3>
+            <hr>
             <div class="row mt">
                 <div class="col-md-12">
                     <div class="col-md-12 mb">
@@ -358,24 +365,27 @@
             })
         });
         $("#dealSubmit").click(function () {
-            $.ajax({
-                url: "/borrow/dealTicket",
-                type: "POST",
-                dataType: "json",
-                data: $("#borrowForm").serialize(),
-                success: function (data) {
-                    if (data.result == "success") {
-                        $("#userNameInfo").show();
-                        $("#overLimitInfo").hide();
-                        $("#TicketNotDeal").hide();
-                        $("#userNotFound").hide();
-                        $("#bookDiv").show();
+            if (confirm("确定要处理此罚单吗?")) {
+                $.ajax({
+                    url: "/borrow/dealTicket",
+                    type: "POST",
+                    dataType: "json",
+                    data: $("#borrowForm").serialize(),
+                    success: function (data) {
+                        if (data.result == "success") {
+                            alert("处理成功！");
+                            $("#userNameInfo").show();
+                            $("#overLimitInfo").hide();
+                            $("#TicketNotDeal").hide();
+                            $("#userNotFound").hide();
+                            $("#bookDiv").show();
+                        }
+                    },
+                    error: function () {
+                        alert("网络出现问题！");
                     }
-                },
-                error: function () {
-                    alert("网络出现问题！");
-                }
-            })
+                })
+            }
         });
         $("#bookSubmit").click(function () {
             if ($("#isbn_1").val().trim() === "") {

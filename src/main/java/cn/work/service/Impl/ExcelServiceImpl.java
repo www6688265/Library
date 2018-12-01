@@ -4,7 +4,7 @@ import cn.work.dao.BookMapper;
 import cn.work.dao.BooktypeMapper;
 import cn.work.dao.InventoryMapper;
 import cn.work.pojo.*;
-import cn.work.service.BookService;
+import cn.work.service.ExcelService;
 import cn.work.util.Validator;
 import org.apache.poi.POIXMLDocumentPart;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -13,14 +13,12 @@ import org.apache.poi.ss.util.CellRangeAddressList;
 import org.apache.poi.xssf.usermodel.*;
 import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.logging.SimpleFormatter;
 
 import static cn.work.spring.config.LibraryConfig.projectPath;
 import static cn.work.spring.config.LibraryConfig.projectUploadPath;
@@ -153,11 +151,16 @@ public class ExcelServiceImpl implements ExcelService {
                 continue;
             }
             sumRow++;
+            row.getCell(0).setCellType(CellType.STRING);
             row.getCell(1).setCellType(CellType.STRING);
+            row.getCell(2).setCellType(CellType.STRING);
+            row.getCell(3).setCellType(CellType.STRING);
+            row.getCell(4).setCellType(CellType.STRING);
             row.getCell(5).setCellType(CellType.STRING);
             row.getCell(6).setCellType(CellType.STRING);
             row.getCell(7).setCellType(CellType.STRING);
             row.getCell(8).setCellType(CellType.STRING);
+            row.getCell(9).setCellType(CellType.STRING);
             String bookname = row.getCell(0).getStringCellValue();
             String isbn = row.getCell(1).getStringCellValue();
             String booktype = row.getCell(2).getStringCellValue();

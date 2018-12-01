@@ -1,86 +1,16 @@
 package cn.work.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
 
-    @RequestMapping("login")
-    public String login() {
-        return "login";
+    @RequestMapping("{page}")
+    public String page(@PathVariable String page) {
+        return page;
     }
 
-    @RequestMapping("index")
-    public String index() {
-        return "index";
-    }
 
-    @RequestMapping("frontIndex")
-    public String frontIndex() {
-        return "frontIndex";
-    }
-
-    @RequestMapping("User_table")
-    public String userTable() {
-        return "User_table";
-    }
-
-    @RequestMapping("addBook")
-    public String addBook() {
-        return "addBook";
-    }
-
-    @RequestMapping("Book_table")
-    public String bookTable() {
-        return "Book_table";
-    }
-
-    @RequestMapping("Borrow_table")
-    public String borrowTable() {
-        return "Borrow_table";
-    }
-
-    @RequestMapping("Ticket_table")
-    public String ticketTable() {
-        return "Ticket_table";
-    }
-
-    @RequestMapping("Borrow")
-    public String borrow() {
-        return "Borrow";
-    }
-
-    @RequestMapping("Return")
-    public String returnBook() {
-        return "Return";
-    }
-    @RequestMapping("Admin_table")
-    public String adminTable() {
-        return "Admin_table";
-    }
-    @RequestMapping("Admin_changePwd")
-    public String adminChangePwd() {
-        return "Admin_changePwd";
-    }
-
-    @RequestMapping("BookList")
-    public String bookList() {
-        return "BookList";
-    }
-
-    @RequestMapping("BookInfo")
-    public String bookInfo() {
-        return "BookInfo";
-    }
-
-    @RequestMapping("UserLogin")
-    public String userLogin() {
-        return "UserLogin";
-    }
-
-    @RequestMapping("profile")
-    public String profile() {
-        return "profile";
-    }
 }

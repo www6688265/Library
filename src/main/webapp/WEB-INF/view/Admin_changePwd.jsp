@@ -82,6 +82,12 @@
                     </a>
                 </li>
                 <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/overDueReminder">
+                        <i class="fa fa-clock-o"></i>
+                        <span>超期提醒设置</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Admin_table">
                         <i class="fa fa-group"></i>
                         <span>管理员管理</span>
@@ -135,7 +141,7 @@
     </footer>
 
 </section>
-<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 <script src="background/lib/bootstrap/js/bootstrap.min.js"></script>

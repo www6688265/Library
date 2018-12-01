@@ -336,7 +336,8 @@
       layer = #{layer,jdbcType=INTEGER}
     where bookID = #{bookid,jdbcType=INTEGER}
   </update>
-  <select id="getBook" resultType="cn.work.pojo.BookExt" parameterType="java.lang.Integer" >
+
+    <select id="getBook" resultType="cn.work.pojo.BookExt" parameterType="java.lang.Integer" >
     SELECT
 	book.bookid,
 	bookname,

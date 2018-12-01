@@ -15,7 +15,7 @@
   <!-- Custom styles for this template -->
     <link href="background/css/style.css" rel="stylesheet">
     <link href="background/css/style-responsive.css" rel="stylesheet">
-    <script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
     <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 </head>

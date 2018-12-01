@@ -3,6 +3,7 @@ package cn.work.dao;
 import cn.work.pojo.Borrow;
 import cn.work.pojo.BorrowExample;
 import cn.work.pojo.BorrowExt;
+import cn.work.pojo.ReminderInfo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -60,4 +61,7 @@ public interface BorrowMapper {
     int countUserOverDueNum(int id);
 
     List<BorrowExt> getNotReturnRec(int id);
+
+    List<ReminderInfo> getAboutToOverDueRec(int num);
+
 }

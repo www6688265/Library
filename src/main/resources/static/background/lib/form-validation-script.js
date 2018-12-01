@@ -72,7 +72,7 @@ var Script = function () {
                 },
                 idcard: {
                     required: "身份证号码不能为空",
-                    idcard:"身份证格式不正确"
+                    idcard: "身份证格式不正确",
                 },
                 sex:{
                     required: "性别不能为空"
@@ -115,16 +115,18 @@ var Script = function () {
                 },
                 admpassword: {
                     required: true,
-                    minlength: 8
+                    minlength: 8,
+                    charAndNum: true
                 }
             },
             messages: {
                 idcard: {
-                    charAndNum: "只能输入中文或者英文",
+                    charAndNum: "只能输入数字或者英文",
                     required: "姓名不能为空",
                     minlength: "至少两个字"
                 },
                 admpassword: {
+                    charAndNum: "只能输入数字或者英文",
                     required: "密码不能为空",
                     minlength: "密码至少8位"
                 }
@@ -136,12 +138,11 @@ var Script = function () {
                     dataType: "json",
                     data: $("#adminForm").serialize(),
                     success: function (data) {
-                        if (data.result == "success") {
-                            alert("添加成功成功");
+                        if (data.result === "success") {
+                            alert("添加成功");
                             oTable.ajax.reload();
                             $("#myModal").modal("hide");
                             $("#myModalLabel").text("新增");
-                            clear();
                         }
                         else {
                             alert(data.msg);

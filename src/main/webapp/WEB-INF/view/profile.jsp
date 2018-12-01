@@ -296,7 +296,7 @@
 <!-- //footer -->
 <!-- //home -->
 <!-- js -->
-<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 <!-- //js -->
@@ -407,7 +407,7 @@
                     $("#userFee").append(data.userFee + "元");
                 }
             }
-        })
+        });
 
 
         oTable = $("#adv-dataTable").DataTable({
@@ -435,8 +435,10 @@
                 },
                 {
                     "data": "bookid",
-                    visible: false
-                }
+                    "visible": false,
+                    "searchable":
+
+                },
             ],
             "pagingType": "full_numbers",
             "paging": true,//开启表格分页
@@ -447,9 +449,9 @@
                 "aTargets": [0]
             }],
             searching: true,
-            "order": [[4, 'dasc']],
-            "autoWidth": true,
             "bFilter": true,
+            "autoWidth": true,
+            "order": [[4, 'dasc']],
             "oLanguage": { // 国际化配置
                 "sProcessing": "正在获取数据，请稍后...",
                 "sLengthMenu": "显示 _MENU_ 条",
@@ -465,11 +467,10 @@
                     "sPrevious": "上一页",
                     "sNext": "下一页",
                     "sLast": "最后一页"
-                },
-            },
+                }
+            }
 
         });
-        oTable.columns.adjust().draw();
 
         $('#adv-dataTable tfoot th').each(function () {
             if ($(this).index() == 1) {
@@ -481,10 +482,6 @@
             }
 
         });
-        $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
-
-        $("#adv-dataTable label input").addClass("col-xs-12");
-
         oTable.columns().every(function () {
             var that = this;
             $('input', this.footer()).on('keyup change', function () {
@@ -492,12 +489,21 @@
                     return;
                 }
                 if (that.search() !== this.value) {
-                    that
-                        .search(this.value)
-                        .draw();
+                    var index = that[0][0];
+                    if (index != 6) {
+                        console.log(index);
+                        oTable.column(index).search(this.value).draw();
+                    }
+
                 }
             });
         });
+        $('#adv-dataTable tfoot tr').appendTo('#adv-dataTable thead');
+
+        $("#adv-dataTable label input").addClass("col-xs-12");
+
+
+
 
         // 第二个表格
         var oTable1;
@@ -600,6 +606,7 @@
             });
         });
 
+
         function check(mete) {
             var index = mete.row;
             var data = oTable.row(index).data();
@@ -646,7 +653,7 @@
                         dataType: "json",
                         data: $("#changPwdForm").serialize(),
                         success: function (data) {
-                            if (data.result == "success") {
+                            if (data.result === "success") {
                                 alert("修改密码成功");
                                 window.location.href = "${pageContext.request.contextPath}/UserLogin";
                             }

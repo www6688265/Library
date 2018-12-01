@@ -21,6 +21,5 @@ public class InitConfig implements CommandLineRunner {
             FileUtils.forceMkdir(TempDir);
         if (!UploadDir.exists())
             FileUtils.forceMkdir(UploadDir);
-        System.out.println("file:" + projectPath + projectUploadPath);
     }
 }

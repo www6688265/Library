@@ -81,6 +81,12 @@
                     </a>
                 </li>
                 <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/overDueReminder">
+                        <i class="fa fa-clock-o"></i>
+                        <span>超期提醒设置</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
                     <a href="${pageContext.request.contextPath}/Admin_table">
                         <i class="fa fa-group"></i>
                         <span>管理员管理</span>

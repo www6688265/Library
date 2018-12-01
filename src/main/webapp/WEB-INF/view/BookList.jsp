@@ -224,7 +224,7 @@
 </script>
 <!-- //cart-js -->
 <!-- price range (top products) -->
-<script src="front/js/jquery-ui.js"></script>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <!-- //price range (top products) -->
 
 <!-- dropdown nav -->

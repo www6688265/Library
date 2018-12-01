@@ -1,4 +1,4 @@
-package cn.work.service.Impl;
+package cn.work.service;
 
 import cn.work.pojo.DataTablePage;
 

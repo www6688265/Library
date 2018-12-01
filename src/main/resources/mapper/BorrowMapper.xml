@@ -200,7 +200,7 @@
   <select id="getNotReturnRec" resultType="cn.work.pojo.BorrowExt" parameterType="java.lang.Integer">
     SELECT
     userinfo.username,
-		userinfo.userid,
+	userinfo.userid,
 	book.bookName,
 	borrow.orderid,
 	BorrowedBooks.bookid,
@@ -214,5 +214,23 @@
 	WHERE
 	borrow.userid = userinfo.userID and
 	BorrowedBooks.BookID=book.bookID and BorrowedBooks.orderid=borrow.orderId and userinfo.userid=#{id} and ReturnTime is null
+  </select>
+    <select id="getAboutToOverDueRec" resultType="cn.work.pojo.ReminderInfo" parameterType="java.lang.Integer">
+    SELECT
+	username,
+	usertele,
+	count(bookname) as bookNum
+FROM
+	userinfo,
+	Book,
+	borrow,
+	BorrowedBooks
+where
+	DATEDIFF(BorrowedBooks.LimitTime,NOW())=#{num} and
+	BorrowedBooks.ReturnTime is null and
+	BorrowedBooks.bookid=Book.bookid and
+	BorrowedBooks.orderid=borrow.orderId and
+	borrow.userid=userinfo.userid
+	GROUP BY username,usertele
   </select>
 </mapper>

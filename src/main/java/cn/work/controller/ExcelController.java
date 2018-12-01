@@ -1,6 +1,6 @@
 package cn.work.controller;
 
-import cn.work.service.Impl.ExcelService;
+import cn.work.service.ExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.ResponseEntity;

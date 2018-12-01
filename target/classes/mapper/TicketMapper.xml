@@ -310,9 +310,9 @@ WHERE
   <update id="dealTicketByUserid" parameterType="java.lang.Integer">
         UPDATE ticket
 INNER JOIN ( SELECT borrow.orderId, borrow.userID FROM borrow ) a
-SET `status` = 1,`dealtime`=now()
+SET ticket_status = 1,`dealtime`=now()
 WHERE
-	`status` = 0
+	ticket_status = 0
 	AND a.orderid = ticket.orderid
 	AND a.userid = #{id};
     </update>

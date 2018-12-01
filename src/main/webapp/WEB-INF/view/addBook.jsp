@@ -17,7 +17,7 @@
     <link href="background/css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="background/lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
 </head>
-<script type="text/javascript" language="javascript" src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 
@@ -82,6 +82,12 @@
                     <a href="${pageContext.request.contextPath}/Return">
                         <i class="fa fa-book"></i>
                         <span>还书</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="${pageContext.request.contextPath}/overDueReminder">
+                        <i class="fa fa-clock-o"></i>
+                        <span>超期提醒设置</span>
                     </a>
                 </li>
                 <li class="sub-menu">
