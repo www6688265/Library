@@ -215,7 +215,7 @@
 	borrow.userid = userinfo.userID and
 	BorrowedBooks.BookID=book.bookID and BorrowedBooks.orderid=borrow.orderId and userinfo.userid=#{id} and ReturnTime is null
   </select>
-  <select id="getAboutToOverDueRec" resultType="cn.work.pojo.ReminderInfo" parameterType="java.lang.Integer">
+    <select id="getAboutToOverDueRec" resultType="cn.work.pojo.ReminderInfo" parameterType="java.lang.Integer">
     SELECT
 	username,
 	usertele,

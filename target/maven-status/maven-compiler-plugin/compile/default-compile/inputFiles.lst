@@ -1,3 +1,4 @@
+/Users/Aaron/LibraryOs/src/main/java/cn/work/controller/ReminderController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/shiro/ShiroRealm.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/BookService.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/BorrowRecServiceImpl.java
@@ -13,10 +14,10 @@
 /Users/Aaron/LibraryOs/src/main/java/cn/work/quartz/ReminderJob.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BorrowExt.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/UserExt.java
-/Users/Aaron/LibraryOs/src/main/java/cn/work/spring/config/QuartzConfig.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/ReturnController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/BookController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Borrowedbooks.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/spring/config/SchedulerConfig.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/spring/config/JobFactory.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/dao/BorrowedbooksMapper.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/Profile.java
@@ -60,6 +61,7 @@
 /Users/Aaron/LibraryOs/src/main/java/cn/work/controller/TicketRecController.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/UserExample.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/AdminExample.java
+/Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/ReminderInfo.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/Impl/AdminServiceImpl.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/pojo/BorrowedbooksKey.java
 /Users/Aaron/LibraryOs/src/main/java/cn/work/service/BARService.java
