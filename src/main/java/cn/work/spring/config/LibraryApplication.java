@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.SpringServletContainerInitializer;
+
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 
@@ -32,6 +33,10 @@ public class LibraryApplication extends SpringServletContainerInitializer {
     @Value("${c3p0.maxPoolSize}")
     private int maxPoolSize;
 
+    @Value("${c3p0.idleConnectionTestPeriod}")
+    private int idleConnectionTestPeriod;
+    private ComboPooledDataSource dataSource;
+
     @Bean
     public DataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
@@ -42,6 +47,8 @@ public class LibraryApplication extends SpringServletContainerInitializer {
         dataSource.setMinPoolSize(minPoolSize);
         dataSource.setInitialPoolSize(initialPoolSize);
         dataSource.setMaxPoolSize(maxPoolSize);
+        dataSource.setTestConnectionOnCheckin(true);
+        dataSource.setIdleConnectionTestPeriod(maxPoolSize);
         return dataSource;
     }
 

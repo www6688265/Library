@@ -129,7 +129,7 @@
                                     <img src="background/img/people.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
-                                    <form id="idcardForm" class="form-inline" role="form">
+                                    <form id="idcardForm" class="form-inline" role="form" onsubmit="return false;">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="idcard" name="idcard"
                                                    placeholder="身份证">
@@ -196,7 +196,7 @@
                                     <img src="background/img/book.png" class="img-circle" width="65">
                                 </div>
                                 <div class="col-md-9">
-                                    <form id="bookForm" class="form-inline" role="form">
+                                    <form id="bookForm" class="form-inline" role="form" onsubmit="return false;">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="isbn_1" name="isbn"
                                                    placeholder="请输入ISBN编号">
@@ -295,7 +295,12 @@
                 x--;
             }
             return false;
-        })
+        });
+        $("input").on("keydown", function (e) {
+            if (e.keyCode == 13) {
+                $("#idSubmit").trigger("click");
+            }
+        });
         $("#idSubmit").click(function () {
             if ($("#idcard").val().trim() === "") {
                 alert("未输入身份证");
@@ -309,6 +314,11 @@
                 success: function (data) {
                     switch (data.result) {
                         case "1":
+                            $("input").on("keydown", function (e) {
+                                if (e.keyCode == 13) {
+                                    $("#bookSubmit").trigger("click");
+                                }
+                            });
                             $("#username1").html(data.username);
                             $("#userid").val(data.userid);
                             $("#userNameInfo").show();
@@ -419,6 +429,7 @@
                     }
                     else {
                         $("#bookNotFound").show();
+                        $("#confirm").hide();
                         var notFonudList = data.notFoundList;
                         var length = notFonudList.length;
                         var html = "";
