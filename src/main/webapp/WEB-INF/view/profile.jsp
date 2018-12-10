@@ -436,8 +436,7 @@
                 {
                     "data": "bookid",
                     "visible": false,
-                    "searchable":
-
+                    "searchable": false
                 },
             ],
             "pagingType": "full_numbers",
