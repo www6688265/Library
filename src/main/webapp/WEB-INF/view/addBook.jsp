@@ -115,6 +115,18 @@
                         <form id="addBookForm" class="form-horizontal style-form" method="post"
                               action="${pageContext.request.contextPath}/book/addBook" enctype="multipart/form-data">
                             <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">ISBN</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="isbn" name="isbn" class="form-control">
+                                </div>
+                                <div class="col-sm-1">
+                                    <b class="help-block">*必填</b>
+                                </div>
+                                <button type="button" class="btn btn-round btn-primary" id="autoFill">自动填写
+                                </button>
+
+                            </div>
+                            <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">书名</label>
                                 <div class="col-sm-3">
                                     <input type="text" id="bookname" name="bookname" class="form-control">
@@ -147,15 +159,6 @@
                                 <label class="col-sm-2 col-sm-2 control-label">作者</label>
                                 <div class="col-sm-3">
                                     <input type="text" id="author" name="author" class="form-control">
-                                </div>
-                                <div class="col-sm-4">
-                                    <b class="help-block">*必填</b>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">ISBN</label>
-                                <div class="col-sm-3">
-                                    <input type="text" id="isbn" name="isbn" class="form-control">
                                 </div>
                                 <div class="col-sm-4">
                                     <b class="help-block">*必填</b>
@@ -218,7 +221,7 @@
                             <div class="form-group ">
                                 <label for="brief" class="control-label col-lg-2">简介</label>
                                 <div class="col-lg-5">
-                                    <textarea class="form-control " id="brief" name="brief"></textarea>
+                                    <textarea class="form-control " id="brief" name="brief" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group last" id="fileZero">
@@ -356,6 +359,36 @@
         });
     });
 
+    $("#autoFill").on("click", function () {
+        isbn = $("#isbn").val();
+        $.ajax({
+            url: 'https://api.douban.com/v2/book/isbn/' + isbn,
+            type: 'get',
+            dataType: 'jsonp',//解决跨域问题
+            success: function (data) {
+                //清空
+                $("#bookname").val();
+                $("#press").val();
+                $("#author").val();
+                $("#brief").val();
+
+                $("#bookname").val(data.title);
+                $("#press").val(data.publisher);
+                var author = data.author;
+                if (author.length != 0) {
+                    $("#author").val(data.author[0]);
+                } else {
+                    $("#author").val("暂无");
+                }
+                $("#brief").val(data.summary);
+
+            },
+            error: function () {
+                alert("找不到符合的图书")
+            }
+        });
+
+    });
 
     function checkFile(target) {
         var file = $("#file");
