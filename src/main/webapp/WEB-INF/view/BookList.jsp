@@ -27,6 +27,7 @@
     <!-- font-awesome icons -->
     <link href="front/css/font-awesome.css" rel="stylesheet">
 
+
     <!-- //Custom Theme files -->
     <!-- online-fonts -->
     <!-- logo -->
@@ -38,6 +39,16 @@
     <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
           rel="stylesheet">
     <!-- //online-fonts -->
+    <style type="text/css">
+        .dd {
+            width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            course: hand;
+            -webkit-line-clamp: 2;
+        }
+    </style>
 </head>
 
 
@@ -310,8 +321,8 @@
                                         <img src="` + item.pic + `"onerror="this.src='/front/images/errorImg.jpg'">
                                     </a>
                                 </div>
-                                <div class="caption">
-                                    <h4>` + item.bookname + `</h4>
+                                <div class="caption" style="max-height:50px">
+                                    <h4 class="dd">` + item.bookname + `</h4>
                                     <p>作者：` + item.author + `</p>
                                 </div>
                             </div>
@@ -362,8 +373,8 @@
                                         <img src="` + item.pic + `"onerror="this.src='/front/images/errorImg.jpg'">
                                     </a>
                                 </div>
-                                <div class="caption">
-                                    <h4>` + item.bookname + `</h4>
+                                <div class="caption" style="max-height:50px">
+                                    <h4 class="dd">` + item.bookname + `</h4>
                                     <p>作者：` + item.author + `</p>
                                 </div>
                             </div>
