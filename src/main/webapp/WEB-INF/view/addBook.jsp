@@ -252,7 +252,6 @@
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
                                     <button id="save" class="btn btn-theme" type="submit">保存</button>
-                                    <button class="btn btn-theme04" type="button">取消</button>
                                 </div>
                             </div>
                         </form>

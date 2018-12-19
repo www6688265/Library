@@ -5,7 +5,6 @@ import cn.work.pojo.Error;
 import cn.work.service.BookService;
 import cn.work.util.FIleUtil;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -64,7 +63,7 @@ public class BookController {
      */
     @RequestMapping(value = "addBook")
     @ResponseBody
-    public Map addBook(BookExt book, MultipartFile file) throws IOException {
+    public Map addBook(BookExt book, MultipartFile file) {
         String picPath = "";
         Map<String, Object> result = new HashMap<>();
         //检查图书是否存在
@@ -145,7 +144,7 @@ public class BookController {
      */
     @RequestMapping(value = "updateBook")
     @ResponseBody
-    public Map updateBook(BookExt book, MultipartFile upload) throws IOException {
+    public Map updateBook(BookExt book, MultipartFile upload) {
         Map<String, Object> result = new HashMap<>();
         Map<String, Object> errorMap = new HashMap<>();
         if (upload != null) {
@@ -203,7 +202,7 @@ public class BookController {
             //返回更新完的图书信息
             BookExt returnBook = bookService.getBook(book.getBookid());
             //这里设置成List是因为前端接受的JSON函数为List
-            List<BookExt> list = new ArrayList<BookExt>();
+            List<BookExt> list = new ArrayList<>();
             list.add(returnBook);
             result.put("data", list);
             return result;
@@ -230,7 +229,7 @@ public class BookController {
      */
     @RequestMapping(value = "showBook")
     @ResponseBody
-    public Map<String, Object> showBook(String id, boolean display) throws IOException {
+    public Map<String, Object> showBook(String id, boolean display) {
         Map<String, Object> result = new HashMap<>();
         try {
             BookExt book = new BookExt();
@@ -285,7 +284,7 @@ public class BookController {
      * @return: 结果信息
      * @Author: Aaron Ke
      */
-    public Map<String, Object> uploadFile(MultipartFile upload, Map<String, Object> result) throws IOException {
+    private Map<String, Object> uploadFile(MultipartFile upload, Map<String, Object> result) {
         String fileAllName = upload.getOriginalFilename();
         //生成唯一的文件名，避免文件名相同
         fileAllName = FIleUtil.getUniqueFileName(fileAllName);
@@ -331,9 +330,9 @@ public class BookController {
      * @return: 移动后的文件路径
      * @Author: Aaron Ke
      */
-    public String moveFileFromTemp(String fileName) {
+    private String moveFileFromTemp(String fileName) {
         File file = null;
-        File targetFileDir = null;
+        File targetFileDir;
         try {
             file = new File(projectPath + projectCachePath + "/" + fileName);
             if (file.exists()) {

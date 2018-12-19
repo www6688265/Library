@@ -6,10 +6,13 @@ import cn.work.service.BARService;
 import cn.work.service.BookService;
 import cn.work.service.TicketRecService;
 import cn.work.service.UserService;
+import org.junit.platform.commons.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.lang.reflect.Array;
 import java.util.*;
 import static cn.work.spring.config.LibraryConfig.limitBorrowNum;
 
@@ -53,10 +56,11 @@ public class BorrowController {
             return result;
         }
         id += Integer.toString(userinfo.getUserid());
+        int borrowNum = 0;
         //检查用户的借书权限，0表示不可以借书，1表示可以结束
         if (userinfo.getAccess() == 0) {
             //得到用户未归还的图书数量
-            int borrowNum = userService.getNotReturnNum(id);
+            borrowNum = userService.getNotReturnNum(id);
             //判断是否等于最大借书数量
             if (borrowNum == limitBorrowNum) {
                 result.put("result", "2");
@@ -82,10 +86,8 @@ public class BorrowController {
                 return result;
             }
         }
-        //得到用户借书数量
-        int notReturnNum = userService.getNotReturnNum(id);
         //得到当前用户最大借书数量
-        int maxBorrowNum = limitBorrowNum - notReturnNum;
+        int maxBorrowNum = limitBorrowNum - borrowNum;
         result.put("result", "1");
         result.put("username", userinfo.getUsername());
         result.put("userid", id);
@@ -155,8 +157,17 @@ public class BorrowController {
      */
     @RequestMapping(value = "borrowBook")
     @ResponseBody
+    //todo
     public Map<String, Object> borrowBook(String userid, String[] bookid) {
         Map<String, Object> result = new HashMap<>();
+        ArrayList<String> bookList = new ArrayList<>(Arrays.asList(bookid));
+        Iterator<String> iterator = bookList.iterator();
+        while (iterator.hasNext()) {
+            if (StringUtils.isBlank(iterator.next())) {
+                iterator.remove();
+            }
+        }
+
 
         //第一种写法
 //        for (String id : bookid) {
@@ -168,7 +179,7 @@ public class BorrowController {
         //第三种，更好的性能。原因如下。
 
         //使用Set数组来检查是否存在有重复的编号
-        Set<String> bookList = new HashSet<>(Arrays.asList(bookid));
+        Set<String> reBookList = new HashSet<>(bookList);
         //Reports Collection.addAll() and Map.putAll() calls after instantiation of a collection using a constructor call without arguments.
         // Such constructs can be replaced with a single call to a parametrized constructor which simplifies code. Also for some collections
         // the replacement might be more performant. For example:
@@ -178,7 +189,7 @@ public class BorrowController {
         //  Set<String> set = new HashSet<>(Arrays.asList("alpha", "beta", "gamma"));
 
 
-        if (bookList.size() < bookid.length) {
+        if (reBookList.size() < bookList.size()) {
             result.put("error", "不能借两本相同的图书！");
             return result;
         }
