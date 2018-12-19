@@ -286,6 +286,7 @@ public class BookController {
      */
     private Map<String, Object> uploadFile(MultipartFile upload, Map<String, Object> result) {
         String fileAllName = upload.getOriginalFilename();
+        fileAllName = fileAllName.replaceAll(" ", "");
         //生成唯一的文件名，避免文件名相同
         fileAllName = FIleUtil.getUniqueFileName(fileAllName);
         //得到目标文件
