@@ -247,6 +247,11 @@
         $().UItoTop({
             easingType: 'easeOutQuart'
         });
+        $("input").on("keydown", function (e) {
+            if (e.keyCode == 13) {
+                $("#btn-login").trigger("click");
+            }
+        });
 
         $("#btn-login").click(function () {
             $("#errorMsg").html("");

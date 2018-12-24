@@ -53,6 +53,11 @@
       speed: 500
     });
     $(document).ready(function() {
+        $("input").on("keydown", function (e) {
+            if (e.keyCode == 13) {
+                $("#login").trigger("click");
+            }
+        });
 
         $("#login").click(function () {
             $("#errorMsg").html("");

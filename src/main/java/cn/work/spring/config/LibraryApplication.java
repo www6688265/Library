@@ -35,7 +35,6 @@ public class LibraryApplication extends SpringServletContainerInitializer {
 
     @Value("${c3p0.idleConnectionTestPeriod}")
     private int idleConnectionTestPeriod;
-    private ComboPooledDataSource dataSource;
 
     @Bean
     public DataSource dataSource() throws PropertyVetoException {

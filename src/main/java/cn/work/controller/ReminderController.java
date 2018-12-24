@@ -62,7 +62,7 @@ public class ReminderController {
     public Map<String, Object> startReminder(String date) {
         Map<String, Object> result = new HashMap<>();
         JobKey jobKey = new JobKey("ReminderJob");
-        JobDetail jobDetail = null;
+        JobDetail jobDetail;
         try {
             if (!StringUtils.isEmpty(date)) {
                 String cron = getCronExpression(date);
