@@ -97,3 +97,5 @@ target/maven-status/maven-compiler-plugin/testCompile/
 target/test-classes/
 "\345\233\276\344\271\246\346\250\241\346\235\277.xls"
 "\345\233\276\344\271\246\346\250\241\346\235\277\345\216\237\345\275\242.xls"
+/图书模板.xls
+/图书模板原形.xls
