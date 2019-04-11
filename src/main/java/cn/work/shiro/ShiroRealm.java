@@ -7,10 +7,12 @@ import cn.work.pojo.UserExt;
 import cn.work.service.AdminService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
@@ -20,6 +22,7 @@ import javax.annotation.Resource;
  * @author: Aaron Ke
  * @create: 2018-11-17 12:22
  **/
+@Component
 public class ShiroRealm extends AuthorizingRealm {
 
     @Resource
@@ -27,9 +30,23 @@ public class ShiroRealm extends AuthorizingRealm {
     @Autowired
     AdminService adminService;
 
+    public ShiroRealm() {
+        super();
+    }
+
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return null;
+        Admin admin = (Admin) principalCollection.getPrimaryPrincipal();
+        SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
+        Admin admin1 = adminService.getAdminByCardId(admin.getIdcard());
+        Integer admright = admin1.getAdmright();
+        if (admright == 0) {
+            authorizationInfo.addRole("manager");
+        } else {
+            authorizationInfo.addRole("admin");
+        }
+        return authorizationInfo;
+
     }
 
     @Override

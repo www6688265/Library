@@ -2,8 +2,10 @@ package cn.work.service.Impl;
 
 import cn.work.dao.BookMapper;
 import cn.work.dao.BooktypeMapper;
+import cn.work.dao.BorrowedbooksMapper;
 import cn.work.dao.InventoryMapper;
 import cn.work.pojo.*;
+import cn.work.pojo.dto.CountDTO;
 import cn.work.service.BookService;
 import com.github.pagehelper.util.StringUtil;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,9 @@ public class BookServiceImpl implements BookService {
 
     @Resource
     InventoryMapper inventoryMapper;
+
+    @Resource
+    BorrowedbooksMapper borrowedbooksMapper;
 
     /**
      * @Description: 增加图书
@@ -89,8 +94,10 @@ public class BookServiceImpl implements BookService {
         //判断图书是否为空
         if (book != null) {
             bookMapper.updateByPrimaryKeySelective(book);
-            Inventory inventory = new Inventory(book.getBookid(), book.getLeft_num());
-            inventoryMapper.updateByPrimaryKey(inventory);
+            if (book.left_num != null) {
+                Inventory inventory = new Inventory(book.getBookid(), book.getLeft_num());
+                inventoryMapper.updateByPrimaryKey(inventory);
+            }
         }
     }
 
@@ -193,6 +200,16 @@ public class BookServiceImpl implements BookService {
             c.andleftNumEqualTo(book.getLeft_num());
         }
         return bookMapper.getBooks(example);
+    }
+
+    @Override
+    public List<CountDTO> getBorrowBooksCount() {
+        return borrowedbooksMapper.getBorrowBooksCount();
+    }
+
+    @Override
+    public List<CountDTO> getBorrowBookTypesCount() {
+        return borrowedbooksMapper.getBorrowBookTypesCount();
     }
 
 

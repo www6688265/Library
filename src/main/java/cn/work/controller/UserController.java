@@ -5,9 +5,12 @@ import cn.work.pojo.User;
 import cn.work.pojo.UserExt;
 import cn.work.pojo.Userinfo;
 import cn.work.service.UserService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +29,7 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
 
     /**
      * @Description: 读者登录
@@ -49,6 +53,11 @@ public class UserController {
                 return result;
             }
             if (va_user.getPassword().equals(pwd)) {
+                Userinfo userStatus = userService.getUserByIDcard(va_user.getIdcard());
+                if (userStatus.getUserStatus() == 0) {
+                    result.put("result", "该用户已经被冻结！");
+                    return result;
+                }
                 //向Session添加用户信息，方便验证
                 request.getSession().setAttribute("userid", va_user.getUserid());
                 result.put("result", "success");
@@ -115,14 +124,35 @@ public class UserController {
      */
     @RequestMapping(value = "getAllUsers")
     @ResponseBody
-    public Map getAllUsers() {
+    public Map getAllUsers(@RequestParam(defaultValue = "1") int pageNum,
+                           @RequestParam(defaultValue = "10") int pageSize,
+                           @RequestParam(defaultValue = "username asc") String order) {
         Map<String, Object> result = new HashMap<>();
         List<Userinfo> userlist;
         //得到用户信息
+        PageHelper.startPage(pageNum, pageSize, order);
         userlist = userService.getAllUsers();
-        result.put("data", userlist);
+        PageInfo<Userinfo> pageInfo = new PageInfo<Userinfo>(userlist);
+        result.put("data", pageInfo);
         return result;
     }
+
+    @RequestMapping(value = "searchUsers")
+    @ResponseBody
+    public Map searchUsers(@RequestParam(defaultValue = "1") int pageNum,
+                           @RequestParam(defaultValue = "10") int pageSize,
+                           @RequestParam(defaultValue = "username asc") String order,
+                           String username, String idcard, String usertele) {
+        Map<String, Object> result = new HashMap<>();
+        List<Userinfo> userlist;
+        //得到用户信息
+        PageHelper.startPage(pageNum, pageSize, order);
+        userlist = userService.searchUsers(username, idcard, usertele);
+        PageInfo<Userinfo> pageInfo = new PageInfo<Userinfo>(userlist);
+        result.put("data", pageInfo);
+        return result;
+    }
+
 
     /**
      * @Description: 增加用户

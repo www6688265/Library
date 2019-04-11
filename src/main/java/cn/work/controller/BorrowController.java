@@ -1,5 +1,6 @@
 package cn.work.controller;
 
+import cn.work.Enum.UserStatusEnum;
 import cn.work.pojo.Book;
 import cn.work.pojo.Userinfo;
 import cn.work.service.BARService;
@@ -37,7 +38,7 @@ public class BorrowController {
 
     /**
      * @Description: 检查用户信息
-     * 注：返回信息1：表示用户状态正常，2：用户已经达到最大借书数量，3：用户有未处理得罚单，4：用户不存在，5：有过期未还图书
+     * 注：返回信息1：表示用户状态正常，2：用户已经达到最大借书数量，3：用户有未处理得罚单，4：用户不存在，5：有过期未还图书 6:该用户被冻结，无法借书
      * @Param: idcard:用户的身份证
      * @return: 结果信息
      * @Author: Aaron Ke
@@ -52,32 +53,36 @@ public class BorrowController {
         String id = "";
         //如果为空，返回用户不存在代码4
         if (userinfo == null) {
-            result.put("result", "4");
+            result.put("result", UserStatusEnum.NOTEXIST.getCode());
+            return result;
+        }
+        if (userinfo.getUserStatus() == 0) {
+            result.put("username", userinfo.getUsername());
+            result.put("result", UserStatusEnum.FREEZEUSER.getCode());
             return result;
         }
         id += Integer.toString(userinfo.getUserid());
-        int borrowNum = 0;
+        int borrowNum = userService.getNotReturnNum(id);
         //检查用户的借书权限，0表示不可以借书，1表示可以结束
         if (userinfo.getAccess() == 0) {
             //得到用户未归还的图书数量
-            borrowNum = userService.getNotReturnNum(id);
             //判断是否等于最大借书数量
             if (borrowNum == limitBorrowNum) {
-                result.put("result", "2");
+                result.put("result", UserStatusEnum.MAXBORROWNUM.getCode());
                 result.put("username", userinfo.getUsername());
                 return result;
             }
             //得到过期未还数量
             int overDueNum = userService.getOverDueNum(id);
             if (overDueNum > 0) {
-                result.put("result", "5");
+                result.put("result", UserStatusEnum.HASOVERDUEBOOK.getCode());
                 result.put("username", userinfo.getUsername());
                 return result;
             }
             //得到罚单数量
             int TicketNum = userService.getTicketNum(id);
             if (TicketNum > 0) {
-                result.put("result", "3");
+                result.put("result", UserStatusEnum.NODEALTICKET.getCode());
                 result.put("userid", id);
                 result.put("username", userinfo.getUsername());
                 //得到罚款的金额
@@ -88,7 +93,7 @@ public class BorrowController {
         }
         //得到当前用户最大借书数量
         int maxBorrowNum = limitBorrowNum - borrowNum;
-        result.put("result", "1");
+        result.put("result", UserStatusEnum.NORMAL.getCode());
         result.put("username", userinfo.getUsername());
         result.put("userid", id);
         result.put("maxBorrowNum", maxBorrowNum);
@@ -124,6 +129,10 @@ public class BorrowController {
     @ResponseBody
     public Map<String, Object> bookCheck(String[] isbn) {
         Map<String, Object> result = new HashMap<>();
+        if (isbn.length == 0) {
+            result.put("result", "0");
+            return result;
+        }
         List<Book> bookList = new ArrayList<>();
         List<String> notFoundList = new ArrayList<>();
         for (String id : isbn) {

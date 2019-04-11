@@ -34,4 +34,7 @@ public interface AdminMapper {
     @Select("select  admid,idcard,admright from Admin")
     List<Admin> getAllAdmins();
 
+    @Select("select admid,idcard,admright from admin where IDcard like CONCAT ( '%',#{username} ,'%' )")
+    List<Admin> getAdmins(String username);
+
 }

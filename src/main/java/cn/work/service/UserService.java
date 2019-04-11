@@ -38,4 +38,6 @@ public interface UserService {
 
     void updatePwd(User user);
 
+    List<Userinfo> searchUsers(String username, String idcard, String usertele);
+
 }

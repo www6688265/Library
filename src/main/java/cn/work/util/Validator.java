@@ -95,7 +95,7 @@ public class Validator {
             if (username.equals(""))
                 return username_required_error;
             else {
-                if (!Pattern.matches("^[0-9a-zA_Z]+$", username)) {
+                if (!Pattern.matches("^[0-9a-zA-Z]+$", username)) {
                     return username_CharAndSum_error;
                 }
             }

@@ -1,6 +1,7 @@
 package cn.work.controller;
 
 
+import cn.work.Enum.UserStatusEnum;
 import cn.work.pojo.*;
 import cn.work.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,6 @@ public class ReturnController {
 
     /**
      * @Description: 检查用户状态
-     * 注：返回信息1：用户状态正常 2：找不到该用户 3：该用户没有归还的图书
      * @Param:
      * @return:
      * @Author: Aaron Ke
@@ -46,7 +46,7 @@ public class ReturnController {
         Userinfo userinfo = userService.getUserByIDcard(idcard);
         String id = "";
         if (userinfo == null) {
-            result.put("result", "2");
+            result.put("result", UserStatusEnum.NOTEXIST.getCode());
             return result;
         }
         //得到用户编号
@@ -55,14 +55,13 @@ public class ReturnController {
         int maxReturnNum = userService.getNotReturnNum(id);
         //判断是否为0
         if (maxReturnNum == 0) {
-            result.put("result", "3");
+            result.put("result", UserStatusEnum.NONEEDTORETURN.getCode());
             result.put("username", userinfo.getUsername());
             return result;
         }
-        result.put("result", "1");
+        result.put("result", UserStatusEnum.NORMAL.getCode());
         result.put("username", userinfo.getUsername());
         result.put("userid", id);
-        result.put("maxReturnNum", maxReturnNum);
         return result;
     }
 
@@ -109,7 +108,7 @@ public class ReturnController {
         //判断此次是否产生罚单
         if (hasTicket) {
             access = false;
-            result.put("hasTicket", hasTicket);
+            result.put("hasTicket", true);
             result.put("fee", sum);
         }
 

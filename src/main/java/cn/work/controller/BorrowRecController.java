@@ -1,10 +1,14 @@
 package cn.work.controller;
 
 import cn.work.pojo.BorrowExt;
+import cn.work.pojo.dto.BorrowRecQuery;
 import cn.work.service.BorrowRecService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +33,7 @@ public class BorrowRecController {
      * @return: 借书记录结果集
      * @Author: Aaron Ke
      */
+    @Deprecated
     @RequestMapping(value = "getAllBorrowRec")
     @ResponseBody
     public Map getAllBorrowRec() {
@@ -38,6 +43,29 @@ public class BorrowRecController {
         result.put("data", borrowList);
         return result;
     }
+
+    @Deprecated
+    @RequestMapping(value = "getAllBorrowRecs")
+    @ResponseBody
+    public Map getAllBorrowRecs(@RequestParam(defaultValue = "1") int pageNum,
+                                @RequestParam(defaultValue = "10") int pageSize,
+                                @RequestParam(defaultValue = "orderid asc") String order,
+                                BorrowRecQuery borrowRecQuery) {
+        Map<String, Object> result = new HashMap<>();
+        List<BorrowExt> borrowList;
+        if (borrowRecQuery != null) {
+            PageHelper.startPage(pageNum, pageSize, order);
+            borrowList = borrowService.getBorrowRecs(borrowRecQuery);
+        } else {
+            PageHelper.startPage(pageNum, pageSize, order);
+            borrowList = borrowService.getAllBorrowRec();
+        }
+        //得到所有借书记录
+        PageInfo pageInfo = new PageInfo<BorrowExt>(borrowList);
+        result.put("data", pageInfo);
+        return result;
+    }
+
 
     /**
      * @Description: 得到用户没有归还的书籍记录

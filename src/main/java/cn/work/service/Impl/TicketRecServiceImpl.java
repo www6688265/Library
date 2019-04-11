@@ -7,6 +7,7 @@ import cn.work.pojo.Ticket;
 import cn.work.pojo.TicketExt;
 import cn.work.pojo.Userinfo;
 import cn.work.pojo.UserinfoExample;
+import cn.work.pojo.dto.TicketQuery;
 import cn.work.service.TicketRecService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -81,6 +82,11 @@ public class TicketRecServiceImpl implements TicketRecService {
     @Override
     public List<TicketExt> getTicketByUserId(String id) {
         return ticketMapper.getTicketByUserId(Integer.parseInt(id));
+    }
+
+    @Override
+    public List<TicketExt> getTicketRecs(TicketQuery ticketQuery) {
+        return ticketMapper.getTicketRecs(ticketQuery);
     }
 
 

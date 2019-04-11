@@ -2,9 +2,10 @@ package cn.work.spring.config;
 
 import cn.work.shiro.ReTryCredentialsMatcher;
 import cn.work.shiro.ShiroRealm;
+import net.sf.ehcache.CacheManager;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
-import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.io.ResourceUtils;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
@@ -16,6 +17,8 @@ import org.springframework.context.annotation.Bean;
 import org.apache.shiro.mgt.SecurityManager;
 import org.springframework.context.annotation.Configuration;
 
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,9 +40,18 @@ public class ShiroConfiguration {
 
     @Bean
     public EhCacheManager ehCacheManager() {
-        EhCacheManager cacheManager = new EhCacheManager();
-        cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
-        return cacheManager;
+        net.sf.ehcache.CacheManager cacheManager = net.sf.ehcache.CacheManager.getCacheManager("es");
+        if (cacheManager == null) {
+            try {
+                cacheManager = CacheManager.create(ResourceUtils.getInputStreamForPath("classpath:ehcache.xml"));
+            } catch (IOException e) {
+                throw new RuntimeException("initialize cacheManager failed");
+            }
+        }
+        EhCacheManager ehCacheManager = new EhCacheManager();
+        ehCacheManager.setCacheManager(cacheManager);
+        return ehCacheManager;
+
     }
 
     //权限管理，配置主要是Realm的管理认证
@@ -73,7 +85,7 @@ public class ShiroConfiguration {
         map.put("/Ticket_table*", "authc");
         map.put("/User_table*", "authc");
         map.put("/overDueReminder*", "authc");
-        map.put("/admin/*", "authc");
+        map.put("/admin/*", "anon");
         //登录
         shiroFilterFactoryBean.setLoginUrl("/login");
         //首页

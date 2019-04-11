@@ -1,10 +1,15 @@
 package cn.work.controller;
 
+import cn.work.pojo.BorrowExt;
 import cn.work.pojo.TicketExt;
+import cn.work.pojo.dto.TicketQuery;
 import cn.work.service.TicketRecService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
@@ -28,6 +33,7 @@ public class TicketRecController {
      * @return: 罚单结果集
      * @Author: Aaron Ke
      */
+    @Deprecated
     @RequestMapping(value = "getAllTicketRec")
     @ResponseBody
     public Map<String, Object> getAllTicketRec() {
@@ -38,16 +44,27 @@ public class TicketRecController {
         return result;
     }
 
-//      废弃的方法
-//    @RequestMapping(value = "delTicketRec")
-//    @ResponseBody
-//    public Map<String, Object> delTicketRec(String id) {
-//        Map<String, Object> result = new HashMap<>();
-//        ticketRecService.delTicketRec(Integer.parseInt(id));
-//        result.put("result", "success");
-//        return result;
-//
-//    }
+    @RequestMapping(value = "getAllTicketRecs")
+    @ResponseBody
+    public Map<String, Object> getAllTicketRecs(@RequestParam(defaultValue = "1") int pageNum,
+                                                @RequestParam(defaultValue = "10") int pageSize,
+                                                @RequestParam(defaultValue = "ticketid asc") String order,
+                                                TicketQuery ticketQuery) {
+        Map<String, Object> result = new HashMap<>();
+        List<TicketExt> list;
+        if (ticketQuery != null) {
+            PageHelper.startPage(pageNum, pageSize, order);
+            list = ticketRecService.getTicketRecs(ticketQuery);
+        } else {
+            //得到所有罚单信息
+            PageHelper.startPage(pageNum, pageSize, order);
+            list = ticketRecService.getAllTicketRec();
+        }
+        PageInfo pageInfo = new PageInfo<>(list);
+        result.put("data", pageInfo);
+        return result;
+    }
+
 
     /**
      * @Description: 得到用户的罚单信息

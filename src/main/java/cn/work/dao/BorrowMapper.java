@@ -4,6 +4,7 @@ import cn.work.pojo.Borrow;
 import cn.work.pojo.BorrowExample;
 import cn.work.pojo.BorrowExt;
 import cn.work.pojo.ReminderInfo;
+import cn.work.pojo.dto.BorrowRecQuery;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -34,6 +35,8 @@ public interface BorrowMapper {
 
     //自己写的语句
     List<BorrowExt> getAllBorrowRec();
+
+    List<BorrowExt> getBorrowRecs(BorrowRecQuery brc);
 
     List<BorrowExt> getBorrowRecByUserID(int id);
 

@@ -17,4 +17,6 @@ public interface AdminService {
     Admin updateAdmin(Admin admin);
 
     Admin getAdminByAdmid(String id);
+
+    List<Admin> getAdmins(String username);
 }

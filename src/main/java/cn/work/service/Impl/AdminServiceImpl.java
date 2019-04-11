@@ -62,8 +62,6 @@ public class AdminServiceImpl implements AdminService {
     public boolean addAdmin(Admin admin) {
         String pwd = admin.getAdmpassword();
         //对密码进行加密
-        pwd = getEncrypt(pwd);
-        admin.setAdmpassword(pwd);
         AdminExample example = new AdminExample();
         example.createCriteria().andIdcardEqualTo(admin.getIdcard());
         //查看是否有相同的管理员信息：依据是管理员的身份证
@@ -71,6 +69,8 @@ public class AdminServiceImpl implements AdminService {
         if (list.size() > 0) {
             return false;
         }
+        pwd = getEncrypt(pwd);
+        admin.setAdmpassword(pwd);
         adminMapper.insertSelective(admin);
         return true;
     }
@@ -128,6 +128,11 @@ public class AdminServiceImpl implements AdminService {
             return admin;
         } else
             return null;
+    }
+
+    @Override
+    public List<Admin> getAdmins(String username) {
+        return adminMapper.getAdmins(username);
     }
 
 }

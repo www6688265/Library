@@ -32,4 +32,9 @@ public interface UserinfoMapper {
 
     //自己的语句
     List<Userinfo> getAllUsers();
+
+    @Select("select * from userInfo where username like CONCAT('%',#{username},'%') " +
+            "and idcard like CONCAT('%',#{idcard},'%') " +
+            "and usertele like CONCAT('%',#{usertele},'%')")
+    List<Userinfo> searchUsers(@Param("username") String username, @Param("idcard") String idcard, @Param("usertele") String usertele);
 }

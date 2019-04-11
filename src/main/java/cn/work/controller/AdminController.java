@@ -1,6 +1,7 @@
 package cn.work.controller;
 
 import cn.work.pojo.Admin;
+import cn.work.pojo.Userinfo;
 import cn.work.service.AdminService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,12 +13,18 @@ import java.util.Map;
 import static cn.work.util.SHAUtil.getEncrypt;
 import static cn.work.util.Validator.adminValidator;
 
+import cn.work.shiro.ShiroRealm;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
+import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -29,6 +36,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class AdminController {
     @Autowired
     AdminService adminService;
+
+    @Autowired
+    ShiroRealm shiroRealm;
 
     /**
      * @Description: 该方法用于登录
@@ -59,6 +69,12 @@ public class AdminController {
                 result.put("result", "尝试登录超过5次，请1分钟后重试 ");
                 return result;
             }
+            subject.hasRole("admin");
+            AuthorizationInfo authorizationInfo = shiroRealm.getAuthorizationCache().get(subject.getPrincipals());
+            if (authorizationInfo != null) {
+                result.put("roles", authorizationInfo.getRoles());
+            }
+
             request.getSession().setAttribute("admin", admin);
             result.put("result", "success");
             return result;
@@ -75,11 +91,13 @@ public class AdminController {
      * @Author: Aaron Ke
      */
     @RequestMapping("logOut")
-    public String logOut(HttpServletRequest request) {
+    @ResponseBody
+    public Object logOut(HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
         //取到用户存在Session的对象
         request.getSession().invalidate();
         //重定向至登录界面
-        return "redirect:/login";
+        return result.put("result", "success");
     }
 
     /**
@@ -88,13 +106,34 @@ public class AdminController {
      * @return: 返回所有管理员的信息
      * @Author: Aaron Ke
      */
+//    @RequestMapping("getAllAdmins")
+//    @ResponseBody
+//    public Map<String, Object> getALlAdmins() {
+//        HashMap<String, Object> result = new HashMap<>();
+//        //得到所有管理员信息
+//        List<Admin> list = adminService.getAllAdmins();
+//        result.put("data", list);
+//        return result;
+//    }
+
     @RequestMapping("getAllAdmins")
     @ResponseBody
-    public Map<String, Object> getALlAdmins() {
+    public Map<String, Object> getAllAdmins(@RequestParam(defaultValue = "1") int pageNum,
+                                            @RequestParam(defaultValue = "10") int pageSize,
+                                            @RequestParam(defaultValue = "admid asc") String order,
+                                            String username) {
         HashMap<String, Object> result = new HashMap<>();
-        //得到所有管理员信息
-        List<Admin> list = adminService.getAllAdmins();
-        result.put("data", list);
+        List<Admin> list;
+        if (!StringUtils.isEmpty(username)) {
+            PageHelper.startPage(pageNum, pageSize, order);
+            list = adminService.getAdmins(username);
+        } else {
+            //得到所有管理员信息
+            PageHelper.startPage(pageNum, pageSize, order);
+            list = adminService.getAllAdmins();
+        }
+        PageInfo<Admin> pageInfo = new PageInfo<Admin>(list);
+        result.put("data", pageInfo);
         return result;
     }
 

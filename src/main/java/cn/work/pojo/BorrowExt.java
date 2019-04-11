@@ -11,6 +11,8 @@ public class BorrowExt extends Borrow {
     Date Borrowtime;
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     Date Limittime;
+
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date returntime;
 
     private Integer bookid;

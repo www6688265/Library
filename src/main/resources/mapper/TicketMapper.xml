@@ -269,6 +269,7 @@
 	ticket.fee,
 	ticket.ticket_STATUS
 FROM
+    user,
 	userinfo,
 	borrow,
 	ticket,
@@ -276,9 +277,12 @@ FROM
 	BorrowedBooks
 WHERE
 	userinfo.userID = borrow.userID
-	AND borrow.orderId = BorrowedBooks.orderId
+	And borrow.orderId=BorrowedBooks.orderid
 	AND book.bookID = BorrowedBooks.BookID
 	AND ticket.orderId = borrow.orderId
+	And ticket.orderId=BorrowedBooks.orderid
+	And ticket.bookid=BorrowedBooks.bookid
+	AND userinfo.userID=user.userID
   </select>
   <select id="countUserTicket" parameterType="java.lang.Integer" resultType="java.lang.Integer">
         SELECT
@@ -344,5 +348,58 @@ WHERE
 	And ticket.bookid=BorrowedBooks.bookid
 	AND userinfo.userID=user.userID
 	AND user.userid=#{id}
+    </select>
+    <select id="getTicketRecs" parameterType="cn.work.pojo.dto.TicketQuery" resultMap="TicketAndBorrowMap">
+        SELECT
+        ticket.TicketId,
+        userinfo.username,
+        book.bookname,
+        BorrowedBooks.BorrowTime,
+        BorrowedBooks.ReturnTime,
+        BorrowedBooks.LimitTime,
+        ticket.overdueTime,
+        ticket.dealTime,
+        ticket.fee,
+        ticket.ticket_STATUS
+        FROM
+        user,
+        userinfo,
+        borrow,
+        ticket,
+        book,
+        BorrowedBooks
+        <where>
+            userinfo.userID = borrow.userID
+            And borrow.orderId=BorrowedBooks.orderid
+            AND book.bookID = BorrowedBooks.BookID
+            AND ticket.orderId = borrow.orderId
+            And ticket.orderId=BorrowedBooks.orderid
+            And ticket.bookid=BorrowedBooks.bookid
+            AND userinfo.userID=user.userID
+            <if test="ticketid!=null and ticketid!=''">
+                and ticket.TicketId=#{ticketid}
+            </if>
+            <if test="username!=null and username!=''">
+                and userinfo.userName like CONCAT('%',#{username},'%')
+            </if>
+            <if test="bookname!=null and bookname!=''">
+                and book.bookname like CONCAT('%',#{bookname},'%')
+            </if>
+            <if test="d_StartTime!=null">
+                and Date(dealTime)>=DATE_FORMAT( #{d_StartTime}, '%Y-%m-%d')
+            </if>
+            <if test="d_EndTime!=null">
+                and Date(dealTime)&lt;=DATE_FORMAT( #{d_EndTime}, '%Y-%m-%d')
+            </if>
+            <if test="r_StartTime!=null">
+                and Date(ReturnTime)>=DATE_FORMAT( #{r_StartTime}, '%Y-%m-%d')
+            </if>
+            <if test="r_EndTime!=null">
+                and Date(ReturnTime)&lt;=DATE_FORMAT( #{r_EndTime}, '%Y-%m-%d')
+            </if>
+            <if test="ticketStatus!=null">
+                and ticket_status=#{ticketStatus}
+            </if>
+        </where>
     </select>
 </mapper>

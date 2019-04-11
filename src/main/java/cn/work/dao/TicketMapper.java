@@ -3,6 +3,7 @@ package cn.work.dao;
 import cn.work.pojo.Ticket;
 import cn.work.pojo.TicketExample;
 import cn.work.pojo.TicketExt;
+import cn.work.pojo.dto.TicketQuery;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -41,4 +42,6 @@ public interface TicketMapper {
     void dealTicketByUserid(int id);
 
     List<TicketExt> getTicketByUserId(int id);
+
+    List<TicketExt> getTicketRecs(TicketQuery ticketQuery);
 }

@@ -89,7 +89,7 @@ public class UserServiceImpl implements UserService {
             double notPayNum = getTicketNum(id);
             //判断用户是否有未归还图书
             if (notReturnNum > 0) {
-                errorMsg += "有未还图书！";
+                errorMsg += "有未还图书!";
             }
             //同上
             if (notPayNum > 0) {
@@ -296,6 +296,13 @@ public class UserServiceImpl implements UserService {
             user.setPassword(pwd);
         }
         userMapper.updateByPrimaryKey(user);
+    }
+
+    @Override
+    public List<Userinfo> searchUsers(String username, String idcard, String usertele) {
+        List<Userinfo> usersList = userinfoMapper.searchUsers(username, idcard, usertele);
+        return usersList;
+
     }
 
 

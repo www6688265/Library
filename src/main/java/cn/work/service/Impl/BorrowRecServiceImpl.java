@@ -5,6 +5,7 @@ import cn.work.dao.BorrowedbooksMapper;
 import cn.work.pojo.BorrowExt;
 import cn.work.pojo.Borrowedbooks;
 import cn.work.pojo.BorrowedbooksKey;
+import cn.work.pojo.dto.BorrowRecQuery;
 import cn.work.service.BorrowRecService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -107,6 +108,11 @@ public class BorrowRecServiceImpl implements BorrowRecService {
             borrowedbooksMapper.updateByPrimaryKeySelective(borrow);
             return true;
         }
+    }
+
+    @Override
+    public List<BorrowExt> getBorrowRecs(BorrowRecQuery borrowRecQuery) {
+        return borrowMapper.getBorrowRecs(borrowRecQuery);
     }
 
 }

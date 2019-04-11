@@ -15,9 +15,7 @@ import org.aspectj.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -136,6 +134,28 @@ public class BookController {
         return result;
     }
 
+    @RequestMapping(value = "getAllBook")
+    @ResponseBody
+    public Map getAllBook(@RequestParam(defaultValue = "1") int pageNum,
+                          @RequestParam(defaultValue = "10") int pageSize,
+                          @RequestParam(defaultValue = "bookname asc") String order,
+                          BookExt searchBook) {
+        Map<String, Object> result = new HashMap<>();
+        List<BookExt> bookList;
+        //是否有需要搜索的内容
+        if (searchBook != null) {
+            PageHelper.startPage(pageNum, pageSize, order);
+            bookList = bookService.getBooks(searchBook);
+        } else {
+            PageHelper.startPage(pageNum, pageSize, order);
+            bookList = bookService.getAllBooks();
+        }
+        PageInfo pageInfo = new PageInfo<>(bookList);
+        result.put("data", pageInfo);
+        return result;
+    }
+
+
     /**
      * @Description: 更新图书，注：这里的图片上传和图书信息更新是分开操作的。所以用if...else...分开
      * @Param: book:图书的信息， file：图书封面
@@ -209,6 +229,80 @@ public class BookController {
         }
     }
 
+    @RequestMapping(value = "updateBook2")
+    @ResponseBody
+    public Map updateBook2(BookExt book, MultipartFile upload) {
+        Map<String, Object> result = new HashMap<>();
+        Map<String, Object> errorMap = new HashMap<>();
+        if (upload != null) {
+            //得到文件名
+            String name = upload.getOriginalFilename();
+            //取得文件后缀名
+            String type = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
+            //得到文件的大小
+            long size = upload.getSize();
+            //判断文件类型
+            if (!type.equals("jpg") && !type.equals("png") && !type.equals("gif")) {
+                errorMap.put("error", "文件类型应为jpg,png,gif");
+                return errorMap;
+            }
+            //判断文件大小
+            if (size > 1024000) {
+                errorMap.put("error", "文件大小不能超过1M");
+                return errorMap;
+            }
+            //上传文件
+            result = uploadFile(upload, result);
+            if (result.get("result") != null)
+                return result;
+            String picPath = projectUploadPath + "/" + result.get("picName").toString();
+            //存放图片的路径
+            book.setPic(picPath);
+            //将文件从缓存目录移动到图片目录
+            moveFileFromTemp(picPath.substring(picPath.lastIndexOf("/")));
+        }
+        //验证图书信息是否合法
+        errorMap = bookValidator(book);
+        if (errorMap != null)
+            return errorMap;
+        String isbn = book.getIsbn();
+        //得到用户填写的ISBN编号并验证
+        Book aBook = bookService.getBookByISBN(isbn);
+        if (aBook != null && !aBook.getIsbn().equals(book.getIsbn())) {
+            errorMap = new HashMap<>();
+            errorMap.put("error", "已存在相同isbn的图书！");
+            return errorMap;
+        }
+        //得到用户填写的库存信息，并判断其合法性
+        if (book.getTotal() != null) {
+            if (book.getLeft_num() > book.getTotal()) {
+                Error error = new Error();
+                error.addError("total", "库存不可以小于剩余数量");
+                return error.getFieldErrors();
+            }
+        }
+        //判断是否有上传图片，所有有移动文件到图书目录
+        String pic = book.getPic();
+        if (pic != null && !pic.equals("")) {
+            boolean hasTemp = pic.contains("Temp");
+            if (hasTemp) {
+                String fileName = moveFileFromTemp(pic.substring(pic.lastIndexOf("/")));
+                book.setPic(fileName);
+            }
+        }
+        //更新图书信息
+        bookService.updateBook(book);
+        //返回更新完的图书信息
+        BookExt returnBook = bookService.getBook(book.getBookid());
+        //这里设置成List是因为前端接受的JSON函数为List
+        List<BookExt> list = new ArrayList<>();
+        list.add(returnBook);
+        result.put("data", list);
+        return result;
+
+    }
+
+
     /**
      * @Description: 得到单本图书的信息
      * @Param: 图书的图书编号
@@ -277,6 +371,20 @@ public class BookController {
             return new PageInfo<>(list);
         } else return null;
     }
+
+    @GetMapping("/getBorrowBooksCount")
+    @ResponseBody
+    public Object getBorrowBooksCount() {
+        return bookService.getBorrowBooksCount();
+    }
+
+    @GetMapping("/getBorrowBookTypesCount")
+    @ResponseBody
+    public Object getBorrowBookTypesCount() {
+        return bookService.getBorrowBookTypesCount();
+    }
+
+
 
     /**
      * @Description: 上传文件，封装方法

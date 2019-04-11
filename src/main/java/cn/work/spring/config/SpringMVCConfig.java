@@ -28,9 +28,7 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/Return")
                 .addPathPatterns("/Ticket_table")
                 .addPathPatterns("/User_table")
-                .addPathPatterns("/admin/*")
                 .excludePathPatterns("/admin/login");
-
         registry.addInterceptor(new UserLoginInterceptor()).addPathPatterns("/profile");
     }
 

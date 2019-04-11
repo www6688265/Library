@@ -1,6 +1,7 @@
 package cn.work.service;
 
 import cn.work.pojo.*;
+import cn.work.pojo.dto.CountDTO;
 
 import java.util.List;
 
@@ -25,5 +26,9 @@ public interface BookService {
     List<Booktype> getAllTypes();
 
     List<BookExt> getBooks(BookExt book);
+
+    List<CountDTO> getBorrowBooksCount();
+
+    List<CountDTO> getBorrowBookTypesCount();
 
 }

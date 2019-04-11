@@ -151,26 +151,76 @@ public class ExcelServiceImpl implements ExcelService {
                 continue;
             }
             sumRow++;
-            row.getCell(0).setCellType(CellType.STRING);
-            row.getCell(1).setCellType(CellType.STRING);
-            row.getCell(2).setCellType(CellType.STRING);
-            row.getCell(3).setCellType(CellType.STRING);
-            row.getCell(4).setCellType(CellType.STRING);
-            row.getCell(5).setCellType(CellType.STRING);
-            row.getCell(6).setCellType(CellType.STRING);
-            row.getCell(7).setCellType(CellType.STRING);
-            row.getCell(8).setCellType(CellType.STRING);
-            row.getCell(9).setCellType(CellType.STRING);
-            String bookname = row.getCell(0).getStringCellValue();
-            String isbn = row.getCell(1).getStringCellValue();
-            String booktype = row.getCell(2).getStringCellValue();
-            String press = "" + row.getCell(3).getStringCellValue().trim();
-            String author = "" + row.getCell(4).getStringCellValue().trim();
-            String t_total = "" + row.getCell(5).getStringCellValue().trim();
-            String t_floor = "" + row.getCell(6).getStringCellValue().trim();
-            String t_bookcase = "" + row.getCell(7).getStringCellValue().trim();
-            String t_layer = "" + row.getCell(8).getStringCellValue().trim();
-            String brief = "" + row.getCell(9).getStringCellValue().trim();
+            String bookname;
+            String isbn;
+            String booktype;
+            String press;
+            String author;
+            String t_total;
+            String t_floor;
+            String t_bookcase;
+            String t_layer;
+            String brief;
+            try {
+                row.getCell(0).setCellType(CellType.STRING);
+                bookname = row.getCell(0).getStringCellValue();
+            } catch (Exception e) {
+                bookname = "";
+            }
+            try {
+                row.getCell(1).setCellType(CellType.STRING);
+                isbn = row.getCell(1).getStringCellValue();
+            } catch (Exception e) {
+                isbn = "";
+            }
+            try {
+                row.getCell(2).setCellType(CellType.STRING);
+                booktype = row.getCell(2).getStringCellValue();
+            } catch (Exception e) {
+                booktype = "";
+            }
+            try {
+                row.getCell(3).setCellType(CellType.STRING);
+                press = "" + row.getCell(3).getStringCellValue();
+            } catch (Exception e) {
+                press = "";
+            }
+            try {
+                row.getCell(4).setCellType(CellType.STRING);
+                author = "" + row.getCell(4).getStringCellValue();
+            } catch (Exception e) {
+                author = "";
+            }
+            try {
+                row.getCell(5).setCellType(CellType.STRING);
+                t_total = "" + row.getCell(5).getStringCellValue();
+            } catch (Exception e) {
+                t_total = "";
+            }
+            try {
+                row.getCell(6).setCellType(CellType.STRING);
+                t_bookcase = "" + row.getCell(6).getStringCellValue();
+            } catch (Exception e) {
+                t_bookcase = "";
+            }
+            try {
+                row.getCell(7).setCellType(CellType.STRING);
+                t_floor = "" + row.getCell(7).getStringCellValue();
+            } catch (Exception e) {
+                t_floor = "";
+            }
+            try {
+                row.getCell(8).setCellType(CellType.STRING);
+                t_layer = "" + row.getCell(8).getStringCellValue();
+            } catch (Exception e) {
+                t_layer = "";
+            }
+            try {
+                row.getCell(9).setCellType(CellType.STRING);
+                brief = "" + row.getCell(9).getStringCellValue();
+            } catch (Exception e) {
+                brief = "";
+            }
             Integer total = null;
             Integer floor = null;
             Integer bookcase = null;
