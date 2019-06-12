@@ -19,7 +19,7 @@ public interface BookService {
 
     BookExt getBook(int id);
 
-    Book getBookByISBN(String isbn);
+    BookExt getBookByISBN(String isbn);
 
     List<BookExt> getBooksByNameOrAuthor(String name, String author);
 

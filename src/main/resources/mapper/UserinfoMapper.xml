@@ -245,4 +245,9 @@
   <select id="getAllUsers" resultMap="BaseResultMap">
     select * from userinfo
   </select>
+    <select id="searchUsers" resultMap="BaseResultMap">
+    select * from userInfo where username like CONCAT('%',#{username},'%')
+    and idcard like CONCAT('%',#{idcard},'%')
+    and usertele like CONCAT('%',#{usertele},'%')
+  </select>
 </mapper>

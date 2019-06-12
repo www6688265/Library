@@ -43,4 +43,6 @@ public interface BookMapper {
 
     List<BookExt> getBooks(BookExample example);
 
+    BookExt getBookByISBN(@Param("isbn") String isbn);
+
 }

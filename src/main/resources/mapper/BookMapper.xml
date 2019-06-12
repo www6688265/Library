@@ -362,6 +362,31 @@ WHERE
 	and inventory.bookid=book.bookid
 	AND book.bookid =#{id}
   </select>
+    <select id="getBookByISBN" resultType="cn.work.pojo.BookExt" parameterType="java.lang.String">
+    SELECT
+	book.bookid,
+	bookname,
+	booktype.booktype,
+	press,
+	brief,
+	total,
+	left_num,
+	pic,
+	author,
+	isbn,
+	floor,
+	bookcase,
+	layer,
+	display
+FROM
+	book,
+	booktype,
+	inventory
+WHERE
+	book.booktypeid = booktype.id
+	and inventory.bookid=book.bookid
+	AND book.isbn =#{isbn}
+  </select>
   <select id="getBooks" resultType="cn.work.pojo.BookExt" parameterType="cn.work.pojo.BookExample">
       SELECT
       book.bookid,bookname,booktype.booktype,press,brief,total,left_num,pic,author,isbn,floor,bookcase,layer,display

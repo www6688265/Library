@@ -119,14 +119,8 @@ public class BookServiceImpl implements BookService {
      * @Author: Aaron Ke
      */
     @Override
-    public Book getBookByISBN(String isbn) {
-        BookExample example = new BookExample();
-        example.createCriteria().andIsbnEqualTo(isbn);
-        List<Book> list = bookMapper.selectByExample(example);
-        if (list.size() > 0)
-            return list.get(0);
-        else
-            return null;
+    public BookExt getBookByISBN(String isbn) {
+        return bookMapper.getBookByISBN(isbn);
     }
 
     /**

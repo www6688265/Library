@@ -2,6 +2,7 @@ package cn.work.controller;
 
 import cn.work.Enum.UserStatusEnum;
 import cn.work.pojo.Book;
+import cn.work.pojo.BookExt;
 import cn.work.pojo.Userinfo;
 import cn.work.service.BARService;
 import cn.work.service.BookService;
@@ -135,13 +136,17 @@ public class BorrowController {
         }
         List<Book> bookList = new ArrayList<>();
         List<String> notFoundList = new ArrayList<>();
+        List<String> noEnoughList = new ArrayList<>();
         for (String id : isbn) {
             id = id.trim();
-            if (id != null && !id.equals("")) {
+            if (!StringUtils.isBlank(id)) {
                 //查找是否存在此书
-                Book book = bookService.getBookByISBN(id);
+                BookExt book = bookService.getBookByISBN(id);
                 if (book != null) {
                     bookList.add(book);
+                    if (book.getLeft_num() <= 0) {
+                        noEnoughList.add(id);
+                    }
                 } else {
                     //如果找不到，加入到找不到图书的数组
                     notFoundList.add(id);
@@ -151,6 +156,11 @@ public class BorrowController {
         if (notFoundList.size() > 0) {
             result.put("result", "0");
             result.put("notFoundList", notFoundList);
+            return result;
+        }
+        if (noEnoughList.size() > 0) {
+            result.put("result", "-1");
+            result.put("noEnoughList", noEnoughList);
             return result;
         }
         result.put("result", "1");
